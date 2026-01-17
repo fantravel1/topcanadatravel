@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinos do Canadá 2025 | Cidades, Províncias e Regiões | Top Canada Travel</title>
+<meta name="description" content="Explore mais de 150 destinos canadenses. De cidades vibrantes como Toronto e Vancouver a províncias deslumbrantes e joias escondidas.">
+<link rel="canonical" href="https://topcanadatravel.com/pt/destinations/">
+<link rel="alternate" hreflang="en" href="https://topcanadatravel.com/destinations/">
+<link rel="alternate" hreflang="pt" href="https://topcanadatravel.com/pt/destinations/">
+<link rel="alternate" hreflang="es" href="https://topcanadatravel.com/es/destinations/">
+<link rel="alternate" hreflang="x-default" href="https://topcanadatravel.com/destinations/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#e63946;--blue:#1d3557;--light:#f1faee;--accent:#457b9d;--text:#2d3748;--gray:#64748b;--light-gray:#f8fafc;--shadow:0 4px 20px rgba(0,0,0,0.1);--radius:16px}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100}
+.header-content{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-size:1.25rem;font-weight:700;color:var(--blue)}
+.logo span{color:var(--red)}
+nav{display:none}
+@media(min-width:768px){nav{display:flex;gap:20px}nav a{color:var(--text);font-weight:500;padding:8px 12px;border-radius:8px}nav a:hover{background:var(--light-gray)}nav a.active{color:var(--red)}}
+.lang-switch{background:var(--light);padding:6px 12px;border-radius:20px;font-size:0.85rem}
+
+.hero{background:linear-gradient(135deg,var(--blue),var(--accent));color:#fff;padding:100px 20px 60px;text-align:center}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.2);padding:8px 16px;border-radius:20px;font-size:0.9rem;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:16px}
+.hero p{font-size:1.1rem;opacity:0.9;max-width:600px;margin:0 auto}
+
+.breadcrumb{background:var(--light-gray);padding:12px 0;border-bottom:1px solid #e5e7eb}
+.breadcrumb-list{display:flex;gap:8px;font-size:0.875rem;color:var(--gray)}
+
+.section{padding:60px 20px}
+.section-header{text-align:center;margin-bottom:40px}
+.section-badge{display:inline-block;background:#fee2e2;color:var(--red);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase;margin-bottom:12px}
+.section-title{font-size:clamp(1.5rem,4vw,2.25rem);color:var(--blue);margin-bottom:12px}
+.section-subtitle{color:var(--gray);font-size:1.1rem;max-width:600px;margin:0 auto}
+
+.province-grid{display:grid;gap:20px}
+@media(min-width:640px){.province-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.province-grid{grid-template-columns:repeat(3,1fr)}}
+
+.province-card{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/10;background:linear-gradient(135deg,var(--blue),var(--accent))}
+.province-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.province-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent)}
+.province-content{position:absolute;bottom:0;left:0;right:0;padding:20px;color:#fff}
+.province-content h3{font-size:1.5rem;margin-bottom:4px}
+.province-content p{font-size:0.9rem;opacity:0.9}
+
+.city-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(min-width:640px){.city-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.city-grid{grid-template-columns:repeat(4,1fr)}}
+
+.city-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:1;background:linear-gradient(135deg,var(--accent),var(--blue))}
+.city-card:hover{transform:translateY(-4px)}
+.city-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent)}
+.city-content{position:absolute;bottom:0;left:0;right:0;padding:16px;color:#fff}
+.city-content h3{font-size:1.1rem;margin-bottom:2px}
+.city-content span{font-size:0.75rem;opacity:0.8}
+
+.region-grid{display:grid;gap:20px}
+@media(min-width:768px){.region-grid{grid-template-columns:repeat(2,1fr)}}
+
+.region-card{display:flex;gap:20px;padding:20px;background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);transition:all 0.2s}
+.region-card:hover{border-color:var(--red);box-shadow:var(--shadow)}
+.region-icon{width:64px;height:64px;display:flex;align-items:center;justify-content:center;background:var(--light-gray);border-radius:12px;font-size:2rem;flex-shrink:0}
+.region-content h3{font-size:1.25rem;color:var(--blue);margin-bottom:8px}
+.region-content p{color:var(--gray);font-size:0.95rem;margin-bottom:12px}
+.region-tags{display:flex;flex-wrap:wrap;gap:8px}
+.region-tag{padding:4px 12px;background:var(--light-gray);border-radius:20px;font-size:0.75rem;color:var(--gray)}
+
+.bg-gray{background:var(--light-gray)}
+
+footer{background:var(--blue);color:#fff;padding:40px 20px}
+.footer-grid{display:grid;gap:30px;margin-bottom:30px}
+@media(min-width:768px){.footer-grid{grid-template-columns:repeat(4,1fr)}}
+.footer-col h4{font-size:0.875rem;margin-bottom:16px;color:var(--red)}
+.footer-col a{display:block;color:rgba(255,255,255,0.8);padding:4px 0;font-size:0.9rem}
+.footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.2);font-size:0.875rem;opacity:0.8}
+
+.mobile-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -2px 10px rgba(0,0,0,0.1);padding:8px 0;padding-bottom:max(8px,env(safe-area-inset-bottom));display:flex;justify-content:space-around;z-index:100}
+@media(min-width:1024px){.mobile-nav{display:none}}
+.nav-item{display:flex;flex-direction:column;align-items:center;padding:8px;color:var(--gray);font-size:0.65rem}
+.nav-item.active{color:var(--red)}
+.nav-icon{font-size:1.25rem;margin-bottom:2px}
+body{padding-bottom:70px}
+@media(min-width:1024px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<header>
+<div class="header-content container">
+<a href="/pt/" class="logo">Top<span>Canada</span>Travel</a>
+<nav>
+<a href="/pt/destinations/" class="active">Destinos</a>
+<a href="/pt/parques-nacionais/">Parques</a>
+<a href="/pt/experiencias/">Experiências</a>
+<a href="/pt/roteiros/">Roteiros</a>
+<a href="/pt/planejar/">Planejar</a>
+</nav>
+<a href="/destinations/" class="lang-switch">EN</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<span class="hero-badge">🗺️ +150 Destinos</span>
+<h1>Explore o Canadá</h1>
+<p>De cidades de classe mundial a áreas selvagens remotas, descubra os destinos que fazem do Canadá uma das experiências de viagem mais diversas do mundo.</p>
+</div>
+</section>
+
+<nav class="breadcrumb">
+<div class="container">
+<ol class="breadcrumb-list">
+<li><a href="/pt/">Início</a></li>
+<li>/</li>
+<li>Destinos</li>
+</ol>
+</div>
+</nav>
+
+<section class="section">
+<div class="container">
+<header class="section-header">
+<span class="section-badge">Províncias e Territórios</span>
+<h2 class="section-title">Explore por Região</h2>
+<p class="section-subtitle">O Canadá abrange 6 fusos horários com 10 províncias e 3 territórios. Cada um oferece paisagens, culturas e experiências únicas.</p>
+</header>
+
+<div class="province-grid">
+<a href="/pt/destinations/columbia-britanica/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>Colúmbia Britânica</h3>
+<p>Montanhas, oceano e cidades de classe mundial</p>
+</div>
+</a>
+<a href="/pt/destinations/alberta/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>Alberta</h3>
+<p>Montanhas Rochosas e paisagens de pradaria</p>
+</div>
+</a>
+<a href="/pt/destinations/ontario/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>Ontário</h3>
+<p>Cataratas do Niágara, Toronto e Ottawa</p>
+</div>
+</a>
+<a href="/pt/destinations/quebec/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>Quebec</h3>
+<p>Cultura francesa e charme histórico</p>
+</div>
+</a>
+<a href="/pt/destinations/nova-escocia/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>Nova Escócia</h3>
+<p>Charme marítimo e beleza costeira</p>
+</div>
+</a>
+<a href="/pt/destinations/yukon/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>Yukon</h3>
+<p>Aurora boreal e natureza selvagem</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<section class="section bg-gray">
+<div class="container">
+<header class="section-header">
+<span class="section-badge">Cidades Populares</span>
+<h2 class="section-title">Cidades Imperdíveis do Canadá</h2>
+<p class="section-subtitle">De metrópoles cosmopolitas a pequenas cidades encantadoras, explore os destinos urbanos mais cativantes do Canadá.</p>
+</header>
+
+<div class="city-grid">
+<a href="/pt/destinations/cities/toronto/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>Toronto</h3><span>Ontário</span></div>
+</a>
+<a href="/pt/destinations/cities/vancouver/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>Vancouver</h3><span>Colúmbia Britânica</span></div>
+</a>
+<a href="/pt/destinations/cities/montreal/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>Montreal</h3><span>Quebec</span></div>
+</a>
+<a href="/pt/destinations/cities/quebec-city/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>Cidade de Quebec</h3><span>Quebec</span></div>
+</a>
+<a href="/pt/destinations/cities/calgary/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>Calgary</h3><span>Alberta</span></div>
+</a>
+<a href="/pt/destinations/cities/ottawa/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>Ottawa</h3><span>Ontário</span></div>
+</a>
+<a href="/pt/destinations/cities/victoria/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>Victoria</h3><span>Colúmbia Britânica</span></div>
+</a>
+<a href="/pt/destinations/cities/halifax/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>Halifax</h3><span>Nova Escócia</span></div>
+</a>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<header class="section-header">
+<span class="section-badge">Regiões de Viagem</span>
+<h2 class="section-title">Explore por Região</h2>
+<p class="section-subtitle">Planeje sua viagem por região geográfica, cada uma com paisagens, culturas e atrações distintas.</p>
+</header>
+
+<div class="region-grid">
+<a href="/pt/destinations/canada-ocidental/" class="region-card">
+<div class="region-icon">🏔️</div>
+<div class="region-content">
+<h3>Canadá Ocidental</h3>
+<p>Colúmbia Britânica e Alberta - Montanhas, oceano e aventura</p>
+<div class="region-tags">
+<span class="region-tag">Vancouver</span>
+<span class="region-tag">Banff</span>
+<span class="region-tag">Whistler</span>
+</div>
+</div>
+</a>
+<a href="/pt/destinations/canada-oriental/" class="region-card">
+<div class="region-icon">🏛️</div>
+<div class="region-content">
+<h3>Canadá Oriental</h3>
+<p>Ontário e Quebec - Cultura, história e emoção urbana</p>
+<div class="region-tags">
+<span class="region-tag">Toronto</span>
+<span class="region-tag">Montreal</span>
+<span class="region-tag">Ottawa</span>
+</div>
+</div>
+</a>
+<a href="/pt/destinations/canada-atlantico/" class="region-card">
+<div class="region-icon">⚓</div>
+<div class="region-content">
+<h3>Canadá Atlântico</h3>
+<p>Províncias marítimas - Charme costeiro e frutos do mar</p>
+<div class="region-tags">
+<span class="region-tag">Halifax</span>
+<span class="region-tag">PEI</span>
+<span class="region-tag">St. John's</span>
+</div>
+</div>
+</a>
+<a href="/pt/destinations/canada-norte/" class="region-card">
+<div class="region-icon">🌌</div>
+<div class="region-content">
+<h3>Canadá Norte</h3>
+<p>Yukon, NWT e Nunavut - Aurora, natureza, aventura</p>
+<div class="region-tags">
+<span class="region-tag">Yellowknife</span>
+<span class="region-tag">Whitehorse</span>
+<span class="region-tag">Aurora</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<h4>Destinos</h4>
+<a href="/pt/destinations/cities/toronto/">Toronto</a>
+<a href="/pt/destinations/cities/vancouver/">Vancouver</a>
+<a href="/pt/destinations/cities/montreal/">Montreal</a>
+<a href="/pt/parques-nacionais/banff/">Banff</a>
+</div>
+<div class="footer-col">
+<h4>Planejar</h4>
+<a href="/pt/planejar/visto/">Visto e eTA</a>
+<a href="/pt/planejar/melhor-epoca/">Melhor Época</a>
+<a href="/pt/roteiros/">Roteiros</a>
+</div>
+<div class="footer-col">
+<h4>Experiências</h4>
+<a href="/pt/experiencias/aurora-boreal/">Aurora Boreal</a>
+<a href="/pt/experiencias/vida-selvagem/">Vida Selvagem</a>
+<a href="/pt/experiencias/esqui/">Esqui</a>
+</div>
+<div class="footer-col">
+<h4>Idiomas</h4>
+<a href="/destinations/">English</a>
+<a href="/es/destinations/">Español</a>
+<a href="/it/destinations/">Italiano</a>
+</div>
+</div>
+<div class="footer-bottom">© 2025 Top Canada Travel. Todos os direitos reservados.</div>
+</div>
+</footer>
+
+<nav class="mobile-nav">
+<a href="/pt/" class="nav-item"><span class="nav-icon">🏠</span>Início</a>
+<a href="/pt/destinations/" class="nav-item active"><span class="nav-icon">📍</span>Explorar</a>
+<a href="/pt/roteiros/" class="nav-item"><span class="nav-icon">🗺️</span>Roteiros</a>
+<a href="/pt/planejar/" class="nav-item"><span class="nav-icon">✈️</span>Planejar</a>
+</nav>
+</body>
+</html>
