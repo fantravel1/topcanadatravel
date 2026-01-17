@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カナダ旅行先ガイド2025 | 都市・州・地域 | Top Canada Travel</title>
+<meta name="description" content="150以上のカナダの旅行先を探索。トロントやバンクーバーなどの活気ある都市から、息をのむような州や隠れた名所まで。">
+<link rel="canonical" href="https://topcanadatravel.com/ja/destinations/">
+<link rel="alternate" hreflang="en" href="https://topcanadatravel.com/destinations/">
+<link rel="alternate" hreflang="ja" href="https://topcanadatravel.com/ja/destinations/">
+<link rel="alternate" hreflang="zh-Hans" href="https://topcanadatravel.com/zh-hans/destinations/">
+<link rel="alternate" hreflang="x-default" href="https://topcanadatravel.com/destinations/">
+<meta property="og:title" content="カナダ旅行先ガイド2025 | Top Canada Travel">
+<meta property="og:description" content="150以上のカナダの旅行先を専門家ガイドで探索。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#e63946;--blue:#1d3557;--light:#f1faee;--accent:#457b9d;--text:#2d3748;--gray:#64748b;--light-gray:#f8fafc;--shadow:0 4px 20px rgba(0,0,0,0.1);--radius:16px}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,system-ui,sans-serif;color:var(--text);line-height:1.8}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100}
+.header-content{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-size:1.25rem;font-weight:700;color:var(--blue)}
+.logo span{color:var(--red)}
+nav{display:none}
+@media(min-width:768px){nav{display:flex;gap:20px}nav a{color:var(--text);font-weight:500;padding:8px 12px;border-radius:8px}nav a:hover{background:var(--light-gray)}nav a.active{color:var(--red)}}
+.lang-switch{background:var(--light);padding:6px 12px;border-radius:20px;font-size:0.85rem}
+
+.hero{background:linear-gradient(135deg,var(--blue),var(--accent));color:#fff;padding:100px 20px 60px;text-align:center}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.2);padding:8px 16px;border-radius:20px;font-size:0.9rem;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:16px}
+.hero p{font-size:1.1rem;opacity:0.9;max-width:600px;margin:0 auto}
+
+.breadcrumb{background:var(--light-gray);padding:12px 0;border-bottom:1px solid #e5e7eb}
+.breadcrumb-list{display:flex;gap:8px;font-size:0.875rem;color:var(--gray)}
+
+.section{padding:60px 20px}
+.section-header{text-align:center;margin-bottom:40px}
+.section-badge{display:inline-block;background:#fee2e2;color:var(--red);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;margin-bottom:12px}
+.section-title{font-size:clamp(1.5rem,4vw,2.25rem);color:var(--blue);margin-bottom:12px}
+.section-subtitle{color:var(--gray);font-size:1.1rem;max-width:600px;margin:0 auto}
+
+.province-grid{display:grid;gap:20px}
+@media(min-width:640px){.province-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.province-grid{grid-template-columns:repeat(3,1fr)}}
+
+.province-card{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/10;background:linear-gradient(135deg,var(--blue),var(--accent))}
+.province-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.province-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent)}
+.province-content{position:absolute;bottom:0;left:0;right:0;padding:20px;color:#fff}
+.province-content h3{font-size:1.5rem;margin-bottom:4px}
+.province-content p{font-size:0.9rem;opacity:0.9}
+
+.city-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(min-width:640px){.city-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.city-grid{grid-template-columns:repeat(4,1fr)}}
+
+.city-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:1;background:linear-gradient(135deg,var(--accent),var(--blue))}
+.city-card:hover{transform:translateY(-4px)}
+.city-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent)}
+.city-content{position:absolute;bottom:0;left:0;right:0;padding:16px;color:#fff}
+.city-content h3{font-size:1.1rem;margin-bottom:2px}
+.city-content span{font-size:0.75rem;opacity:0.8}
+
+.region-grid{display:grid;gap:20px}
+@media(min-width:768px){.region-grid{grid-template-columns:repeat(2,1fr)}}
+
+.region-card{display:flex;gap:20px;padding:20px;background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);transition:all 0.2s}
+.region-card:hover{border-color:var(--red);box-shadow:var(--shadow)}
+.region-icon{width:64px;height:64px;display:flex;align-items:center;justify-content:center;background:var(--light-gray);border-radius:12px;font-size:2rem;flex-shrink:0}
+.region-content h3{font-size:1.25rem;color:var(--blue);margin-bottom:8px}
+.region-content p{color:var(--gray);font-size:0.95rem;margin-bottom:12px}
+.region-tags{display:flex;flex-wrap:wrap;gap:8px}
+.region-tag{padding:4px 12px;background:var(--light-gray);border-radius:20px;font-size:0.75rem;color:var(--gray)}
+
+.bg-gray{background:var(--light-gray)}
+
+footer{background:var(--blue);color:#fff;padding:40px 20px}
+.footer-grid{display:grid;gap:30px;margin-bottom:30px}
+@media(min-width:768px){.footer-grid{grid-template-columns:repeat(4,1fr)}}
+.footer-col h4{font-size:0.875rem;margin-bottom:16px;color:var(--red)}
+.footer-col a{display:block;color:rgba(255,255,255,0.8);padding:4px 0;font-size:0.9rem}
+.footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.2);font-size:0.875rem;opacity:0.8}
+
+.mobile-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -2px 10px rgba(0,0,0,0.1);padding:8px 0;padding-bottom:max(8px,env(safe-area-inset-bottom));display:flex;justify-content:space-around;z-index:100}
+@media(min-width:1024px){.mobile-nav{display:none}}
+.nav-item{display:flex;flex-direction:column;align-items:center;padding:8px;color:var(--gray);font-size:0.65rem}
+.nav-item.active{color:var(--red)}
+.nav-icon{font-size:1.25rem;margin-bottom:2px}
+body{padding-bottom:70px}
+@media(min-width:1024px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<header>
+<div class="header-content container">
+<a href="/ja/" class="logo">Top<span>Canada</span>Travel</a>
+<nav>
+<a href="/ja/destinations/" class="active">観光地</a>
+<a href="/ja/national-parks/">国立公園</a>
+<a href="/ja/experiences/">体験</a>
+<a href="/ja/itineraries/">旅程</a>
+<a href="/ja/plan/">計画</a>
+</nav>
+<a href="/destinations/" class="lang-switch">EN</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<span class="hero-badge">🗺️ 150+の観光地</span>
+<h1>カナダを探索</h1>
+<p>ワールドクラスの都市から人里離れた荒野まで、カナダを世界で最も多様な旅行体験の一つにする観光地を発見してください。</p>
+</div>
+</section>
+
+<nav class="breadcrumb">
+<div class="container">
+<ol class="breadcrumb-list">
+<li><a href="/ja/">ホーム</a></li>
+<li>/</li>
+<li>観光地</li>
+</ol>
+</div>
+</nav>
+
+<section class="section">
+<div class="container">
+<header class="section-header">
+<span class="section-badge">州と準州</span>
+<h2 class="section-title">地域別に探索</h2>
+<p class="section-subtitle">カナダは10州と3準州にまたがる6つのタイムゾーンを持ちます。それぞれが独自の景観、文化、体験を提供します。</p>
+</header>
+
+<div class="province-grid">
+<a href="/ja/destinations/british-columbia/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>ブリティッシュコロンビア州</h3>
+<p>山、海、そしてワールドクラスの都市</p>
+</div>
+</a>
+<a href="/ja/destinations/alberta/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>アルバータ州</h3>
+<p>ロッキー山脈と大平原の風景</p>
+</div>
+</a>
+<a href="/ja/destinations/ontario/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>オンタリオ州</h3>
+<p>ナイアガラの滝、トロント、オタワ</p>
+</div>
+</a>
+<a href="/ja/destinations/quebec/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>ケベック州</h3>
+<p>フランス文化と歴史的な魅力</p>
+</div>
+</a>
+<a href="/ja/destinations/nova-scotia/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>ノバスコシア州</h3>
+<p>海洋の魅力と海岸の美しさ</p>
+</div>
+</a>
+<a href="/ja/destinations/yukon/" class="province-card">
+<div class="province-overlay"></div>
+<div class="province-content">
+<h3>ユーコン準州</h3>
+<p>オーロラと荒野</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<section class="section bg-gray">
+<div class="container">
+<header class="section-header">
+<span class="section-badge">人気の都市</span>
+<h2 class="section-title">必見のカナダの都市</h2>
+<p class="section-subtitle">国際的な大都市から魅力的な小さな町まで、カナダで最も魅力的な都市の旅行先を探索してください。</p>
+</header>
+
+<div class="city-grid">
+<a href="/ja/destinations/cities/toronto/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>トロント</h3><span>オンタリオ州</span></div>
+</a>
+<a href="/ja/destinations/cities/vancouver/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>バンクーバー</h3><span>ブリティッシュコロンビア州</span></div>
+</a>
+<a href="/ja/destinations/cities/montreal/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>モントリオール</h3><span>ケベック州</span></div>
+</a>
+<a href="/ja/destinations/cities/quebec-city/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>ケベックシティ</h3><span>ケベック州</span></div>
+</a>
+<a href="/ja/destinations/cities/calgary/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>カルガリー</h3><span>アルバータ州</span></div>
+</a>
+<a href="/ja/destinations/cities/ottawa/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>オタワ</h3><span>オンタリオ州</span></div>
+</a>
+<a href="/ja/destinations/cities/victoria/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>ビクトリア</h3><span>ブリティッシュコロンビア州</span></div>
+</a>
+<a href="/ja/destinations/cities/halifax/" class="city-card">
+<div class="city-overlay"></div>
+<div class="city-content"><h3>ハリファックス</h3><span>ノバスコシア州</span></div>
+</a>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<header class="section-header">
+<span class="section-badge">旅行地域</span>
+<h2 class="section-title">地域別に探索</h2>
+<p class="section-subtitle">地理的な地域ごとに旅行を計画。それぞれに独特の景観、文化、アトラクションがあります。</p>
+</header>
+
+<div class="region-grid">
+<a href="/ja/destinations/western-canada/" class="region-card">
+<div class="region-icon">🏔️</div>
+<div class="region-content">
+<h3>カナダ西部</h3>
+<p>ブリティッシュコロンビア州とアルバータ州 - 山、海、冒険</p>
+<div class="region-tags">
+<span class="region-tag">バンクーバー</span>
+<span class="region-tag">バンフ</span>
+<span class="region-tag">ウィスラー</span>
+</div>
+</div>
+</a>
+<a href="/ja/destinations/eastern-canada/" class="region-card">
+<div class="region-icon">🏛️</div>
+<div class="region-content">
+<h3>カナダ東部</h3>
+<p>オンタリオ州とケベック州 - 文化、歴史、都市の興奮</p>
+<div class="region-tags">
+<span class="region-tag">トロント</span>
+<span class="region-tag">モントリオール</span>
+<span class="region-tag">オタワ</span>
+</div>
+</div>
+</a>
+<a href="/ja/destinations/atlantic-canada/" class="region-card">
+<div class="region-icon">⚓</div>
+<div class="region-content">
+<h3>大西洋カナダ</h3>
+<p>沿海州 - 海岸の魅力とシーフード</p>
+<div class="region-tags">
+<span class="region-tag">ハリファックス</span>
+<span class="region-tag">PEI</span>
+<span class="region-tag">セントジョンズ</span>
+</div>
+</div>
+</a>
+<a href="/ja/destinations/northern-canada/" class="region-card">
+<div class="region-icon">🌌</div>
+<div class="region-content">
+<h3>カナダ北部</h3>
+<p>ユーコン、NWT、ヌナブト - オーロラ、荒野、冒険</p>
+<div class="region-tags">
+<span class="region-tag">イエローナイフ</span>
+<span class="region-tag">ホワイトホース</span>
+<span class="region-tag">オーロラ</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<h4>観光地</h4>
+<a href="/ja/destinations/cities/toronto/">トロント</a>
+<a href="/ja/destinations/cities/vancouver/">バンクーバー</a>
+<a href="/ja/destinations/cities/montreal/">モントリオール</a>
+<a href="/ja/national-parks/banff/">バンフ</a>
+</div>
+<div class="footer-col">
+<h4>計画</h4>
+<a href="/ja/plan/visa/">ビザ・eTA</a>
+<a href="/ja/plan/best-time/">ベストシーズン</a>
+<a href="/ja/itineraries/">旅程</a>
+</div>
+<div class="footer-col">
+<h4>体験</h4>
+<a href="/ja/experiences/aurora/">オーロラ</a>
+<a href="/ja/experiences/wildlife/">野生動物</a>
+<a href="/ja/experiences/skiing/">スキー</a>
+</div>
+<div class="footer-col">
+<h4>言語</h4>
+<a href="/destinations/">English</a>
+<a href="/zh-hans/destinations/">中文</a>
+<a href="/ko/destinations/">한국어</a>
+</div>
+</div>
+<div class="footer-bottom">© 2025 Top Canada Travel. All rights reserved.</div>
+</div>
+</footer>
+
+<nav class="mobile-nav">
+<a href="/ja/" class="nav-item"><span class="nav-icon">🏠</span>ホーム</a>
+<a href="/ja/destinations/" class="nav-item active"><span class="nav-icon">📍</span>探索</a>
+<a href="/ja/itineraries/" class="nav-item"><span class="nav-icon">🗺️</span>旅程</a>
+<a href="/ja/plan/" class="nav-item"><span class="nav-icon">✈️</span>計画</a>
+</nav>
+</body>
+</html>
