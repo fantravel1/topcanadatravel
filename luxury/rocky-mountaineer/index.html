@@ -65,6 +65,39 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between GoldLeaf and SilverLeaf Service?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GoldLeaf Service features bi-level glass-dome coaches with a separate dining car below, outdoor viewing platform, premium gourmet meals, and upgraded hotel accommodations. SilverLeaf offers single-level dome coaches with meals served at your seat, still providing an excellent experience at a lower price point."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why does the train only travel during daylight?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Rocky Mountaineer travels exclusively during daylight hours so passengers never miss any of the spectacular scenery. Overnight stops are at hotels along the route, allowing guests to rest comfortably and explore the towns they visit."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When is the best time to take the Rocky Mountaineer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The train operates from mid-April through mid-October. June through September offers the warmest weather and longest days. May and October provide shoulder-season value with beautiful spring blooms or fall colors."
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         :root {
             --color-gold: #D4AF37; --color-gold-dark: #B8960F; --color-gold-light: #F4E4BA;
@@ -107,20 +140,27 @@
         .mobile-menu-btn { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: var(--color-white); }
         @media (min-width: 1024px) { .mobile-menu-btn { display: none; } }
 
-        .hero { position: relative; min-height: 70vh; display: flex; align-items: center; padding-top: 72px; background: linear-gradient(135deg, var(--color-luxury-dark) 0%, var(--color-luxury-medium) 100%); overflow: hidden; }
-        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(212,175,55,0.2) 0%, transparent 60%); pointer-events: none; }
-        .hero-image { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1600&q=80') center/cover; opacity: 0.3; }
-        .hero-content { position: relative; z-index: 1; max-width: 800px; }
-        .hero-badge { display: inline-flex; padding: var(--space-2) var(--space-5); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; color: var(--color-luxury-dark); margin-bottom: var(--space-6); text-transform: uppercase; letter-spacing: 0.1em; }
-        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; line-height: 1.1; color: var(--color-white); margin-bottom: var(--space-6); }
-        .hero-title span { color: var(--color-gold); }
-        .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); line-height: 1.7; }
-        .hero-meta { display: flex; flex-wrap: wrap; gap: var(--space-6); }
-        .hero-meta-item { display: flex; flex-direction: column; }
-        .hero-meta-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
-        .hero-meta-value { font-size: 1.25rem; font-weight: 700; color: var(--color-gold); }
+        /* Full-viewport Hero */
+        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,26,46,0.4) 0%, rgba(26,26,46,0.7) 50%, rgba(26,26,46,0.95) 100%); }
+        .hero-content { position: relative; z-index: 10; text-align: center; max-width: 900px; padding: var(--space-8); padding-top: 100px; }
+        .hero-badge { display: inline-flex; padding: var(--space-2) var(--space-6); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; color: var(--color-luxury-dark); margin-bottom: var(--space-6); text-transform: uppercase; letter-spacing: 0.15em; }
+        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 700; line-height: 1.1; color: var(--color-white); margin-bottom: var(--space-6); }
+        .hero-title span { color: var(--color-gold); display: block; }
+        .hero-subtitle { font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: rgba(255,255,255,0.9); margin-bottom: var(--space-10); line-height: 1.7; max-width: 700px; margin-left: auto; margin-right: auto; }
 
-        .breadcrumb { padding: var(--space-4) 0; background: rgba(26,26,46,0.5); }
+        .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+        @media (min-width: 768px) { .hero-stats { grid-template-columns: repeat(4, 1fr); } }
+        .hero-stat { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.3); border-radius: var(--radius-xl); padding: var(--space-5); text-align: center; }
+        .hero-stat-value { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--color-gold); line-height: 1.2; }
+        .hero-stat-label { font-size: 0.8125rem; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-1); }
+
+        .scroll-indicator { position: absolute; bottom: var(--space-8); left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); color: rgba(255,255,255,0.6); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); } 40% { transform: translateX(-50%) translateY(-10px); } 60% { transform: translateX(-50%) translateY(-5px); } }
+
+        .breadcrumb { padding: var(--space-4) 0; background: var(--color-luxury-dark); }
         .breadcrumb-list { display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: rgba(255,255,255,0.6); }
         .breadcrumb-list a:hover { color: var(--color-gold); }
         .breadcrumb-separator { color: rgba(255,255,255,0.3); }
@@ -135,40 +175,170 @@
         .section-subtitle { font-size: 1.125rem; color: var(--color-gray-600); line-height: 1.7; }
         .section-dark .section-subtitle { color: rgba(255,255,255,0.8); }
 
-        .routes-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-8); }
-        @media (min-width: 768px) { .routes-grid { grid-template-columns: repeat(2, 1fr); } }
+        /* Photo Gallery */
+        .gallery { padding: var(--space-12) 0; background: var(--color-gray-50); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+        @media (min-width: 768px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: var(--space-4); } }
+        .gallery-item { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3; }
+        .gallery-item.tall { grid-row: span 2; aspect-ratio: auto; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
 
-        .route-card { background: var(--color-white); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg); transition: all var(--transition-base); border: 1px solid var(--color-gray-200); }
-        .route-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-gold); border-color: var(--color-gold); }
-        .route-image { height: 220px; background-size: cover; background-position: center; position: relative; }
-        .route-badge { position: absolute; top: var(--space-4); left: var(--space-4); padding: var(--space-2) var(--space-4); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; border-radius: var(--radius-full); }
-        .route-content { padding: var(--space-6); }
-        .route-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: var(--space-2); }
-        .route-path { font-size: 0.9375rem; color: var(--color-gold-dark); font-weight: 500; margin-bottom: var(--space-3); }
-        .route-desc { font-size: 0.9375rem; color: var(--color-gray-600); line-height: 1.7; margin-bottom: var(--space-4); }
-        .route-details { display: flex; flex-wrap: wrap; gap: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--color-gray-200); font-size: 0.875rem; color: var(--color-gray-500); }
-        .route-price { font-size: 1.5rem; font-weight: 700; color: var(--color-gold-dark); margin-top: var(--space-4); }
-        .route-price span { font-size: 0.875rem; font-weight: 400; color: var(--color-gray-500); }
+        /* Experience Grid */
+        .experience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+        @media (min-width: 768px) { .experience-grid { grid-template-columns: repeat(4, 1fr); } }
+        .experience-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: var(--radius-xl); padding: var(--space-6); text-align: center; transition: all var(--transition-base); }
+        .experience-card:hover { background: rgba(212,175,55,0.1); border-color: var(--color-gold); transform: translateY(-4px); }
+        .experience-icon { font-size: 2.5rem; margin-bottom: var(--space-3); }
+        .experience-title { font-weight: 600; color: var(--color-white); margin-bottom: var(--space-2); }
+        .experience-text { font-size: 0.875rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
 
-        .goldleaf-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-8); align-items: center; }
-        @media (min-width: 1024px) { .goldleaf-grid { grid-template-columns: 1fr 1fr; } }
-        .goldleaf-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; color: var(--color-gray-900); margin-bottom: var(--space-6); }
-        .goldleaf-content p { font-size: 1.125rem; color: var(--color-gray-600); line-height: 1.8; margin-bottom: var(--space-6); }
-        .goldleaf-features { display: grid; grid-template-columns: 1fr; gap: var(--space-4); margin-bottom: var(--space-8); }
-        @media (min-width: 480px) { .goldleaf-features { grid-template-columns: repeat(2, 1fr); } }
-        .goldleaf-feature { display: flex; align-items: flex-start; gap: var(--space-3); }
-        .goldleaf-feature-icon { flex-shrink: 0; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--color-gold-light); border-radius: var(--radius-md); font-size: 1.25rem; }
-        .goldleaf-feature-text { font-size: 0.9375rem; color: var(--color-gray-700); font-weight: 500; }
-        .goldleaf-image { border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-xl); }
-        .goldleaf-image img { width: 100%; height: 400px; object-fit: cover; }
+        /* Service Comparison */
+        .comparison-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-6); }
+        @media (min-width: 1024px) { .comparison-grid { grid-template-columns: repeat(2, 1fr); } }
 
-        .highlights-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
-        @media (min-width: 768px) { .highlights-grid { grid-template-columns: repeat(4, 1fr); } }
-        .highlight-item { text-align: center; padding: var(--space-6); background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); border-radius: var(--radius-xl); }
-        .highlight-icon { font-size: 2.5rem; margin-bottom: var(--space-3); }
-        .highlight-title { font-weight: 600; color: var(--color-white); margin-bottom: var(--space-1); }
-        .highlight-text { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
+        .service-card { background: var(--color-white); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid var(--color-gray-200); transition: all var(--transition-base); }
+        .service-card.featured { border-color: var(--color-gold); }
+        .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
 
+        .service-header { padding: var(--space-6); background: linear-gradient(135deg, var(--color-luxury-dark), var(--color-luxury-medium)); color: var(--color-white); text-align: center; }
+        .service-card.featured .service-header { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); }
+        .service-badge { display: inline-block; padding: var(--space-1) var(--space-3); background: rgba(255,255,255,0.2); border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-3); }
+        .service-card.featured .service-badge { background: rgba(26,26,46,0.2); }
+        .service-name { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; margin-bottom: var(--space-2); }
+        .service-price { font-size: 1.25rem; opacity: 0.9; }
+        .service-price strong { font-size: 2rem; }
+
+        .service-body { padding: var(--space-6); }
+        .service-features { display: flex; flex-direction: column; gap: var(--space-3); }
+        .service-feature { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--color-gray-100); }
+        .service-feature:last-child { border-bottom: none; }
+        .service-feature-icon { flex-shrink: 0; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; background: var(--color-gold-light); color: var(--color-gold-dark); border-radius: var(--radius-full); font-size: 0.875rem; }
+        .service-feature-text { font-size: 0.9375rem; color: var(--color-gray-700); }
+        .service-feature-text strong { color: var(--color-gray-900); }
+
+        /* Route Cards */
+        .routes-container { display: flex; flex-direction: column; gap: var(--space-12); }
+
+        .route-detail { display: grid; grid-template-columns: 1fr; gap: var(--space-8); align-items: start; }
+        @media (min-width: 1024px) { .route-detail { grid-template-columns: 1fr 1fr; } }
+        .route-detail:nth-child(even) .route-detail-image { order: -1; }
+        @media (min-width: 1024px) { .route-detail:nth-child(even) .route-detail-image { order: 1; } }
+
+        .route-detail-content { padding: var(--space-4) 0; }
+        .route-badge-container { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+        .route-type-badge { padding: var(--space-2) var(--space-4); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-radius: var(--radius-full); }
+        .route-duration { font-size: 0.875rem; color: var(--color-gray-500); font-weight: 500; }
+
+        .route-detail-title { font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; color: var(--color-gray-900); margin-bottom: var(--space-2); }
+        .route-detail-path { font-size: 1.125rem; color: var(--color-gold-dark); font-weight: 600; margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2); }
+        .route-detail-desc { font-size: 1.0625rem; color: var(--color-gray-600); line-height: 1.8; margin-bottom: var(--space-6); }
+
+        .route-highlights { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin-bottom: var(--space-6); }
+        .route-highlight { display: flex; align-items: center; gap: var(--space-2); font-size: 0.9375rem; color: var(--color-gray-700); }
+        .route-highlight-icon { color: var(--color-gold-dark); }
+
+        .route-itinerary { background: var(--color-gray-50); border-radius: var(--radius-xl); padding: var(--space-5); margin-bottom: var(--space-6); }
+        .route-itinerary-title { font-weight: 700; color: var(--color-gray-900); margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2); }
+        .route-day { display: flex; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--color-gray-200); }
+        .route-day:last-child { border-bottom: none; }
+        .route-day-num { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-gold); color: var(--color-luxury-dark); font-weight: 700; font-size: 0.875rem; border-radius: var(--radius-full); }
+        .route-day-content { flex: 1; }
+        .route-day-title { font-weight: 600; color: var(--color-gray-900); margin-bottom: var(--space-1); }
+        .route-day-desc { font-size: 0.875rem; color: var(--color-gray-600); line-height: 1.6; }
+
+        .route-price-tag { display: inline-flex; align-items: baseline; gap: var(--space-2); background: linear-gradient(135deg, var(--color-luxury-dark), var(--color-luxury-medium)); color: var(--color-white); padding: var(--space-3) var(--space-5); border-radius: var(--radius-lg); }
+        .route-price-tag strong { font-size: 1.5rem; color: var(--color-gold); }
+        .route-price-tag span { font-size: 0.875rem; opacity: 0.8; }
+
+        .route-detail-image { border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-xl); }
+        .route-detail-image img { width: 100%; height: 100%; min-height: 400px; object-fit: cover; }
+
+        /* Scenic Highlights */
+        .scenic-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-6); }
+        @media (min-width: 768px) { .scenic-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .scenic-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .scenic-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: var(--radius-xl); overflow: hidden; transition: all var(--transition-base); }
+        .scenic-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .scenic-image { height: 200px; overflow: hidden; }
+        .scenic-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .scenic-card:hover .scenic-image img { transform: scale(1.1); }
+        .scenic-content { padding: var(--space-5); }
+        .scenic-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--color-white); margin-bottom: var(--space-2); }
+        .scenic-route { font-size: 0.8125rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-3); }
+        .scenic-desc { font-size: 0.9375rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
+
+        /* Sample Day Timeline */
+        .timeline-container { max-width: 800px; margin: 0 auto; }
+        .timeline-item { display: flex; gap: var(--space-6); padding: var(--space-6) 0; border-bottom: 1px solid var(--color-gray-200); }
+        .timeline-item:last-child { border-bottom: none; }
+        .timeline-time { flex-shrink: 0; width: 100px; text-align: right; }
+        .timeline-time-value { font-size: 1.25rem; font-weight: 700; color: var(--color-gold-dark); }
+        .timeline-time-period { font-size: 0.75rem; color: var(--color-gray-500); text-transform: uppercase; }
+        .timeline-content { flex: 1; padding-left: var(--space-6); border-left: 2px solid var(--color-gold); }
+        .timeline-title { font-weight: 700; color: var(--color-gray-900); margin-bottom: var(--space-2); font-size: 1.125rem; }
+        .timeline-desc { font-size: 0.9375rem; color: var(--color-gray-600); line-height: 1.7; }
+
+        /* Seasonal Guide */
+        .season-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+        @media (min-width: 768px) { .season-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .season-card { background: var(--color-white); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); }
+        .season-header { padding: var(--space-4) var(--space-5); display: flex; align-items: center; gap: var(--space-3); }
+        .season-header.spring { background: linear-gradient(135deg, #a8e6cf, #88d8b0); }
+        .season-header.summer { background: linear-gradient(135deg, #ffd93d, #ff9a3c); }
+        .season-header.fall { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+        .season-header.shoulder { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
+        .season-icon { font-size: 2rem; }
+        .season-title { font-weight: 700; color: var(--color-luxury-dark); }
+        .season-months { font-size: 0.875rem; opacity: 0.8; }
+        .season-body { padding: var(--space-5); }
+        .season-highlights { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-4); }
+        .season-highlight { display: flex; align-items: flex-start; gap: var(--space-2); font-size: 0.9375rem; color: var(--color-gray-700); }
+        .season-highlight-icon { color: var(--color-gold-dark); flex-shrink: 0; margin-top: 2px; }
+        .season-tip { background: var(--color-gray-50); border-radius: var(--radius-md); padding: var(--space-3); font-size: 0.875rem; color: var(--color-gray-600); }
+        .season-tip strong { color: var(--color-gray-900); }
+
+        /* Packing Checklist */
+        .packing-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-6); }
+        @media (min-width: 768px) { .packing-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .packing-category { background: var(--color-white); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); }
+        .packing-category-header { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); padding-bottom: var(--space-4); border-bottom: 2px solid var(--color-gold-light); }
+        .packing-category-icon { font-size: 1.75rem; }
+        .packing-category-title { font-weight: 700; color: var(--color-gray-900); }
+        .packing-list { display: flex; flex-direction: column; gap: var(--space-2); }
+        .packing-item { display: flex; align-items: center; gap: var(--space-2); font-size: 0.9375rem; color: var(--color-gray-700); }
+        .packing-item::before { content: ''; width: 16px; height: 16px; border: 2px solid var(--color-gold); border-radius: var(--radius-sm); flex-shrink: 0; }
+
+        /* FAQ Accordion */
+        .faq-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-4); }
+        .faq-item { background: var(--color-white); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--color-gray-200); transition: all var(--transition-base); }
+        .faq-item:hover { border-color: var(--color-gold); }
+        .faq-question { width: 100%; padding: var(--space-5) var(--space-6); display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); text-align: left; font-size: 1.0625rem; font-weight: 600; color: var(--color-gray-900); background: transparent; cursor: pointer; }
+        .faq-question:hover { color: var(--color-gold-dark); }
+        .faq-icon { flex-shrink: 0; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: var(--color-gold-light); color: var(--color-gold-dark); border-radius: var(--radius-full); font-size: 1.25rem; font-weight: 400; transition: transform var(--transition-base); }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-answer-content { padding: 0 var(--space-6) var(--space-5); font-size: 0.9375rem; color: var(--color-gray-600); line-height: 1.8; }
+
+        /* Testimonials */
+        .testimonial-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-6); }
+        @media (min-width: 768px) { .testimonial-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .testimonial-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: var(--radius-xl); padding: var(--space-6); }
+        .testimonial-stars { color: var(--color-gold); font-size: 1.125rem; letter-spacing: 2px; margin-bottom: var(--space-4); }
+        .testimonial-text { font-size: 1rem; color: rgba(255,255,255,0.9); line-height: 1.8; margin-bottom: var(--space-4); font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: var(--space-3); padding-top: var(--space-4); border-top: 1px solid rgba(212,175,55,0.2); }
+        .testimonial-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-luxury-dark); }
+        .testimonial-info { }
+        .testimonial-name { font-weight: 600; color: var(--color-white); }
+        .testimonial-route { font-size: 0.875rem; color: var(--color-gold); }
+
+        /* CTA Section */
         .cta-section { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); text-align: center; padding: var(--space-16) 0; }
         .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); color: var(--color-luxury-dark); margin-bottom: var(--space-4); }
         .cta-text { font-size: 1.125rem; color: var(--color-luxury-dark); opacity: 0.9; max-width: 600px; margin: 0 auto var(--space-8); }
@@ -191,6 +361,10 @@
         .bottom-nav-item { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); padding: var(--space-2); font-size: 0.625rem; color: rgba(255,255,255,0.6); }
         .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--color-gold); }
         .bottom-nav-icon { font-size: 1.25rem; }
+
+        /* Animation */
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
@@ -226,31 +400,46 @@
     </div>
 
     <main id="main-content">
+        <!-- Immersive Hero -->
         <section class="hero">
-            <div class="hero-image"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-badge">Iconic Rail Journey</span>
-                    <h1 class="hero-title"><span>Rocky Mountaineer</span></h1>
-                    <p class="hero-subtitle">
-                        Travel through the Canadian Rockies in glass-dome luxury aboard the world's most spectacular
-                        train journey. Gourmet cuisine, impeccable service, and views that will take your breath away.
-                    </p>
-                    <div class="hero-meta">
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">GoldLeaf From</span>
-                            <span class="hero-meta-value">$3,500/journey</span>
-                        </div>
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">Duration</span>
-                            <span class="hero-meta-value">2-14 days</span>
-                        </div>
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">Season</span>
-                            <span class="hero-meta-value">April-October</span>
-                        </div>
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?w=1920&q=80" alt="Rocky Mountaineer train journey through Canadian Rockies">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">World's Greatest Train Journey</span>
+                <h1 class="hero-title">
+                    <span>Rocky Mountaineer</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Glide through the heart of the Canadian Rockies in glass-dome luxury. Experience
+                    gourmet cuisine, impeccable service, and vistas that have captivated travelers
+                    for over 30 years.
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">4</div>
+                        <div class="hero-stat-label">Spectacular Routes</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">2M+</div>
+                        <div class="hero-stat-label">Guests Since 1990</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">100%</div>
+                        <div class="hero-stat-label">Daylight Travel</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">65+</div>
+                        <div class="hero-stat-label">Awards Won</div>
                     </div>
                 </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Discover More</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
             </div>
         </section>
 
@@ -266,188 +455,1055 @@
             </div>
         </nav>
 
+        <!-- Photo Gallery -->
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item tall">
+                        <img src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=600&q=80" alt="Rocky Mountaineer train winding through mountains" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=600&q=80" alt="Glass dome observation car interior" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=600&q=80" alt="Turquoise glacial lake along route" loading="lazy">
+                    </div>
+                    <div class="gallery-item tall">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Dramatic mountain peaks" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Mountain river alongside tracks" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="Scenic mountain valley" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Experience -->
         <section class="section section-dark">
             <div class="container">
-                <header class="section-header">
-                    <span class="section-badge">The Journey</span>
-                    <h2 class="section-title">What Makes Rocky Mountaineer Special</h2>
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">The Experience</span>
+                    <h2 class="section-title">More Than a Train Journey</h2>
                     <p class="section-subtitle">
-                        More than just a train ride, the Rocky Mountaineer is a curated journey through some of
-                        Earth's most dramatic landscapes with service that rivals the world's finest hotels.
+                        Rocky Mountaineer transforms transportation into an unforgettable adventure.
+                        Every detail is crafted to ensure you experience the Canadian Rockies in
+                        absolute comfort and style.
                     </p>
                 </header>
 
-                <div class="highlights-grid">
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🏔️</div>
-                        <h3 class="highlight-title">Glass-Dome Views</h3>
-                        <p class="highlight-text">Bi-level coaches with panoramic windows and outdoor viewing platforms</p>
+                <div class="experience-grid animate-on-scroll">
+                    <div class="experience-card">
+                        <div class="experience-icon">🏔️</div>
+                        <h3 class="experience-title">Glass-Dome Coaches</h3>
+                        <p class="experience-text">Bi-level coaches with floor-to-ceiling windows and outdoor viewing platforms for unobstructed panoramas</p>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🍽️</div>
-                        <h3 class="highlight-title">Gourmet Dining</h3>
-                        <p class="highlight-text">Multi-course meals featuring Pacific Northwest cuisine</p>
+                    <div class="experience-card">
+                        <div class="experience-icon">🍽️</div>
+                        <h3 class="experience-title">Gourmet Cuisine</h3>
+                        <p class="experience-text">Multi-course meals featuring fresh Pacific Northwest ingredients, paired with premium wines and spirits</p>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🌅</div>
-                        <h3 class="highlight-title">Daylight Travel</h3>
-                        <p class="highlight-text">All travel during daylight hours so you never miss a view</p>
+                    <div class="experience-card">
+                        <div class="experience-icon">🌅</div>
+                        <h3 class="experience-title">Daylight Travel</h3>
+                        <p class="experience-text">All journeys during daylight hours with overnight hotel stays, so you never miss a single view</p>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🎯</div>
-                        <h3 class="highlight-title">Expert Hosts</h3>
-                        <p class="highlight-text">Dedicated hosts sharing stories and pointing out wildlife</p>
+                    <div class="experience-card">
+                        <div class="experience-icon">🎯</div>
+                        <h3 class="experience-title">Expert Hosts</h3>
+                        <p class="experience-text">Knowledgeable hosts share stories, point out wildlife, and ensure exceptional service throughout</p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-icon">🦅</div>
+                        <h3 class="experience-title">Wildlife Spotting</h3>
+                        <p class="experience-text">Watch for bears, eagles, elk, and mountain goats as you traverse remote wilderness corridors</p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-icon">📸</div>
+                        <h3 class="experience-title">Photo Opportunities</h3>
+                        <p class="experience-text">Outdoor viewing platforms perfect for capturing mountains, glaciers, and rushing rivers</p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-icon">🥂</div>
+                        <h3 class="experience-title">Premium Beverages</h3>
+                        <p class="experience-text">Complimentary beer, wine, and cocktails flow throughout the journey in GoldLeaf Service</p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-icon">🏨</div>
+                        <h3 class="experience-title">Luxury Hotels</h3>
+                        <p class="experience-text">Handpicked accommodations at the finest hotels in Kamloops, Quesnel, and your destination</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Service Levels Comparison -->
         <section class="section" style="background: var(--color-gray-50);">
             <div class="container">
-                <div class="goldleaf-grid">
-                    <div class="goldleaf-content">
-                        <h2>GoldLeaf Service</h2>
-                        <p>
-                            The ultimate Rocky Mountaineer experience. Travel in bi-level glass-dome coaches
-                            with exclusive dining in an elegant lower-level restaurant, outdoor viewing platform,
-                            and the most attentive service in rail travel.
-                        </p>
-
-                        <div class="goldleaf-features">
-                            <div class="goldleaf-feature">
-                                <div class="goldleaf-feature-icon">🥂</div>
-                                <div class="goldleaf-feature-text">Premium drinks & Champagne service</div>
-                            </div>
-                            <div class="goldleaf-feature">
-                                <div class="goldleaf-feature-icon">🪑</div>
-                                <div class="goldleaf-feature-text">Spacious reclining seats</div>
-                            </div>
-                            <div class="goldleaf-feature">
-                                <div class="goldleaf-feature-icon">👨‍🍳</div>
-                                <div class="goldleaf-feature-text">Multi-course gourmet meals</div>
-                            </div>
-                            <div class="goldleaf-feature">
-                                <div class="goldleaf-feature-icon">🏨</div>
-                                <div class="goldleaf-feature-text">Premium hotel accommodations</div>
-                            </div>
-                            <div class="goldleaf-feature">
-                                <div class="goldleaf-feature-icon">🧳</div>
-                                <div class="goldleaf-feature-text">Luggage delivery service</div>
-                            </div>
-                            <div class="goldleaf-feature">
-                                <div class="goldleaf-feature-icon">📸</div>
-                                <div class="goldleaf-feature-text">Priority boarding & photography</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="goldleaf-image">
-                        <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=800&q=80" alt="Rocky Mountaineer GoldLeaf dome car interior" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <header class="section-header">
-                    <span class="section-badge">Routes</span>
-                    <h2 class="section-title">Choose Your Journey</h2>
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">Choose Your Service</span>
+                    <h2 class="section-title">GoldLeaf vs SilverLeaf</h2>
                     <p class="section-subtitle">
-                        Four spectacular routes through Western Canada, each offering unique landscapes
-                        and experiences along the way.
+                        Both service levels offer exceptional comfort and hospitality. Choose GoldLeaf
+                        for the ultimate luxury experience, or SilverLeaf for outstanding value.
                     </p>
                 </header>
 
-                <div class="routes-grid">
-                    <div class="route-card">
-                        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=800&q=80')">
-                            <span class="route-badge">Most Popular</span>
+                <div class="comparison-grid animate-on-scroll">
+                    <!-- GoldLeaf Card -->
+                    <div class="service-card featured">
+                        <div class="service-header">
+                            <span class="service-badge">Recommended</span>
+                            <h3 class="service-name">GoldLeaf Service</h3>
+                            <div class="service-price">From <strong>$3,500</strong> per person</div>
                         </div>
-                        <div class="route-content">
-                            <h3 class="route-title">First Passage to the West</h3>
-                            <p class="route-path">Vancouver ↔ Banff/Lake Louise</p>
-                            <p class="route-desc">
-                                The original Rocky Mountaineer route through Kamloops, Kicking Horse Canyon,
-                                and the Spiral Tunnels. See the dramatic scenery that inspired the railway.
-                            </p>
-                            <div class="route-details">
-                                <span>2 days</span>
-                                <span>964 km</span>
-                                <span>GoldLeaf available</span>
+                        <div class="service-body">
+                            <div class="service-features">
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Bi-level glass-dome coaches</strong> - Upper level for seating with 360° views, lower level for dining</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Outdoor viewing platform</strong> - Open-air vestibule for photography and fresh mountain air</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Full gourmet meals</strong> - Breakfast, lunch, and snacks served in dedicated dining room</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Premium bar service</strong> - Unlimited beer, wine, cocktails, and non-alcoholic beverages</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Luxury hotel upgrades</strong> - Premium room categories at Fairmont and similar properties</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Priority boarding</strong> - First to board and choose your preferred seat</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Exclusive amenities</strong> - Premium headphones, souvenir blanket, and gift package</span>
+                                </div>
                             </div>
-                            <div class="route-price">$3,500 <span>GoldLeaf from</span></div>
                         </div>
                     </div>
 
-                    <div class="route-card">
-                        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=800&q=80')">
-                            <span class="route-badge">Scenic</span>
+                    <!-- SilverLeaf Card -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-badge">Great Value</span>
+                            <h3 class="service-name">SilverLeaf Service</h3>
+                            <div class="service-price">From <strong>$2,200</strong> per person</div>
                         </div>
-                        <div class="route-content">
-                            <h3 class="route-title">Journey Through the Clouds</h3>
-                            <p class="route-path">Vancouver ↔ Jasper</p>
-                            <p class="route-desc">
-                                Travel the highest point on the Rocky Mountaineer system through Yellowhead Pass,
-                                past Mount Robson, and into the heart of Jasper National Park.
-                            </p>
-                            <div class="route-details">
-                                <span>2 days</span>
-                                <span>1,150 km</span>
-                                <span>GoldLeaf available</span>
+                        <div class="service-body">
+                            <div class="service-features">
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Single-level dome coaches</strong> - Oversized windows with excellent panoramic views</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Spacious seating</strong> - Comfortable reclining seats with ample legroom</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Delicious meals at-seat</strong> - Hot breakfast and lunch served at your seat</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Complimentary beverages</strong> - Beer, wine, and non-alcoholic drinks included</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Quality hotels</strong> - Comfortable 3-4 star accommodations throughout journey</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Same spectacular scenery</strong> - Identical route with the same amazing views</span>
+                                </div>
+                                <div class="service-feature">
+                                    <span class="service-feature-icon">✓</span>
+                                    <span class="service-feature-text"><strong>Attentive hosts</strong> - Same knowledgeable commentary and warm hospitality</span>
+                                </div>
                             </div>
-                            <div class="route-price">$3,800 <span>GoldLeaf from</span></div>
-                        </div>
-                    </div>
-
-                    <div class="route-card">
-                        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80')">
-                            <span class="route-badge">Adventure</span>
-                        </div>
-                        <div class="route-content">
-                            <h3 class="route-title">Rainforest to Gold Rush</h3>
-                            <p class="route-path">Vancouver ↔ Jasper via Whistler & Quesnel</p>
-                            <p class="route-desc">
-                                The most adventurous route through the Sea-to-Sky corridor, Cariboo gold rush
-                                country, and the remote wilderness of northern British Columbia.
-                            </p>
-                            <div class="route-details">
-                                <span>3 days</span>
-                                <span>1,300+ km</span>
-                                <span>GoldLeaf available</span>
-                            </div>
-                            <div class="route-price">$5,200 <span>GoldLeaf from</span></div>
-                        </div>
-                    </div>
-
-                    <div class="route-card">
-                        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80')">
-                            <span class="route-badge">New</span>
-                        </div>
-                        <div class="route-content">
-                            <h3 class="route-title">Rockies to the Red Rocks</h3>
-                            <p class="route-path">Denver ↔ Moab (USA Route)</p>
-                            <p class="route-desc">
-                                Rocky Mountaineer's US route through Colorado's dramatic canyons and Utah's
-                                red rock country. A completely different but equally stunning landscape.
-                            </p>
-                            <div class="route-details">
-                                <span>2 days</span>
-                                <span>USA Route</span>
-                                <span>GoldLeaf available</span>
-                            </div>
-                            <div class="route-price">$2,950 <span>GoldLeaf from</span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Detailed Routes -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">The Routes</span>
+                    <h2 class="section-title">Four Spectacular Journeys</h2>
+                    <p class="section-subtitle">
+                        Each Rocky Mountaineer route offers distinct landscapes and experiences.
+                        Choose your adventure through Western Canada's most breathtaking terrain.
+                    </p>
+                </header>
+
+                <div class="routes-container">
+                    <!-- First Passage to the West -->
+                    <div class="route-detail animate-on-scroll">
+                        <div class="route-detail-content">
+                            <div class="route-badge-container">
+                                <span class="route-type-badge">Most Popular</span>
+                                <span class="route-duration">2 Days Rail</span>
+                            </div>
+                            <h3 class="route-detail-title">First Passage to the West</h3>
+                            <p class="route-detail-path">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                                Vancouver ↔ Banff / Lake Louise
+                            </p>
+                            <p class="route-detail-desc">
+                                Follow the historic Canadian Pacific Railway route through the dramatic Fraser Canyon,
+                                past Craigellachie where the last spike was driven, through the Kicking Horse Canyon,
+                                and over the Continental Divide into the heart of Banff National Park. This is the
+                                journey that defined Canada.
+                            </p>
+
+                            <div class="route-highlights">
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Hell's Gate on Fraser River</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Last Spike at Craigellachie</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Spiral Tunnels engineering marvel</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Kicking Horse Pass (5,339 ft)</span>
+                                </div>
+                            </div>
+
+                            <div class="route-itinerary">
+                                <h4 class="route-itinerary-title">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="var(--color-gold)"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/></svg>
+                                    Day-by-Day Itinerary
+                                </h4>
+                                <div class="route-day">
+                                    <span class="route-day-num">1</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Vancouver to Kamloops</div>
+                                        <div class="route-day-desc">Depart Vancouver Station, travel through the Coast Mountains, Fraser Canyon, and Thompson River valley. Overnight in Kamloops with evening at leisure.</div>
+                                    </div>
+                                </div>
+                                <div class="route-day">
+                                    <span class="route-day-num">2</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Kamloops to Banff/Lake Louise</div>
+                                        <div class="route-day-desc">Journey through Rogers Pass, the Spiral Tunnels, and Kicking Horse Canyon. Cross the Continental Divide into Alberta and arrive at your Rocky Mountain destination.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="route-price-tag">
+                                <span>GoldLeaf from</span>
+                                <strong>$3,500</strong>
+                                <span>per person</span>
+                            </div>
+                        </div>
+                        <div class="route-detail-image">
+                            <img src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=800&q=80" alt="Train through mountain valley" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Journey Through the Clouds -->
+                    <div class="route-detail animate-on-scroll">
+                        <div class="route-detail-content">
+                            <div class="route-badge-container">
+                                <span class="route-type-badge">Highest Elevation</span>
+                                <span class="route-duration">2 Days Rail</span>
+                            </div>
+                            <h3 class="route-detail-title">Journey Through the Clouds</h3>
+                            <p class="route-detail-path">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                                Vancouver ↔ Jasper
+                            </p>
+                            <p class="route-detail-desc">
+                                Ascend to the highest point on the Rocky Mountaineer system through Yellowhead Pass,
+                                passing the mighty Mount Robson—the highest peak in the Canadian Rockies. This route
+                                delivers raw wilderness and the chance to see wildlife in their natural habitat as
+                                you enter Jasper National Park from the west.
+                            </p>
+
+                            <div class="route-highlights">
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Mount Robson (12,972 ft)</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Yellowhead Pass crossing</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Pyramid Falls viewpoint</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Remote wilderness wildlife</span>
+                                </div>
+                            </div>
+
+                            <div class="route-itinerary">
+                                <h4 class="route-itinerary-title">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="var(--color-gold)"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/></svg>
+                                    Day-by-Day Itinerary
+                                </h4>
+                                <div class="route-day">
+                                    <span class="route-day-num">1</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Vancouver to Kamloops</div>
+                                        <div class="route-day-desc">Journey through Fraser Canyon past Hell's Gate, into the interior plateau with stunning views of mountains and rivers. Overnight in Kamloops.</div>
+                                    </div>
+                                </div>
+                                <div class="route-day">
+                                    <span class="route-day-num">2</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Kamloops to Jasper</div>
+                                        <div class="route-day-desc">Climb through the Monashee and Cariboo Mountains, past Pyramid Falls, to Yellowhead Pass. Marvel at Mount Robson before descending into Jasper.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="route-price-tag">
+                                <span>GoldLeaf from</span>
+                                <strong>$3,800</strong>
+                                <span>per person</span>
+                            </div>
+                        </div>
+                        <div class="route-detail-image">
+                            <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=800&q=80" alt="Mount Robson and glacial lake" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Rainforest to Gold Rush -->
+                    <div class="route-detail animate-on-scroll">
+                        <div class="route-detail-content">
+                            <div class="route-badge-container">
+                                <span class="route-type-badge">Most Adventurous</span>
+                                <span class="route-duration">3 Days Rail</span>
+                            </div>
+                            <h3 class="route-detail-title">Rainforest to Gold Rush</h3>
+                            <p class="route-detail-path">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                                Vancouver ↔ Jasper via Whistler & Quesnel
+                            </p>
+                            <p class="route-detail-desc">
+                                The most immersive Rocky Mountaineer experience spans three days through diverse
+                                landscapes. Begin with the spectacular Sea-to-Sky corridor to Whistler, journey
+                                through historic Cariboo gold rush country, and traverse the remote northern
+                                wilderness to Jasper. This is Canada at its most wild and varied.
+                            </p>
+
+                            <div class="route-highlights">
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Sea-to-Sky corridor</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Whistler overnight stop</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Cariboo Gold Rush Trail</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Remote northern wilderness</span>
+                                </div>
+                            </div>
+
+                            <div class="route-itinerary">
+                                <h4 class="route-itinerary-title">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="var(--color-gold)"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/></svg>
+                                    Day-by-Day Itinerary
+                                </h4>
+                                <div class="route-day">
+                                    <span class="route-day-num">1</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Vancouver to Whistler</div>
+                                        <div class="route-day-desc">Travel the breathtaking Sea-to-Sky corridor along Howe Sound, past Shannon Falls and through the Coast Mountains to world-famous Whistler.</div>
+                                    </div>
+                                </div>
+                                <div class="route-day">
+                                    <span class="route-day-num">2</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Whistler to Quesnel</div>
+                                        <div class="route-day-desc">Journey through the Cariboo region, following the historic Gold Rush Trail. Pass ranching country and climb through the Cariboo Mountains to Quesnel.</div>
+                                    </div>
+                                </div>
+                                <div class="route-day">
+                                    <span class="route-day-num">3</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Quesnel to Jasper</div>
+                                        <div class="route-day-desc">Traverse the remote northern wilderness, past pristine lakes and through mountain passes. Cross Yellowhead Pass and descend into Jasper National Park.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="route-price-tag">
+                                <span>GoldLeaf from</span>
+                                <strong>$5,200</strong>
+                                <span>per person</span>
+                            </div>
+                        </div>
+                        <div class="route-detail-image">
+                            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80" alt="Sea to Sky Highway scenic view" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Rockies to the Red Rocks -->
+                    <div class="route-detail animate-on-scroll">
+                        <div class="route-detail-content">
+                            <div class="route-badge-container">
+                                <span class="route-type-badge">USA Route</span>
+                                <span class="route-duration">2 Days Rail</span>
+                            </div>
+                            <h3 class="route-detail-title">Rockies to the Red Rocks</h3>
+                            <p class="route-detail-path">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                                Denver ↔ Moab, Utah
+                            </p>
+                            <p class="route-detail-desc">
+                                Rocky Mountaineer's American route showcases the dramatic contrast of Colorado's
+                                Rocky Mountains with Utah's striking red rock desert landscapes. Wind through
+                                deep canyons, past towering sandstone formations, and alongside the Colorado
+                                River—a completely different but equally breathtaking journey.
+                            </p>
+
+                            <div class="route-highlights">
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Glenwood Canyon</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Colorado River gorge</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Ruby Canyon red rocks</span>
+                                </div>
+                                <div class="route-highlight">
+                                    <span class="route-highlight-icon">✦</span>
+                                    <span>Arches National Park access</span>
+                                </div>
+                            </div>
+
+                            <div class="route-itinerary">
+                                <h4 class="route-itinerary-title">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="var(--color-gold)"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/></svg>
+                                    Day-by-Day Itinerary
+                                </h4>
+                                <div class="route-day">
+                                    <span class="route-day-num">1</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Denver to Glenwood Springs</div>
+                                        <div class="route-day-desc">Depart Denver Union Station, climb through Rocky Mountain foothills and traverse the spectacular Glenwood Canyon alongside the Colorado River.</div>
+                                    </div>
+                                </div>
+                                <div class="route-day">
+                                    <span class="route-day-num">2</span>
+                                    <div class="route-day-content">
+                                        <div class="route-day-title">Glenwood Springs to Moab</div>
+                                        <div class="route-day-desc">Journey through Ruby Canyon's red rock formations, past ancient geological wonders, arriving in Moab—gateway to Arches and Canyonlands National Parks.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="route-price-tag">
+                                <span>SilverLeaf Plus from</span>
+                                <strong>$2,950</strong>
+                                <span>per person</span>
+                            </div>
+                        </div>
+                        <div class="route-detail-image">
+                            <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80" alt="Red rock canyon landscape" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scenic Highlights -->
+        <section class="section section-dark">
+            <div class="container">
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">Iconic Sights</span>
+                    <h2 class="section-title">Scenic Highlights Along the Way</h2>
+                    <p class="section-subtitle">
+                        Your hosts will point out these legendary landmarks as you pass through
+                        some of North America's most spectacular terrain.
+                    </p>
+                </header>
+
+                <div class="scenic-grid animate-on-scroll">
+                    <div class="scenic-card">
+                        <div class="scenic-image">
+                            <img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d9?w=600&q=80" alt="Fraser River Canyon" loading="lazy">
+                        </div>
+                        <div class="scenic-content">
+                            <div class="scenic-route">First Passage to the West</div>
+                            <h3 class="scenic-title">Hell's Gate</h3>
+                            <p class="scenic-desc">Where the mighty Fraser River narrows to just 35 meters, creating a churning torrent that challenged railway builders and salmon alike.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenic-card">
+                        <div class="scenic-image">
+                            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Spiral Tunnels" loading="lazy">
+                        </div>
+                        <div class="scenic-content">
+                            <div class="scenic-route">First Passage to the West</div>
+                            <h3 class="scenic-title">Spiral Tunnels</h3>
+                            <p class="scenic-desc">An engineering marvel where the railway loops inside Mount Cathedral and Mount Ogden, descending 300 meters in tight spirals.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenic-card">
+                        <div class="scenic-image">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Mount Robson" loading="lazy">
+                        </div>
+                        <div class="scenic-content">
+                            <div class="scenic-route">Journey Through the Clouds</div>
+                            <h3 class="scenic-title">Mount Robson</h3>
+                            <p class="scenic-desc">The "Monarch of the Canadian Rockies" rises 12,972 feet—the highest peak in the range, often shrouded in dramatic clouds.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenic-card">
+                        <div class="scenic-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Kicking Horse River" loading="lazy">
+                        </div>
+                        <div class="scenic-content">
+                            <div class="scenic-route">First Passage to the West</div>
+                            <h3 class="scenic-title">Kicking Horse Canyon</h3>
+                            <p class="scenic-desc">Named after an incident with pack horses during railway surveys, this dramatic canyon marks your approach to the Continental Divide.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenic-card">
+                        <div class="scenic-image">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="Whistler landscape" loading="lazy">
+                        </div>
+                        <div class="scenic-content">
+                            <div class="scenic-route">Rainforest to Gold Rush</div>
+                            <h3 class="scenic-title">Sea-to-Sky Corridor</h3>
+                            <p class="scenic-desc">One of the world's most scenic drives becomes even more spectacular by rail, following Howe Sound past waterfalls to Whistler.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenic-card">
+                        <div class="scenic-image">
+                            <img src="https://images.unsplash.com/photo-1615551043360-33de8b5f410c?w=600&q=80" alt="Ruby Canyon" loading="lazy">
+                        </div>
+                        <div class="scenic-content">
+                            <div class="scenic-route">Rockies to Red Rocks</div>
+                            <h3 class="scenic-title">Ruby Canyon</h3>
+                            <p class="scenic-desc">Walls of red sandstone rise hundreds of feet as the train follows the Colorado River through this remote and roadless canyon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Day on Board -->
+        <section class="section" style="background: var(--color-gray-50);">
+            <div class="container">
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">A Day Aboard</span>
+                    <h2 class="section-title">Your Typical Day on Rocky Mountaineer</h2>
+                    <p class="section-subtitle">
+                        From sunrise to sunset, every moment is designed to maximize your experience
+                        of the stunning landscapes and impeccable service.
+                    </p>
+                </header>
+
+                <div class="timeline-container animate-on-scroll">
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            <div class="timeline-time-value">6:00</div>
+                            <div class="timeline-time-period">AM</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Wake Up & Hotel Breakfast</div>
+                            <div class="timeline-desc">Start your day with breakfast at your hotel before the complimentary shuttle arrives to take you to the station.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            <div class="timeline-time-value">7:00</div>
+                            <div class="timeline-time-period">AM</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">All Aboard</div>
+                            <div class="timeline-desc">Board the train at the station. GoldLeaf guests receive priority boarding and a welcome glass of champagne as you settle into your seat.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            <div class="timeline-time-value">8:00</div>
+                            <div class="timeline-time-period">AM</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Departure & Morning Views</div>
+                            <div class="timeline-desc">The train pulls away as your hosts welcome you and describe the day's journey. Morning light illuminates the mountains as you enjoy your first coffee.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            <div class="timeline-time-value">9:00</div>
+                            <div class="timeline-time-period">AM</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Gourmet Breakfast Service</div>
+                            <div class="timeline-desc">GoldLeaf guests descend to the dining car for a hot breakfast featuring local ingredients. Eggs benedict, fresh-baked pastries, and seasonal fruits await.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            <div class="timeline-time-value">11:00</div>
+                            <div class="timeline-time-period">AM</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Scenic Highlights & Photography</div>
+                            <div class="timeline-desc">Your hosts announce upcoming landmarks. Head to the outdoor vestibule for fresh air and unobstructed photos of passing mountains and rivers.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            <div class="timeline-time-value">12:30</div>
+                            <div class="timeline-time-period">PM</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Gourmet Lunch</div>
+                            <div class="timeline-desc">A three-course lunch features Pacific Northwest cuisine—perhaps wild salmon, Alberta beef, or vegetarian options—paired with BC wines.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            <div class="timeline-time-value">3:00</div>
+                            <div class="timeline-time-period">PM</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Afternoon Relaxation</div>
+                            <div class="timeline-desc">Enjoy complimentary beverages, gourmet snacks, and perhaps a local craft beer as the afternoon scenery unfolds. Wildlife sightings are common.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            <div class="timeline-time-value">6:00</div>
+                            <div class="timeline-time-period">PM</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Arrival & Evening</div>
+                            <div class="timeline-desc">Arrive at your overnight destination as golden hour light bathes the mountains. Transfer to your hotel with the evening free to explore the town.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal Guide -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">When to Travel</span>
+                    <h2 class="section-title">Seasonal Guide</h2>
+                    <p class="section-subtitle">
+                        Rocky Mountaineer operates from mid-April through mid-October. Each season
+                        offers distinct experiences and beauty along the routes.
+                    </p>
+                </header>
+
+                <div class="season-grid animate-on-scroll">
+                    <div class="season-card">
+                        <div class="season-header spring">
+                            <span class="season-icon">🌸</span>
+                            <div>
+                                <div class="season-title">Spring Awakening</div>
+                                <div class="season-months">Mid-April – May</div>
+                            </div>
+                        </div>
+                        <div class="season-body">
+                            <div class="season-highlights">
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Thundering waterfalls at peak flow from snowmelt</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Wildflowers blooming in lower elevations</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Snow-capped peaks create dramatic contrasts</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Bears emerging from hibernation with cubs</span>
+                                </div>
+                            </div>
+                            <div class="season-tip">
+                                <strong>Tip:</strong> Best value season with smaller crowds. Bring layers for cool mornings.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <div class="season-header summer">
+                            <span class="season-icon">☀️</span>
+                            <div>
+                                <div class="season-title">Peak Summer</div>
+                                <div class="season-months">June – August</div>
+                            </div>
+                        </div>
+                        <div class="season-body">
+                            <div class="season-highlights">
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Longest daylight hours for maximum viewing</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Warm, comfortable temperatures on outdoor platforms</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Alpine meadows blanketed in wildflowers</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Clear skies for mountain photography</span>
+                                </div>
+                            </div>
+                            <div class="season-tip">
+                                <strong>Tip:</strong> Book 6-12 months ahead—peak season sells out fastest. Best weather overall.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <div class="season-header fall">
+                            <span class="season-icon">🍂</span>
+                            <div>
+                                <div class="season-title">Autumn Colors</div>
+                                <div class="season-months">September – Mid-October</div>
+                            </div>
+                        </div>
+                        <div class="season-body">
+                            <div class="season-highlights">
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Golden larches create stunning mountain displays</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Crisp, clear air for spectacular visibility</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Wildlife active preparing for winter</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Early snow dusting higher peaks</span>
+                                </div>
+                            </div>
+                            <div class="season-tip">
+                                <strong>Tip:</strong> Many travelers' favorite season. Peak foliage typically mid-September to early October.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <div class="season-header shoulder">
+                            <span class="season-icon">💜</span>
+                            <div>
+                                <div class="season-title">Shoulder Season Value</div>
+                                <div class="season-months">April & October</div>
+                            </div>
+                        </div>
+                        <div class="season-body">
+                            <div class="season-highlights">
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Best prices of the season</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Fewer guests for more intimate experience</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Easier hotel availability in destinations</span>
+                                </div>
+                                <div class="season-highlight">
+                                    <span class="season-highlight-icon">✦</span>
+                                    <span>Dramatic lighting from lower sun angles</span>
+                                </div>
+                            </div>
+                            <div class="season-tip">
+                                <strong>Tip:</strong> Great value without compromising the experience. Weather more variable—come prepared.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Pack -->
+        <section class="section" style="background: var(--color-gray-50);">
+            <div class="container">
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">Be Prepared</span>
+                    <h2 class="section-title">What to Pack</h2>
+                    <p class="section-subtitle">
+                        Your main luggage will be transferred separately to your hotels. Here's what
+                        to keep with you for maximum comfort during your journey.
+                    </p>
+                </header>
+
+                <div class="packing-grid animate-on-scroll">
+                    <div class="packing-category">
+                        <div class="packing-category-header">
+                            <span class="packing-category-icon">📸</span>
+                            <span class="packing-category-title">Essential Gear</span>
+                        </div>
+                        <ul class="packing-list">
+                            <li class="packing-item">Camera with extra batteries</li>
+                            <li class="packing-item">Binoculars for wildlife viewing</li>
+                            <li class="packing-item">Polarized sunglasses</li>
+                            <li class="packing-item">Phone/tablet for photos</li>
+                            <li class="packing-item">Small day bag or backpack</li>
+                            <li class="packing-item">Portable charger</li>
+                        </ul>
+                    </div>
+
+                    <div class="packing-category">
+                        <div class="packing-category-header">
+                            <span class="packing-category-icon">👔</span>
+                            <span class="packing-category-title">Clothing Layers</span>
+                        </div>
+                        <ul class="packing-list">
+                            <li class="packing-item">Light jacket for outdoor platform</li>
+                            <li class="packing-item">Warm sweater or fleece</li>
+                            <li class="packing-item">Comfortable walking shoes</li>
+                            <li class="packing-item">Smart casual attire</li>
+                            <li class="packing-item">Hat or cap for sun protection</li>
+                            <li class="packing-item">Scarf for cooler mornings</li>
+                        </ul>
+                    </div>
+
+                    <div class="packing-category">
+                        <div class="packing-category-header">
+                            <span class="packing-category-icon">💊</span>
+                            <span class="packing-category-title">Personal Items</span>
+                        </div>
+                        <ul class="packing-list">
+                            <li class="packing-item">Any required medications</li>
+                            <li class="packing-item">Sunscreen (high altitude = stronger UV)</li>
+                            <li class="packing-item">Lip balm with SPF</li>
+                            <li class="packing-item">Hand sanitizer</li>
+                            <li class="packing-item">Light reading material</li>
+                            <li class="packing-item">Travel pillow (optional)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section section-dark">
+            <div class="container">
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">Guest Stories</span>
+                    <h2 class="section-title">What Travelers Say</h2>
+                    <p class="section-subtitle">
+                        Over two million guests have experienced Rocky Mountaineer. Here's why they
+                        call it the journey of a lifetime.
+                    </p>
+                </header>
+
+                <div class="testimonial-grid animate-on-scroll">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"We've traveled the world and this ranks among our greatest experiences. The views through the glass dome were simply incomparable—every turn brought a new spectacular vista."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MJ</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Margaret & James</div>
+                                <div class="testimonial-route">First Passage to the West</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The GoldLeaf service exceeded every expectation. Our hosts Sarah and Mike made us feel like family while pointing out wildlife we would have missed. The food was restaurant quality!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RT</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Robert T.</div>
+                                <div class="testimonial-route">Journey Through the Clouds</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"We booked the 3-day Rainforest to Gold Rush route and it was worth every penny. From the Sea-to-Sky corridor to Jasper, each day brought completely different and stunning scenery."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">CP</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Catherine & Peter</div>
+                                <div class="testimonial-route">Rainforest to Gold Rush</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header animate-on-scroll">
+                    <span class="section-badge">Questions</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">
+                        Everything you need to know about planning your Rocky Mountaineer journey.
+                    </p>
+                </header>
+
+                <div class="faq-list animate-on-scroll">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What's the difference between GoldLeaf and SilverLeaf Service?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                GoldLeaf Service features bi-level glass-dome coaches with a separate dining car below, an outdoor viewing platform, premium gourmet meals served in a dedicated restaurant, unlimited premium beverages including cocktails, and upgraded hotel accommodations. SilverLeaf offers single-level dome coaches with oversized windows, meals served at your seat, and standard hotel accommodations—still an excellent experience at a lower price point. Both offer the same spectacular scenery and attentive host service.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Why does the train only travel during daylight hours?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Rocky Mountaineer travels exclusively during daylight hours so passengers never miss any of the spectacular scenery—that's the entire point of the journey! Overnight stops at hotels along the route (like Kamloops or Quesnel) allow guests to rest comfortably, enjoy local restaurants, and explore the towns. This format also means you're fresh and rested each morning for another full day of viewing.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>When is the best time of year to take the Rocky Mountaineer?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                The train operates from mid-April through mid-October. June through August offers the warmest weather and longest days—ideal for the outdoor viewing platform. September brings stunning fall colors with golden larches. Spring (April-May) and late fall (October) offer better prices and fewer crowds, though weather can be more variable. Each season has its own unique beauty, so there's truly no wrong time to go.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What happens to my luggage during the journey?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Your main luggage is transferred separately and delivered directly to your hotel rooms—you won't need to handle it at all during the journey. Simply pack a small day bag with essentials like camera, binoculars, layers for the outdoor platform, and any medications. Your bags will be waiting in your room when you arrive each evening.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I book just the train, or do I need a complete package?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Rocky Mountaineer journeys include the rail travel, all meals aboard the train, and overnight hotel accommodations at intermediate stops. You can book rail-only packages (just the train and required overnight hotels) or complete vacation packages that include additional nights at your starting/ending destinations, activities, and transfers. Our concierge can help design the perfect itinerary for your trip.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How far in advance should I book?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                For peak summer dates (June-August) and popular routes, booking 6-12 months in advance is recommended—popular departure dates sell out quickly. For shoulder season travel (April-May, September-October), 3-6 months is usually sufficient. GoldLeaf Service has limited capacity and sells out before SilverLeaf, so if that's your preference, book early. Last-minute availability sometimes opens up, but selection will be limited.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is the journey suitable for travelers with mobility concerns?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Rocky Mountaineer strives to accommodate all travelers. GoldLeaf coaches require climbing stairs between levels, so SilverLeaf single-level coaches may be more suitable for those with mobility limitations. Wheelchairs can be accommodated with advance notice. The train makes station stops where passengers can step off to stretch—platforms are accessible. Contact us to discuss specific needs and we'll help find the best solution.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What if I have dietary restrictions or allergies?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Rocky Mountaineer accommodates most dietary requirements including vegetarian, vegan, gluten-free, and common allergies. Notify us at booking and confirm again 30 days before travel. The culinary team takes dietary needs seriously and will prepare alternative meals that match the quality and presentation of standard dishes. Kosher and Halal meals can sometimes be arranged with sufficient advance notice.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
                 <h2 class="cta-title">Book Your Rail Journey</h2>
                 <p class="cta-text">
-                    Popular dates sell out quickly. Contact our rail specialists to secure your
+                    Popular dates sell out months in advance. Contact our rail specialists to secure your
                     GoldLeaf experience and create the perfect Rocky Mountain itinerary.
                 </p>
                 <a href="/contact/" class="btn btn-dark">
@@ -468,6 +1524,7 @@
                     <a href="/luxury/">All Luxury Experiences</a>
                     <a href="/luxury/helicopter-tours/">Helicopter Tours</a>
                     <a href="/luxury/wilderness-lodges/">Wilderness Lodges</a>
+                    <a href="/luxury/yacht-expeditions/">Yacht Expeditions</a>
                     <a href="/contact/">Contact</a>
                 </div>
                 <p>&copy; 2025 TopCanadaTravel. All rights reserved.</p>
@@ -484,8 +1541,44 @@
     </nav>
 
     <script>
+        // Mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('active');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>

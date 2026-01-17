@@ -23,7 +23,18 @@
         "name": "Luxury Heli-Ski & Ski Experiences - Canada",
         "description": "Private heli-skiing and luxury ski experiences with exclusive lodge accommodations",
         "url": "https://topcanadatravel.com/luxury/ski-experiences/",
+        "touristType": ["Luxury Travelers", "Ski Enthusiasts", "Adventure Seekers"],
         "offers": {"@type": "Offer", "price": "1800", "priceCurrency": "CAD", "unitText": "per day"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What skill level is required for heli-skiing?", "acceptedAnswer": {"@type": "Answer", "text": "Most operators require strong intermediate to advanced skiing ability comfortable on black diamond runs in varied conditions."}},
+            {"@type": "Question", "name": "When is the best time for heli-skiing in BC?", "acceptedAnswer": {"@type": "Answer", "text": "January through March offers the most consistent powder conditions, with December and April also excellent depending on conditions."}}
+        ]
     }
     </script>
 
@@ -37,14 +48,10 @@
             --color-gray-900: #111827;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-display: 'Playfair Display', Georgia, serif;
-            --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
-            --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
-            --space-12: 3rem; --space-16: 4rem; --space-24: 6rem;
             --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
             --radius-xl: 1rem; --radius-2xl: 1.5rem; --radius-full: 9999px;
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1); --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
             --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.3);
-            --transition-fast: 150ms ease; --transition-base: 200ms ease;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -54,95 +61,204 @@
         a { color: inherit; text-decoration: none; }
         button { font-family: inherit; cursor: pointer; border: none; background: none; }
         ul, ol { list-style: none; }
-        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 var(--space-4); }
-        @media (min-width: 768px) { .container { padding: 0 var(--space-6); } }
+        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+        @media (min-width: 768px) { .container { padding: 0 1.5rem; } }
 
+        /* Header */
         .header { position: fixed; top: 0; left: 0; right: 0; z-index: 300; background: rgba(26,26,46,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(212,175,55,0.2); }
         .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-        .logo { display: flex; align-items: center; gap: var(--space-2); font-weight: 700; font-size: 1.125rem; color: var(--color-white); }
+        .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.125rem; color: var(--color-white); }
         .logo-icon { font-size: 1.5rem; }
         .logo-text span { color: var(--color-gold); }
-        .nav-menu { display: none; gap: var(--space-1); }
+        .nav-menu { display: none; gap: 0.25rem; }
         @media (min-width: 1024px) { .nav-menu { display: flex; } }
-        .nav-link { padding: var(--space-2) var(--space-4); font-size: 0.9375rem; font-weight: 500; color: rgba(255,255,255,0.8); border-radius: var(--radius-md); transition: all var(--transition-fast); }
+        .nav-link { padding: 0.5rem 1rem; font-size: 0.9375rem; font-weight: 500; color: rgba(255,255,255,0.8); border-radius: var(--radius-md); transition: all 0.15s ease; }
         .nav-link:hover { color: var(--color-gold); background: rgba(212,175,55,0.1); }
         .mobile-menu-btn { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: var(--color-white); }
         @media (min-width: 1024px) { .mobile-menu-btn { display: none; } }
 
-        .hero { position: relative; min-height: 70vh; display: flex; align-items: center; padding-top: 72px; background: linear-gradient(135deg, var(--color-luxury-dark) 0%, var(--color-luxury-medium) 100%); overflow: hidden; }
-        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(212,175,55,0.2) 0%, transparent 60%); pointer-events: none; }
-        .hero-image { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&q=80') center/cover; opacity: 0.3; }
-        .hero-content { position: relative; z-index: 1; max-width: 800px; }
-        .hero-badge { display: inline-flex; padding: var(--space-2) var(--space-5); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; color: var(--color-luxury-dark); margin-bottom: var(--space-6); text-transform: uppercase; letter-spacing: 0.1em; }
-        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; line-height: 1.1; color: var(--color-white); margin-bottom: var(--space-6); }
-        .hero-title span { color: var(--color-gold); }
-        .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); line-height: 1.7; }
-        .hero-meta { display: flex; flex-wrap: wrap; gap: var(--space-6); }
-        .hero-meta-item { display: flex; flex-direction: column; }
-        .hero-meta-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
-        .hero-meta-value { font-size: 1.25rem; font-weight: 700; color: var(--color-gold); }
+        /* Hero */
+        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 72px; background: var(--color-luxury-dark); overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,26,46,0.3) 0%, rgba(26,26,46,0.6) 50%, rgba(26,26,46,0.95) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; padding: 2rem 1rem; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 700; color: var(--color-luxury-dark); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 700; line-height: 1.1; color: var(--color-white); margin-bottom: 1.5rem; }
+        .hero-title span { color: var(--color-gold); display: block; }
+        .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+        @media (min-width: 768px) { .hero-stats { grid-template-columns: repeat(4, 1fr); } }
+        .hero-stat { text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: var(--radius-xl); backdrop-filter: blur(10px); }
+        .hero-stat-value { font-size: 2.5rem; font-weight: 800; color: var(--color-gold); line-height: 1; }
+        .hero-stat-label { font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem; }
 
-        .breadcrumb { padding: var(--space-4) 0; background: rgba(26,26,46,0.5); }
-        .breadcrumb-list { display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+        /* Breadcrumb */
+        .breadcrumb { padding: 1rem 0; background: rgba(26,26,46,0.5); }
+        .breadcrumb-list { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.6); flex-wrap: wrap; }
         .breadcrumb-list a:hover { color: var(--color-gold); }
 
-        .section { padding: var(--space-16) 0; }
-        @media (min-width: 768px) { .section { padding: var(--space-24) 0; } }
+        /* Gallery */
+        .gallery { padding: 4rem 0; background: var(--color-gray-50); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        @media (min-width: 768px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+        @media (min-width: 1024px) { .gallery-grid { grid-template-columns: repeat(6, 1fr); } }
+        .gallery-item { position: relative; aspect-ratio: 1; border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem 0.75rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; font-size: 0.75rem; font-weight: 500; opacity: 0; transition: opacity 0.3s ease; }
+        .gallery-item:hover .gallery-caption { opacity: 1; }
+
+        /* Sections */
+        .section { padding: 4rem 0; }
+        @media (min-width: 768px) { .section { padding: 6rem 0; } }
         .section-dark { background: linear-gradient(135deg, var(--color-luxury-dark) 0%, var(--color-luxury-medium) 100%); }
-        .section-header { text-align: center; max-width: 800px; margin: 0 auto var(--space-12); }
-        .section-badge { display: inline-block; padding: var(--space-2) var(--space-4); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: var(--radius-full); margin-bottom: var(--space-4); }
-        .section-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--color-gray-900); line-height: 1.2; margin-bottom: var(--space-4); }
+        .section-gray { background: var(--color-gray-50); }
+        .section-header { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
+        .section-badge { display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: var(--radius-full); margin-bottom: 1rem; }
+        .section-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--color-gray-900); line-height: 1.2; margin-bottom: 1rem; }
         .section-dark .section-title { color: var(--color-white); }
         .section-subtitle { font-size: 1.125rem; color: var(--color-gray-600); line-height: 1.7; }
         .section-dark .section-subtitle { color: rgba(255,255,255,0.8); }
 
-        .ski-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-8); }
-        @media (min-width: 768px) { .ski-grid { grid-template-columns: repeat(2, 1fr); } }
+        /* Features Grid */
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        @media (min-width: 768px) { .features-grid { grid-template-columns: repeat(4, 1fr); } }
+        .feature-card { text-align: center; padding: 2rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: var(--radius-xl); transition: all 0.3s ease; }
+        .feature-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-title { font-weight: 700; color: var(--color-white); margin-bottom: 0.5rem; }
+        .feature-text { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
 
-        .ski-card { background: var(--color-white); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg); transition: all var(--transition-base); border: 1px solid var(--color-gray-200); }
-        .ski-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-gold); border-color: var(--color-gold); }
-        .ski-image { height: 240px; background-size: cover; background-position: center; position: relative; }
-        .ski-badge { position: absolute; top: var(--space-4); left: var(--space-4); padding: var(--space-2) var(--space-4); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; border-radius: var(--radius-full); }
-        .ski-content { padding: var(--space-6); }
-        .ski-location { font-size: 0.875rem; color: var(--color-gold-dark); font-weight: 500; margin-bottom: var(--space-2); }
-        .ski-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: var(--space-3); }
-        .ski-desc { font-size: 0.9375rem; color: var(--color-gray-600); line-height: 1.7; margin-bottom: var(--space-4); }
-        .ski-highlights { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
-        .ski-highlight { padding: var(--space-1) var(--space-3); background: var(--color-gray-100); color: var(--color-gray-700); font-size: 0.75rem; border-radius: var(--radius-full); }
-        .ski-footer { display: flex; justify-content: space-between; align-items: center; padding-top: var(--space-4); border-top: 1px solid var(--color-gray-200); }
-        .ski-price { font-size: 1.25rem; font-weight: 700; color: var(--color-gold-dark); }
-        .ski-price span { font-size: 0.75rem; font-weight: 400; color: var(--color-gray-500); display: block; }
-        .ski-season { font-size: 0.875rem; color: var(--color-gray-500); }
+        /* Operator Cards */
+        .operator-grid { display: grid; gap: 3rem; }
+        .operator-card { display: grid; gap: 2rem; background: var(--color-white); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-xl); border: 1px solid var(--color-gray-200); }
+        @media (min-width: 1024px) {
+            .operator-card { grid-template-columns: 1fr 1fr; }
+            .operator-card:nth-child(even) .operator-image { order: 2; }
+        }
+        .operator-image { position: relative; min-height: 400px; }
+        .operator-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .operator-badges { position: absolute; top: 1.5rem; left: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .op-badge { padding: 0.5rem 1rem; background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; border-radius: var(--radius-full); text-transform: uppercase; }
+        .op-badge-dark { background: var(--color-luxury-dark); color: var(--color-gold); }
+        .operator-content { padding: 2rem; display: flex; flex-direction: column; }
+        @media (min-width: 768px) { .operator-content { padding: 3rem; } }
+        .op-location { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--color-gold-dark); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .op-title { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 1rem; }
+        .op-desc { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1.5rem; }
+        .op-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; padding: 1.5rem; background: var(--color-gray-50); border-radius: var(--radius-lg); }
+        .op-stat { text-align: center; }
+        .op-stat-value { font-size: 1.5rem; font-weight: 800; color: var(--color-gold-dark); }
+        .op-stat-label { font-size: 0.75rem; color: var(--color-gray-500); text-transform: uppercase; }
+        .op-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+        .op-feature { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--color-gray-700); }
+        .op-feature::before { content: '✓'; color: var(--color-gold-dark); font-weight: bold; }
+        .op-packages { background: var(--color-gray-50); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .op-packages-title { font-weight: 700; color: var(--color-gray-900); margin-bottom: 1rem; }
+        .op-package { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--color-gray-200); }
+        .op-package:last-child { border-bottom: none; }
+        .op-package-name { font-weight: 600; color: var(--color-gray-800); }
+        .op-package-price { font-weight: 700; color: var(--color-gold-dark); }
+        .op-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200); margin-top: auto; }
+        .op-price { }
+        .op-price-value { font-size: 2rem; font-weight: 800; color: var(--color-gold-dark); }
+        .op-price-label { font-size: 0.875rem; color: var(--color-gray-500); }
+        .op-season { text-align: right; }
+        .op-season-value { font-weight: 700; color: var(--color-gray-900); }
+        .op-season-label { font-size: 0.75rem; color: var(--color-gray-500); }
 
-        .highlights-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
-        @media (min-width: 768px) { .highlights-grid { grid-template-columns: repeat(4, 1fr); } }
-        .highlight-item { text-align: center; padding: var(--space-6); background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); border-radius: var(--radius-xl); }
-        .highlight-icon { font-size: 2.5rem; margin-bottom: var(--space-3); }
-        .highlight-title { font-weight: 600; color: var(--color-white); margin-bottom: var(--space-1); }
-        .highlight-text { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
+        /* Terrain Types */
+        .terrain-grid { display: grid; gap: 1.5rem; }
+        @media (min-width: 768px) { .terrain-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .terrain-grid { grid-template-columns: repeat(3, 1fr); } }
+        .terrain-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: var(--radius-xl); padding: 2rem; transition: all 0.3s ease; }
+        .terrain-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .terrain-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .terrain-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 0.5rem; }
+        .terrain-desc { font-size: 0.9375rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1rem; }
+        .terrain-features { }
+        .terrain-features li { padding: 0.5rem 0; font-size: 0.875rem; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .terrain-features li:last-child { border-bottom: none; }
+        .terrain-features li::before { content: '•'; color: var(--color-gold); }
 
-        .cta-section { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); text-align: center; padding: var(--space-16) 0; }
-        .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); color: var(--color-luxury-dark); margin-bottom: var(--space-4); }
-        .cta-text { font-size: 1.125rem; color: var(--color-luxury-dark); opacity: 0.9; max-width: 600px; margin: 0 auto var(--space-8); }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); padding: var(--space-4) var(--space-8); font-size: 1rem; font-weight: 600; border-radius: var(--radius-lg); transition: all var(--transition-base); min-height: 52px; }
+        /* Season Guide */
+        .season-grid { display: grid; gap: 1.5rem; }
+        @media (min-width: 768px) { .season-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .season-grid { grid-template-columns: repeat(4, 1fr); } }
+        .season-card { background: var(--color-white); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); transition: all 0.3s ease; }
+        .season-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .season-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .season-month { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.5rem; }
+        .season-conditions { font-size: 0.875rem; color: var(--color-gold-dark); font-weight: 600; margin-bottom: 1rem; }
+        .season-details { font-size: 0.9375rem; color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1rem; }
+        .season-rating { display: flex; align-items: center; gap: 0.5rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200); }
+        .season-rating-label { font-size: 0.75rem; color: var(--color-gray-500); text-transform: uppercase; }
+        .season-rating-stars { color: var(--color-gold); }
+
+        /* What's Included */
+        .included-grid { display: grid; gap: 1.5rem; }
+        @media (min-width: 768px) { .included-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .included-grid { grid-template-columns: repeat(4, 1fr); } }
+        .included-card { background: var(--color-white); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); transition: all 0.3s ease; }
+        .included-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .included-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1.5rem; }
+        .included-title { font-weight: 700; color: var(--color-gray-900); margin-bottom: 1rem; }
+        .included-list { list-style: none; }
+        .included-list li { padding: 0.5rem 0; font-size: 0.875rem; color: var(--color-gray-600); display: flex; align-items: flex-start; gap: 0.5rem; }
+        .included-list li::before { content: '✓'; color: var(--color-gold-dark); font-weight: bold; flex-shrink: 0; }
+
+        /* Testimonials */
+        .testimonials-grid { display: grid; gap: 1.5rem; }
+        @media (min-width: 768px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+        .testimonial-card { background: var(--color-white); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); }
+        .testimonial-stars { color: var(--color-gold); font-size: 1.25rem; margin-bottom: 1rem; }
+        .testimonial-text { font-size: 1rem; color: var(--color-gray-700); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+        .testimonial-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold)); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-luxury-dark); }
+        .testimonial-name { font-weight: 700; color: var(--color-gray-900); }
+        .testimonial-trip { font-size: 0.875rem; color: var(--color-gray-500); }
+
+        /* FAQ */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--color-white); border-radius: var(--radius-lg); margin-bottom: 1rem; box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--color-gray-900); text-align: left; cursor: pointer; }
+        .faq-question:hover { color: var(--color-gold-dark); }
+        .faq-icon { font-size: 1.5rem; color: var(--color-gold); transition: transform 0.3s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 500px; padding-bottom: 1.5rem; }
+        .faq-answer p { color: var(--color-gray-600); line-height: 1.8; }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); text-align: center; padding: 5rem 0; }
+        .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); color: var(--color-luxury-dark); margin-bottom: 1rem; }
+        .cta-text { font-size: 1.125rem; color: var(--color-luxury-dark); opacity: 0.9; max-width: 600px; margin: 0 auto 2rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 1rem; font-weight: 600; border-radius: var(--radius-lg); transition: all 0.2s ease; }
         .btn-dark { background: var(--color-luxury-dark); color: var(--color-gold); }
         .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 
-        .footer { background: var(--color-gray-900); color: var(--color-gray-400); padding: var(--space-12) 0; }
-        .footer-content { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-4); }
-        .footer-logo { display: flex; align-items: center; gap: var(--space-2); font-size: 1.25rem; font-weight: 700; color: var(--color-white); }
-        .footer-links { display: flex; gap: var(--space-6); flex-wrap: wrap; justify-content: center; }
+        /* Footer */
+        .footer { background: var(--color-gray-900); color: var(--color-gray-400); padding: 3rem 0; }
+        .footer-content { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+        .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.25rem; font-weight: 700; color: var(--color-white); }
+        .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
         .footer-links a:hover { color: var(--color-gold); }
 
-        .mobile-menu { position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--color-luxury-dark); padding: var(--space-4); transform: translateX(100%); transition: transform 0.3s ease; z-index: 299; }
+        /* Mobile Menu & Nav */
+        .mobile-menu { position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--color-luxury-dark); padding: 1rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 299; }
         .mobile-menu.active { transform: translateX(0); }
-        .mobile-nav-link { display: block; padding: var(--space-4); font-size: 1.125rem; color: var(--color-white); border-bottom: 1px solid rgba(212,175,55,0.2); }
-
-        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--color-luxury-dark); border-top: 1px solid rgba(212,175,55,0.2); padding: var(--space-2) 0; padding-bottom: env(safe-area-inset-bottom); z-index: 300; display: flex; justify-content: space-around; }
+        .mobile-nav-link { display: block; padding: 1rem; font-size: 1.125rem; color: var(--color-white); border-bottom: 1px solid rgba(212,175,55,0.2); }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--color-luxury-dark); border-top: 1px solid rgba(212,175,55,0.2); padding: 0.5rem 0; padding-bottom: env(safe-area-inset-bottom); z-index: 300; display: flex; justify-content: space-around; }
         @media (min-width: 1024px) { .bottom-nav { display: none; } }
-        .bottom-nav-item { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); padding: var(--space-2); font-size: 0.625rem; color: rgba(255,255,255,0.6); }
+        .bottom-nav-item { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 0.5rem; font-size: 0.625rem; color: rgba(255,255,255,0.6); }
         .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--color-gold); }
         .bottom-nav-icon { font-size: 1.25rem; }
+
+        /* Animations */
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
@@ -173,30 +289,35 @@
     </div>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-image"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-badge">Powder Paradise</span>
-                    <h1 class="hero-title">Heli-Ski & <span>Luxury Ski</span> Experiences</h1>
-                    <p class="hero-subtitle">
-                        Access untouched powder on private peaks with the world's finest heli-ski operators.
-                        Combine with luxury lodge accommodations, private guides, and concierge services
-                        for the ultimate Canadian ski experience.
-                    </p>
-                    <div class="hero-meta">
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">Starting From</span>
-                            <span class="hero-meta-value">$1,800/day</span>
-                        </div>
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">Duration</span>
-                            <span class="hero-meta-value">3-7 days</span>
-                        </div>
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">Season</span>
-                            <span class="hero-meta-value">Dec-April</span>
-                        </div>
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1920&q=80" alt="Heli-skiing in British Columbia mountains">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">🚁 Powder Paradise</span>
+                <h1 class="hero-title">Heli-Ski & <span>Luxury Ski Experiences</span></h1>
+                <p class="hero-subtitle">
+                    Access untouched powder on private peaks with the world's finest heli-ski operators.
+                    British Columbia's legendary terrain awaits with exclusive lodges and ACMG-certified guides.
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">10M+</div>
+                        <div class="hero-stat-label">Acres of Terrain</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">12m</div>
+                        <div class="hero-stat-label">Avg Annual Snowfall</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">50+</div>
+                        <div class="hero-stat-label">Years Heritage</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">100%</div>
+                        <div class="hero-stat-label">Private Access</div>
                     </div>
                 </div>
             </div>
@@ -204,139 +325,369 @@
 
         <nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li><a href="/">Home</a></li><li>/</li><li><a href="/luxury/">Luxury</a></li><li>/</li><li>Ski Experiences</li></ol></div></nav>
 
+        <!-- Photo Gallery -->
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=400&q=80" alt="Helicopter skiing">
+                        <div class="gallery-caption">Heli Drop, Revelstoke</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=400&q=80" alt="Deep powder skiing">
+                        <div class="gallery-caption">Deep Powder, Purcells</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=400&q=80" alt="Mountain peaks">
+                        <div class="gallery-caption">Alpine Terrain, Monashees</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1565992441121-4367c2967103?w=400&q=80" alt="Luxury ski lodge">
+                        <div class="gallery-caption">Luxury Lodge, BC</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1520364130867-7a76d3c5e186?w=400&q=80" alt="Skiing through trees">
+                        <div class="gallery-caption">Tree Skiing, Selkirks</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80" alt="Mountain sunset">
+                        <div class="gallery-caption">Sunset Run, Whistler</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why BC Heli-Skiing -->
         <section class="section section-dark">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-badge">The Experience</span>
-                    <h2 class="section-title">Why Choose Canadian Heli-Skiing</h2>
+                    <span class="section-badge">The Difference</span>
+                    <h2 class="section-title">Why British Columbia is the Heli-Skiing Capital</h2>
                     <p class="section-subtitle">
-                        British Columbia is the birthplace of heli-skiing and remains the world's premier destination
-                        for accessing pristine powder in vast mountain terrain.
+                        BC is the birthplace of heli-skiing and remains the world's premier destination for accessing
+                        pristine powder in vast, untouched mountain terrain.
                     </p>
                 </header>
 
-                <div class="highlights-grid">
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🚁</div>
-                        <h3 class="highlight-title">Untouched Terrain</h3>
-                        <p class="highlight-text">Access to millions of acres of untracked powder</p>
+                <div class="features-grid animate-on-scroll">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚁</div>
+                        <h3 class="feature-title">Untouched Terrain</h3>
+                        <p class="feature-text">Access millions of acres of untracked powder across multiple mountain ranges</p>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">❄️</div>
-                        <h3 class="highlight-title">Deep Snow</h3>
-                        <p class="highlight-text">Average annual snowfall of 12+ meters in prime areas</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">❄️</div>
+                        <h3 class="feature-title">Legendary Snow</h3>
+                        <p class="feature-text">12+ meters annual snowfall with consistent light, dry interior powder</p>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🎿</div>
-                        <h3 class="highlight-title">Expert Guides</h3>
-                        <p class="highlight-text">ACMG-certified guides with decades of experience</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎿</div>
+                        <h3 class="feature-title">ACMG Guides</h3>
+                        <p class="feature-text">World's most qualified mountain guides with decades of terrain experience</p>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🏔️</div>
-                        <h3 class="highlight-title">Endless Variety</h3>
-                        <p class="highlight-text">Alpine bowls, glaciers, trees, and pillow lines</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏔️</div>
+                        <h3 class="feature-title">Terrain Variety</h3>
+                        <p class="feature-text">Alpine bowls, glaciers, old-growth trees, pillow lines, and couloirs</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3 class="feature-title">Luxury Lodges</h3>
+                        <p class="feature-text">Remote wilderness lodges with gourmet dining and spa facilities</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3 class="feature-title">Small Groups</h3>
+                        <p class="feature-text">Maximum 11 skiers per group ensures personalized experience</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3 class="feature-title">Media Packages</h3>
+                        <p class="feature-text">Professional photography and video available to capture your runs</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">Vertical Guarantee</h3>
+                        <p class="feature-text">Most operators offer 25,000-30,000+ vertical feet guarantee per trip</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Premier Operators -->
         <section class="section">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-badge">Premier Operations</span>
-                    <h2 class="section-title">Exclusive Ski Experiences</h2>
-                    <p class="section-subtitle">From world-renowned heli-ski operators to private ski concierge at top resorts.</p>
+                    <span class="section-badge">Premier Operators</span>
+                    <h2 class="section-title">World-Class Heli-Ski Operations</h2>
+                    <p class="section-subtitle">We partner exclusively with BC's most respected heli-ski operators, each offering unique terrain and experiences.</p>
                 </header>
 
-                <div class="ski-grid">
-                    <div class="ski-card">
-                        <div class="ski-image" style="background-image: url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&q=80')">
-                            <span class="ski-badge">Legendary</span>
-                        </div>
-                        <div class="ski-content">
-                            <p class="ski-location">Revelstoke & Blue River, BC</p>
-                            <h3 class="ski-title">CMH Heli-Skiing</h3>
-                            <p class="ski-desc">
-                                The pioneers of heli-skiing. Access 12 exclusive areas with 3+ million acres of
-                                terrain across the Cariboo, Monashee, and Selkirk mountains.
-                            </p>
-                            <div class="ski-highlights">
-                                <span class="ski-highlight">3M+ acres</span>
-                                <span class="ski-highlight">Luxury lodges</span>
-                                <span class="ski-highlight">30,000+ ft/day</span>
+                <div class="operator-grid">
+                    <!-- CMH Heli-Skiing -->
+                    <div class="operator-card animate-on-scroll">
+                        <div class="operator-image">
+                            <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&q=80" alt="CMH Heli-Skiing terrain">
+                            <div class="operator-badges">
+                                <span class="op-badge">Pioneer Since 1965</span>
+                                <span class="op-badge op-badge-dark">Dec-Apr</span>
                             </div>
-                            <div class="ski-footer">
-                                <div class="ski-price">$12,000 <span>4-day package</span></div>
-                                <span class="ski-season">Dec-April</span>
+                        </div>
+                        <div class="operator-content">
+                            <p class="op-location">📍 12 Locations Across BC</p>
+                            <h3 class="op-title">CMH Heli-Skiing</h3>
+                            <p class="op-desc">
+                                The pioneers who invented heli-skiing in 1965. CMH operates the world's largest
+                                heli-skiing tenure with 12 exclusive areas spanning the Cariboo, Monashee, Selkirk,
+                                and Bugaboo ranges. Unmatched terrain variety and legendary snow quality.
+                            </p>
+                            <div class="op-stats">
+                                <div class="op-stat">
+                                    <div class="op-stat-value">3M+</div>
+                                    <div class="op-stat-label">Acres</div>
+                                </div>
+                                <div class="op-stat">
+                                    <div class="op-stat-value">12</div>
+                                    <div class="op-stat-label">Lodges</div>
+                                </div>
+                                <div class="op-stat">
+                                    <div class="op-stat-value">30K</div>
+                                    <div class="op-stat-label">Vertical/Day</div>
+                                </div>
+                            </div>
+                            <div class="op-features">
+                                <span class="op-feature">Private lodge accommodations</span>
+                                <span class="op-feature">All meals & wine included</span>
+                                <span class="op-feature">Massage & spa services</span>
+                                <span class="op-feature">Safety equipment provided</span>
+                                <span class="op-feature">Professional photography</span>
+                                <span class="op-feature">Après-ski program</span>
+                            </div>
+                            <div class="op-packages">
+                                <h4 class="op-packages-title">Package Options</h4>
+                                <div class="op-package">
+                                    <span class="op-package-name">3-Day Adventure</span>
+                                    <span class="op-package-price">$9,500</span>
+                                </div>
+                                <div class="op-package">
+                                    <span class="op-package-name">4-Day Classic</span>
+                                    <span class="op-package-price">$12,500</span>
+                                </div>
+                                <div class="op-package">
+                                    <span class="op-package-name">7-Day Ultimate</span>
+                                    <span class="op-package-price">$21,000</span>
+                                </div>
+                            </div>
+                            <div class="op-footer">
+                                <div class="op-price">
+                                    <div class="op-price-value">From $9,500</div>
+                                    <div class="op-price-label">per person, all-inclusive</div>
+                                </div>
+                                <div class="op-season">
+                                    <div class="op-season-value">Dec - Apr</div>
+                                    <div class="op-season-label">Season</div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="ski-card">
-                        <div class="ski-image" style="background-image: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=800&q=80')">
-                            <span class="ski-badge">Exclusive</span>
-                        </div>
-                        <div class="ski-content">
-                            <p class="ski-location">Whistler, BC</p>
-                            <h3 class="ski-title">Whistler Private Heli</h3>
-                            <p class="ski-desc">
-                                Private heli-skiing from Whistler Village. Access remote Coast Mountain terrain
-                                while enjoying Whistler's world-class dining and accommodations.
-                            </p>
-                            <div class="ski-highlights">
-                                <span class="ski-highlight">Private groups</span>
-                                <span class="ski-highlight">Coast Mountains</span>
-                                <span class="ski-highlight">Day trips</span>
+                    <!-- Mike Wiegele -->
+                    <div class="operator-card animate-on-scroll">
+                        <div class="operator-image">
+                            <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800&q=80" alt="Mike Wiegele terrain">
+                            <div class="operator-badges">
+                                <span class="op-badge">Legendary</span>
+                                <span class="op-badge op-badge-dark">Dec-Apr</span>
                             </div>
-                            <div class="ski-footer">
-                                <div class="ski-price">$1,800 <span>per person/day</span></div>
-                                <span class="ski-season">Dec-April</span>
+                        </div>
+                        <div class="operator-content">
+                            <p class="op-location">📍 Blue River, BC</p>
+                            <h3 class="op-title">Mike Wiegele Helicopter Skiing</h3>
+                            <p class="op-desc">
+                                The "Champagne Powder" experts operating from a world-class resort in Blue River.
+                                With 1.2 million acres of tenure and the largest heli-ski fleet in the world,
+                                Mike Wiegele delivers the most consistent powder experience available.
+                            </p>
+                            <div class="op-stats">
+                                <div class="op-stat">
+                                    <div class="op-stat-value">1.2M</div>
+                                    <div class="op-stat-label">Acres</div>
+                                </div>
+                                <div class="op-stat">
+                                    <div class="op-stat-value">15</div>
+                                    <div class="op-stat-label">Helicopters</div>
+                                </div>
+                                <div class="op-stat">
+                                    <div class="op-stat-value">35K</div>
+                                    <div class="op-stat-label">Vertical/Day</div>
+                                </div>
+                            </div>
+                            <div class="op-features">
+                                <span class="op-feature">Luxury chalet accommodations</span>
+                                <span class="op-feature">Fitness center & pool</span>
+                                <span class="op-feature">On-site ski technicians</span>
+                                <span class="op-feature">Vertical guarantee program</span>
+                                <span class="op-feature">Snowcat backup available</span>
+                                <span class="op-feature">Airport transfers included</span>
+                            </div>
+                            <div class="op-packages">
+                                <h4 class="op-packages-title">Package Options</h4>
+                                <div class="op-package">
+                                    <span class="op-package-name">3-Day Intro</span>
+                                    <span class="op-package-price">$10,200</span>
+                                </div>
+                                <div class="op-package">
+                                    <span class="op-package-name">5-Day Classic</span>
+                                    <span class="op-package-price">$16,500</span>
+                                </div>
+                                <div class="op-package">
+                                    <span class="op-package-name">7-Day Premium</span>
+                                    <span class="op-package-price">$22,500</span>
+                                </div>
+                            </div>
+                            <div class="op-footer">
+                                <div class="op-price">
+                                    <div class="op-price-value">From $10,200</div>
+                                    <div class="op-price-label">per person, all-inclusive</div>
+                                </div>
+                                <div class="op-season">
+                                    <div class="op-season-value">Dec - Apr</div>
+                                    <div class="op-season-label">Season</div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="ski-card">
-                        <div class="ski-image" style="background-image: url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800&q=80')">
-                            <span class="ski-badge">Ultimate</span>
-                        </div>
-                        <div class="ski-content">
-                            <p class="ski-location">Panorama & Purcells, BC</p>
-                            <h3 class="ski-title">RK Heliski</h3>
-                            <p class="ski-desc">
-                                Small-group heli-skiing in the stunning Purcell Mountains. Intimate lodge experience
-                                with guaranteed vertical and exceptional terrain variety.
-                            </p>
-                            <div class="ski-highlights">
-                                <span class="ski-highlight">Small groups</span>
-                                <span class="ski-highlight">Purcell Range</span>
-                                <span class="ski-highlight">All levels</span>
+                    <!-- Bella Coola -->
+                    <div class="operator-card animate-on-scroll">
+                        <div class="operator-image">
+                            <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=800&q=80" alt="Bella Coola terrain">
+                            <div class="operator-badges">
+                                <span class="op-badge">Steep & Deep</span>
+                                <span class="op-badge op-badge-dark">Feb-Apr</span>
                             </div>
-                            <div class="ski-footer">
-                                <div class="ski-price">$9,500 <span>3-day package</span></div>
-                                <span class="ski-season">Dec-April</span>
+                        </div>
+                        <div class="operator-content">
+                            <p class="op-location">📍 Bella Coola Valley, BC</p>
+                            <h3 class="op-title">Bella Coola Heli Sports</h3>
+                            <p class="op-desc">
+                                For expert skiers seeking the ultimate steep terrain. Operating in the Coast Mountains
+                                with vertical runs up to 6,000 feet, Bella Coola offers the most technical terrain
+                                in the industry with incredible maritime snowpack for late-season stability.
+                            </p>
+                            <div class="op-stats">
+                                <div class="op-stat">
+                                    <div class="op-stat-value">2.6M</div>
+                                    <div class="op-stat-label">Acres</div>
+                                </div>
+                                <div class="op-stat">
+                                    <div class="op-stat-value">6,000</div>
+                                    <div class="op-stat-label">Max Vertical</div>
+                                </div>
+                                <div class="op-stat">
+                                    <div class="op-stat-value">11</div>
+                                    <div class="op-stat-label">Max Guests</div>
+                                </div>
+                            </div>
+                            <div class="op-features">
+                                <span class="op-feature">Boutique lodge experience</span>
+                                <span class="op-feature">Expert-only terrain options</span>
+                                <span class="op-feature">Small group guarantee</span>
+                                <span class="op-feature">Couloirs & big mountain</span>
+                                <span class="op-feature">Flexible trip lengths</span>
+                                <span class="op-feature">Splitboard friendly</span>
+                            </div>
+                            <div class="op-packages">
+                                <h4 class="op-packages-title">Package Options</h4>
+                                <div class="op-package">
+                                    <span class="op-package-name">4-Day Steep</span>
+                                    <span class="op-package-price">$11,900</span>
+                                </div>
+                                <div class="op-package">
+                                    <span class="op-package-name">7-Day Ultimate</span>
+                                    <span class="op-package-price">$19,500</span>
+                                </div>
+                                <div class="op-package">
+                                    <span class="op-package-name">Private Group (4+)</span>
+                                    <span class="op-package-price">Custom</span>
+                                </div>
+                            </div>
+                            <div class="op-footer">
+                                <div class="op-price">
+                                    <div class="op-price-value">From $11,900</div>
+                                    <div class="op-price-label">per person, all-inclusive</div>
+                                </div>
+                                <div class="op-season">
+                                    <div class="op-season-value">Feb - Apr</div>
+                                    <div class="op-season-label">Season</div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="ski-card">
-                        <div class="ski-image" style="background-image: url('https://images.unsplash.com/photo-1565992441121-4367c2967103?w=800&q=80')">
-                            <span class="ski-badge">VIP</span>
-                        </div>
-                        <div class="ski-content">
-                            <p class="ski-location">Whistler & Banff</p>
-                            <h3 class="ski-title">Private Ski Concierge</h3>
-                            <p class="ski-desc">
-                                Full luxury ski concierge at Canada's top resorts. Private guides, first tracks,
-                                ski-in/ski-out accommodations, and exclusive mountain dining.
-                            </p>
-                            <div class="ski-highlights">
-                                <span class="ski-highlight">Private guides</span>
-                                <span class="ski-highlight">First tracks</span>
-                                <span class="ski-highlight">VIP access</span>
+                    <!-- Private Day Heli -->
+                    <div class="operator-card animate-on-scroll">
+                        <div class="operator-image">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80" alt="Whistler heli-skiing">
+                            <div class="operator-badges">
+                                <span class="op-badge">Day Trips</span>
+                                <span class="op-badge op-badge-dark">Dec-Apr</span>
                             </div>
-                            <div class="ski-footer">
-                                <div class="ski-price">$2,500 <span>per day + lodging</span></div>
-                                <span class="ski-season">Nov-April</span>
+                        </div>
+                        <div class="operator-content">
+                            <p class="op-location">📍 Whistler & Revelstoke, BC</p>
+                            <h3 class="op-title">Private Day Heli-Skiing</h3>
+                            <p class="op-desc">
+                                Experience world-class heli-skiing without the multi-day commitment. Our private
+                                day programs from Whistler and Revelstoke offer exclusive helicopter access to
+                                pristine powder while you stay at your choice of luxury resort accommodations.
+                            </p>
+                            <div class="op-stats">
+                                <div class="op-stat">
+                                    <div class="op-stat-value">4-6</div>
+                                    <div class="op-stat-label">Guests Max</div>
+                                </div>
+                                <div class="op-stat">
+                                    <div class="op-stat-value">8-10</div>
+                                    <div class="op-stat-label">Runs/Day</div>
+                                </div>
+                                <div class="op-stat">
+                                    <div class="op-stat-value">20K</div>
+                                    <div class="op-stat-label">Vertical/Day</div>
+                                </div>
+                            </div>
+                            <div class="op-features">
+                                <span class="op-feature">Private helicopter charter</span>
+                                <span class="op-feature">Choose your accommodation</span>
+                                <span class="op-feature">Flexible scheduling</span>
+                                <span class="op-feature">Custom terrain selection</span>
+                                <span class="op-feature">Multi-day discounts</span>
+                                <span class="op-feature">Resort access included</span>
+                            </div>
+                            <div class="op-packages">
+                                <h4 class="op-packages-title">Day Options</h4>
+                                <div class="op-package">
+                                    <span class="op-package-name">Single Day (per person)</span>
+                                    <span class="op-package-price">$1,800</span>
+                                </div>
+                                <div class="op-package">
+                                    <span class="op-package-name">Private Group (4 guests)</span>
+                                    <span class="op-package-price">$8,500</span>
+                                </div>
+                                <div class="op-package">
+                                    <span class="op-package-name">3-Day Package</span>
+                                    <span class="op-package-price">$4,800/pp</span>
+                                </div>
+                            </div>
+                            <div class="op-footer">
+                                <div class="op-price">
+                                    <div class="op-price-value">From $1,800</div>
+                                    <div class="op-price-label">per person per day</div>
+                                </div>
+                                <div class="op-season">
+                                    <div class="op-season-value">Dec - Apr</div>
+                                    <div class="op-season-label">Season</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -344,11 +695,348 @@
             </div>
         </section>
 
+        <!-- Terrain Types -->
+        <section class="section section-dark">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">Terrain Guide</span>
+                    <h2 class="section-title">Experience Every Type of Terrain</h2>
+                    <p class="section-subtitle">BC's diverse mountain ranges offer terrain for every style and ability level.</p>
+                </header>
+
+                <div class="terrain-grid animate-on-scroll">
+                    <div class="terrain-card">
+                        <div class="terrain-icon">🏔️</div>
+                        <h3 class="terrain-name">Alpine Bowls</h3>
+                        <p class="terrain-desc">Wide open above-treeline bowls with consistent pitch and spectacular views.</p>
+                        <ul class="terrain-features">
+                            <li>30-40 degree average pitch</li>
+                            <li>Above treeline exposure</li>
+                            <li>Wind-loaded powder pockets</li>
+                            <li>Intermediate to advanced</li>
+                        </ul>
+                    </div>
+                    <div class="terrain-card">
+                        <div class="terrain-icon">🌲</div>
+                        <h3 class="terrain-name">Gladed Trees</h3>
+                        <p class="terrain-desc">Protected old-growth forests offering storm-day skiing and pillow lines.</p>
+                        <ul class="terrain-features">
+                            <li>Weather-protected zones</li>
+                            <li>Consistent snow quality</li>
+                            <li>Natural pillow features</li>
+                            <li>All ability levels</li>
+                        </ul>
+                    </div>
+                    <div class="terrain-card">
+                        <div class="terrain-icon">🗻</div>
+                        <h3 class="terrain-name">Glaciers</h3>
+                        <p class="terrain-desc">Epic glacier runs with sustained vertical and spring corn conditions.</p>
+                        <ul class="terrain-features">
+                            <li>3,000-6,000m vertical runs</li>
+                            <li>Spring corn skiing</li>
+                            <li>Dramatic scenery</li>
+                            <li>Advanced skiers</li>
+                        </ul>
+                    </div>
+                    <div class="terrain-card">
+                        <div class="terrain-icon">⛷️</div>
+                        <h3 class="terrain-name">Couloirs</h3>
+                        <p class="terrain-desc">Technical steep chutes for expert skiers seeking the ultimate challenge.</p>
+                        <ul class="terrain-features">
+                            <li>45-55 degree pitches</li>
+                            <li>Technical entry/exit</li>
+                            <li>Expert only</li>
+                            <li>Requires stable snow</li>
+                        </ul>
+                    </div>
+                    <div class="terrain-card">
+                        <div class="terrain-icon">🎯</div>
+                        <h3 class="terrain-name">Pillow Lines</h3>
+                        <p class="terrain-desc">Playful snow pillows formed on rocky terrain for creative line choice.</p>
+                        <ul class="terrain-features">
+                            <li>Natural snow features</li>
+                            <li>Air opportunities</li>
+                            <li>Creative line selection</li>
+                            <li>Advanced skiers</li>
+                        </ul>
+                    </div>
+                    <div class="terrain-card">
+                        <div class="terrain-icon">🎿</div>
+                        <h3 class="terrain-name">Groomers & Mellow</h3>
+                        <p class="terrain-desc">Gentler terrain for warm-up runs and intermediate progression.</p>
+                        <ul class="terrain-features">
+                            <li>20-30 degree pitch</li>
+                            <li>Confidence building</li>
+                            <li>Perfect for progression</li>
+                            <li>Beginner to intermediate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Season Guide -->
+        <section class="section section-gray">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">Season Guide</span>
+                    <h2 class="section-title">When to Go Heli-Skiing</h2>
+                    <p class="section-subtitle">Each month offers different conditions and experiences.</p>
+                </header>
+
+                <div class="season-grid animate-on-scroll">
+                    <div class="season-card">
+                        <div class="season-icon">🌨️</div>
+                        <h3 class="season-month">December</h3>
+                        <p class="season-conditions">Early Season | Fresh Base</p>
+                        <p class="season-details">Season opener with building snowpack. Great rates and availability. Some terrain restrictions possible.</p>
+                        <div class="season-rating">
+                            <span class="season-rating-label">Conditions:</span>
+                            <span class="season-rating-stars">★★★☆☆</span>
+                        </div>
+                    </div>
+                    <div class="season-card">
+                        <div class="season-icon">❄️</div>
+                        <h3 class="season-month">January</h3>
+                        <p class="season-conditions">Prime Powder | Deep Snow</p>
+                        <p class="season-details">Consistent storms build deep base. Cold temps preserve powder. Most terrain accessible.</p>
+                        <div class="season-rating">
+                            <span class="season-rating-label">Conditions:</span>
+                            <span class="season-rating-stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="season-card">
+                        <div class="season-icon">⛷️</div>
+                        <h3 class="season-month">February</h3>
+                        <p class="season-conditions">Peak Season | Best Variety</p>
+                        <p class="season-details">Deep consolidated base. All terrain open. Best overall conditions. Book early - highest demand.</p>
+                        <div class="season-rating">
+                            <span class="season-rating-label">Conditions:</span>
+                            <span class="season-rating-stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="season-card">
+                        <div class="season-icon">☀️</div>
+                        <h3 class="season-month">March-April</h3>
+                        <p class="season-conditions">Spring Skiing | Corn Snow</p>
+                        <p class="season-details">Longer days, warmer temps. Morning powder, afternoon corn. Glacier skiing at its best.</p>
+                        <div class="season-rating">
+                            <span class="season-rating-label">Conditions:</span>
+                            <span class="season-rating-stars">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">All-Inclusive</span>
+                    <h2 class="section-title">What's Included</h2>
+                    <p class="section-subtitle">Multi-day packages include everything for the ultimate heli-ski experience.</p>
+                </header>
+
+                <div class="included-grid animate-on-scroll">
+                    <div class="included-card">
+                        <div class="included-icon">🚁</div>
+                        <h3 class="included-title">Helicopter Access</h3>
+                        <ul class="included-list">
+                            <li>All helicopter flights</li>
+                            <li>Fuel surcharge included</li>
+                            <li>Vertical guarantee program</li>
+                            <li>Weather flexibility days</li>
+                            <li>Multiple aircraft available</li>
+                        </ul>
+                    </div>
+                    <div class="included-card">
+                        <div class="included-icon">🏨</div>
+                        <h3 class="included-title">Accommodations</h3>
+                        <ul class="included-list">
+                            <li>Private or shared rooms</li>
+                            <li>Luxury wilderness lodges</li>
+                            <li>Daily housekeeping</li>
+                            <li>Hot tub & sauna access</li>
+                            <li>Massage services available</li>
+                        </ul>
+                    </div>
+                    <div class="included-card">
+                        <div class="included-icon">🍽️</div>
+                        <h3 class="included-title">Gourmet Dining</h3>
+                        <ul class="included-list">
+                            <li>All meals included</li>
+                            <li>Executive chef prepared</li>
+                            <li>Wine with dinner</li>
+                            <li>Mountain picnic lunches</li>
+                            <li>Dietary accommodations</li>
+                        </ul>
+                    </div>
+                    <div class="included-card">
+                        <div class="included-icon">🎿</div>
+                        <h3 class="included-title">Guiding & Safety</h3>
+                        <ul class="included-list">
+                            <li>ACMG-certified guides</li>
+                            <li>Avalanche safety gear</li>
+                            <li>Transceiver, probe, shovel</li>
+                            <li>Airbag pack available</li>
+                            <li>Fat ski rentals included</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section section-gray">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">Guest Experiences</span>
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <p class="section-subtitle">Life-changing powder experiences in the mountains of BC.</p>
+                </header>
+
+                <div class="testimonials-grid animate-on-scroll">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Five days of waist-deep powder at CMH Bugaboos. Every run felt like a first descent.
+                            The guides found us fresh lines all week long. Absolutely the best skiing of my life."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JM</div>
+                            <div>
+                                <div class="testimonial-name">James M.</div>
+                                <div class="testimonial-trip">CMH Bugaboos, Feb 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Mike Wiegele exceeded every expectation. The vertical guarantee meant we skied
+                            40,000+ feet over 5 days. The champagne powder was unreal, and the lodge was pure luxury."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SR</div>
+                            <div>
+                                <div class="testimonial-name">Sarah R.</div>
+                                <div class="testimonial-trip">Mike Wiegele, Jan 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Bella Coola is for serious skiers. The terrain is next level - 4,000 foot runs
+                            through spines and couloirs. Our guide was incredible at reading the snow and finding safe lines."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">TK</div>
+                            <div>
+                                <div class="testimonial-name">Tom K.</div>
+                                <div class="testimonial-trip">Bella Coola, Mar 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">FAQ</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </header>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What skill level is required for heli-skiing?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most operators require strong intermediate to advanced skiing ability. You should be comfortable skiing black diamond runs at resorts in varied snow conditions and able to ski 20,000+ vertical feet per day. Some operators offer programs for strong intermediates, while others like Bella Coola cater to experts seeking extreme terrain.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            When is the best time for heli-skiing in BC?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>January through March offers the most consistent powder conditions. January typically brings fresh storms and cold temperatures. February is peak season with deep base and all terrain accessible. March and April offer spring skiing with longer days and corn snow on glaciers. December can be excellent but terrain may be limited.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What happens if weather prevents flying?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Weather days are built into most packages. Operators maintain vertical guarantees (typically 25,000-30,000 feet) and may extend your trip if needed. Many lodges have snowcat backup for ground-based skiing. Alternative activities like spa, yoga, or touring may be offered. Credits or refunds vary by operator policy.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What safety equipment is provided?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>All operators provide avalanche transceivers, probes, and shovels. Airbag packs are available at most operations (some included, some rental). Fat skis optimized for powder are included. Helmets are mandatory. Guides carry extensive rescue equipment and communication devices. Safety briefings are conducted before the first run.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How far in advance should I book?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Prime weeks (February) should be booked 6-12 months in advance. January and March dates typically fill 3-6 months out. December and April offer better last-minute availability. For the best selection of dates and accommodations, we recommend booking as early as possible. Deposits are typically 50% at booking.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can snowboarders participate?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Most operators welcome snowboarders and splitboarders. Some have dedicated snowboard weeks or groups. Terrain selection may be adjusted for mixed groups. Splitboard-specific trips are available at certain operators. Let us know your preference when booking so we can match you with the best program.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What's the typical group size?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Helicopter groups typically consist of 4-5 skiers plus a guide. The helicopter carries the group to each run location. Lodges may host 20-44 total guests split into multiple groups based on ability. Private groups can be arranged for families or corporate retreats. Smaller boutique operations like Bella Coola host maximum 11 guests total.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is travel to the lodge included?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most packages include transfers from the nearest major airport or meeting point. CMH includes helicopter transfers to remote lodges. Mike Wiegele provides ground transfers from Kamloops. Some operators charge separately for transfers. We'll provide detailed logistics for your specific program and can arrange additional transportation as needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
                 <h2 class="cta-title">Book Your Powder Adventure</h2>
-                <p class="cta-text">Prime dates at top operators book 6-12 months in advance. Contact our ski specialists to secure your ideal experience.</p>
-                <a href="/contact/" class="btn btn-dark">Inquire About Heli-Skiing <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg></a>
+                <p class="cta-text">Prime dates at top operators book 6-12 months in advance. Contact our ski specialists to secure your ideal heli-ski experience.</p>
+                <a href="/contact/" class="btn btn-dark">
+                    Inquire About Heli-Skiing
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+                </a>
             </div>
         </section>
     </main>
@@ -361,6 +1049,7 @@
                     <a href="/luxury/">All Luxury Experiences</a>
                     <a href="/luxury/helicopter-tours/">Helicopter Tours</a>
                     <a href="/luxury/wilderness-lodges/">Wilderness Lodges</a>
+                    <a href="/luxury/wildlife-viewing/">Wildlife Viewing</a>
                     <a href="/contact/">Contact</a>
                 </div>
                 <p>&copy; 2025 TopCanadaTravel. All rights reserved.</p>
@@ -376,6 +1065,32 @@
         <a href="/plan-your-trip/" class="bottom-nav-item"><span class="bottom-nav-icon">✈️</span><span>Plan</span></a>
     </nav>
 
-    <script>document.querySelector('.mobile-menu-btn').addEventListener('click', function() { document.getElementById('mobile-menu').classList.toggle('active'); });</script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('active');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

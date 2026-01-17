@@ -23,7 +23,18 @@
         "name": "Exclusive Wildlife Viewing - Canada",
         "description": "Private wildlife encounters with polar bears, grizzlies, and spirit bears in remote Canadian wilderness",
         "url": "https://topcanadatravel.com/luxury/wildlife-viewing/",
-        "offers": {"@type": "Offer", "price": "8000", "priceCurrency": "CAD", "unitText": "per week"}
+        "touristType": ["Luxury Travelers", "Wildlife Enthusiasts", "Nature Photographers"],
+        "offers": {"@type": "Offer", "price": "7500", "priceCurrency": "CAD", "unitText": "per person"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is the best time to see polar bears in Churchill?", "acceptedAnswer": {"@type": "Answer", "text": "October to November is prime polar bear season when bears gather along Hudson Bay waiting for sea ice to form."}},
+            {"@type": "Question", "name": "How rare are spirit bear sightings?", "acceptedAnswer": {"@type": "Answer", "text": "Spirit bears are extremely rare - only about 400 exist. Our experienced guides achieve 70-80% sighting success rates during peak season."}}
+        ]
     }
     </script>
 
@@ -37,14 +48,10 @@
             --color-gray-900: #111827;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-display: 'Playfair Display', Georgia, serif;
-            --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
-            --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
-            --space-12: 3rem; --space-16: 4rem; --space-24: 6rem;
             --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
             --radius-xl: 1rem; --radius-2xl: 1.5rem; --radius-full: 9999px;
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1); --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
             --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.3);
-            --transition-fast: 150ms ease; --transition-base: 200ms ease;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -54,95 +61,194 @@
         a { color: inherit; text-decoration: none; }
         button { font-family: inherit; cursor: pointer; border: none; background: none; }
         ul, ol { list-style: none; }
-        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 var(--space-4); }
-        @media (min-width: 768px) { .container { padding: 0 var(--space-6); } }
+        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+        @media (min-width: 768px) { .container { padding: 0 1.5rem; } }
 
+        /* Header */
         .header { position: fixed; top: 0; left: 0; right: 0; z-index: 300; background: rgba(26,26,46,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(212,175,55,0.2); }
         .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-        .logo { display: flex; align-items: center; gap: var(--space-2); font-weight: 700; font-size: 1.125rem; color: var(--color-white); }
+        .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.125rem; color: var(--color-white); }
         .logo-icon { font-size: 1.5rem; }
         .logo-text span { color: var(--color-gold); }
-        .nav-menu { display: none; gap: var(--space-1); }
+        .nav-menu { display: none; gap: 0.25rem; }
         @media (min-width: 1024px) { .nav-menu { display: flex; } }
-        .nav-link { padding: var(--space-2) var(--space-4); font-size: 0.9375rem; font-weight: 500; color: rgba(255,255,255,0.8); border-radius: var(--radius-md); transition: all var(--transition-fast); }
+        .nav-link { padding: 0.5rem 1rem; font-size: 0.9375rem; font-weight: 500; color: rgba(255,255,255,0.8); border-radius: var(--radius-md); transition: all 0.15s ease; }
         .nav-link:hover { color: var(--color-gold); background: rgba(212,175,55,0.1); }
         .mobile-menu-btn { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: var(--color-white); }
         @media (min-width: 1024px) { .mobile-menu-btn { display: none; } }
 
-        .hero { position: relative; min-height: 70vh; display: flex; align-items: center; padding-top: 72px; background: linear-gradient(135deg, var(--color-luxury-dark) 0%, var(--color-luxury-medium) 100%); overflow: hidden; }
-        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(212,175,55,0.2) 0%, transparent 60%); pointer-events: none; }
-        .hero-image { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=1600&q=80') center/cover; opacity: 0.3; }
-        .hero-content { position: relative; z-index: 1; max-width: 800px; }
-        .hero-badge { display: inline-flex; padding: var(--space-2) var(--space-5); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; color: var(--color-luxury-dark); margin-bottom: var(--space-6); text-transform: uppercase; letter-spacing: 0.1em; }
-        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; line-height: 1.1; color: var(--color-white); margin-bottom: var(--space-6); }
-        .hero-title span { color: var(--color-gold); }
-        .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); line-height: 1.7; }
-        .hero-meta { display: flex; flex-wrap: wrap; gap: var(--space-6); }
-        .hero-meta-item { display: flex; flex-direction: column; }
-        .hero-meta-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
-        .hero-meta-value { font-size: 1.25rem; font-weight: 700; color: var(--color-gold); }
+        /* Hero */
+        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 72px; background: var(--color-luxury-dark); overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,26,46,0.4) 0%, rgba(26,26,46,0.7) 50%, rgba(26,26,46,0.95) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; padding: 2rem 1rem; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 700; color: var(--color-luxury-dark); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 700; line-height: 1.1; color: var(--color-white); margin-bottom: 1.5rem; }
+        .hero-title span { color: var(--color-gold); display: block; }
+        .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.9); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+        @media (min-width: 768px) { .hero-stats { grid-template-columns: repeat(4, 1fr); } }
+        .hero-stat { text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: var(--radius-xl); backdrop-filter: blur(10px); }
+        .hero-stat-value { font-size: 2.5rem; font-weight: 800; color: var(--color-gold); line-height: 1; }
+        .hero-stat-label { font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem; }
 
-        .breadcrumb { padding: var(--space-4) 0; background: rgba(26,26,46,0.5); }
-        .breadcrumb-list { display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+        /* Breadcrumb */
+        .breadcrumb { padding: 1rem 0; background: rgba(26,26,46,0.5); }
+        .breadcrumb-list { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.6); flex-wrap: wrap; }
         .breadcrumb-list a:hover { color: var(--color-gold); }
 
-        .section { padding: var(--space-16) 0; }
-        @media (min-width: 768px) { .section { padding: var(--space-24) 0; } }
+        /* Gallery */
+        .gallery { padding: 4rem 0; background: var(--color-gray-50); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        @media (min-width: 768px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+        @media (min-width: 1024px) { .gallery-grid { grid-template-columns: repeat(6, 1fr); } }
+        .gallery-item { position: relative; aspect-ratio: 1; border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem 0.75rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; font-size: 0.75rem; font-weight: 500; opacity: 0; transition: opacity 0.3s ease; }
+        .gallery-item:hover .gallery-caption { opacity: 1; }
+
+        /* Sections */
+        .section { padding: 4rem 0; }
+        @media (min-width: 768px) { .section { padding: 6rem 0; } }
         .section-dark { background: linear-gradient(135deg, var(--color-luxury-dark) 0%, var(--color-luxury-medium) 100%); }
-        .section-header { text-align: center; max-width: 800px; margin: 0 auto var(--space-12); }
-        .section-badge { display: inline-block; padding: var(--space-2) var(--space-4); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: var(--radius-full); margin-bottom: var(--space-4); }
-        .section-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--color-gray-900); line-height: 1.2; margin-bottom: var(--space-4); }
+        .section-gray { background: var(--color-gray-50); }
+        .section-header { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
+        .section-badge { display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: var(--radius-full); margin-bottom: 1rem; }
+        .section-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--color-gray-900); line-height: 1.2; margin-bottom: 1rem; }
         .section-dark .section-title { color: var(--color-white); }
         .section-subtitle { font-size: 1.125rem; color: var(--color-gray-600); line-height: 1.7; }
         .section-dark .section-subtitle { color: rgba(255,255,255,0.8); }
 
-        .wildlife-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-8); }
-        @media (min-width: 768px) { .wildlife-grid { grid-template-columns: repeat(2, 1fr); } }
+        /* Features Grid */
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        @media (min-width: 768px) { .features-grid { grid-template-columns: repeat(4, 1fr); } }
+        .feature-card { text-align: center; padding: 2rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: var(--radius-xl); transition: all 0.3s ease; }
+        .feature-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-title { font-weight: 700; color: var(--color-white); margin-bottom: 0.5rem; }
+        .feature-text { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
 
-        .wildlife-card { background: var(--color-white); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg); transition: all var(--transition-base); border: 1px solid var(--color-gray-200); }
-        .wildlife-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-gold); border-color: var(--color-gold); }
-        .wildlife-image { height: 260px; background-size: cover; background-position: center; position: relative; }
-        .wildlife-badge { position: absolute; top: var(--space-4); left: var(--space-4); padding: var(--space-2) var(--space-4); background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; border-radius: var(--radius-full); }
-        .wildlife-content { padding: var(--space-6); }
-        .wildlife-location { font-size: 0.875rem; color: var(--color-gold-dark); font-weight: 500; margin-bottom: var(--space-2); }
-        .wildlife-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: var(--space-3); }
-        .wildlife-desc { font-size: 0.9375rem; color: var(--color-gray-600); line-height: 1.7; margin-bottom: var(--space-4); }
-        .wildlife-highlights { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
-        .wildlife-highlight { padding: var(--space-1) var(--space-3); background: var(--color-gray-100); color: var(--color-gray-700); font-size: 0.75rem; border-radius: var(--radius-full); }
-        .wildlife-footer { display: flex; justify-content: space-between; align-items: center; padding-top: var(--space-4); border-top: 1px solid var(--color-gray-200); }
-        .wildlife-price { font-size: 1.25rem; font-weight: 700; color: var(--color-gold-dark); }
-        .wildlife-price span { font-size: 0.75rem; font-weight: 400; color: var(--color-gray-500); display: block; }
-        .wildlife-season { font-size: 0.875rem; color: var(--color-gray-500); }
+        /* Wildlife Experience Cards */
+        .experience-grid { display: grid; gap: 3rem; }
+        .experience-card { display: grid; gap: 2rem; background: var(--color-white); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-xl); border: 1px solid var(--color-gray-200); }
+        @media (min-width: 1024px) {
+            .experience-card { grid-template-columns: 1fr 1fr; }
+            .experience-card:nth-child(even) .experience-image { order: 2; }
+        }
+        .experience-image { position: relative; min-height: 400px; }
+        .experience-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .experience-badges { position: absolute; top: 1.5rem; left: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .exp-badge { padding: 0.5rem 1rem; background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: var(--color-luxury-dark); font-size: 0.75rem; font-weight: 700; border-radius: var(--radius-full); text-transform: uppercase; }
+        .exp-badge-dark { background: var(--color-luxury-dark); color: var(--color-gold); }
+        .experience-content { padding: 2rem; display: flex; flex-direction: column; }
+        @media (min-width: 768px) { .experience-content { padding: 3rem; } }
+        .exp-location { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--color-gold-dark); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .exp-title { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 1rem; }
+        .exp-desc { color: var(--color-gray-600); line-height: 1.8; margin-bottom: 1.5rem; }
+        .exp-highlights { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+        .exp-highlight { display: flex; align-items: center; gap: 0.75rem; }
+        .exp-highlight-icon { width: 40px; height: 40px; background: var(--color-gold-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+        .exp-highlight-text { font-size: 0.875rem; color: var(--color-gray-700); font-weight: 500; }
+        .exp-itinerary { background: var(--color-gray-50); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .exp-itinerary-title { font-weight: 700; color: var(--color-gray-900); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .exp-day { display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--color-gray-200); }
+        .exp-day:last-child { border-bottom: none; }
+        .exp-day-num { width: 28px; height: 28px; background: var(--color-gold); color: var(--color-luxury-dark); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
+        .exp-day-content { flex: 1; }
+        .exp-day-title { font-weight: 600; color: var(--color-gray-900); font-size: 0.9375rem; }
+        .exp-day-desc { font-size: 0.8125rem; color: var(--color-gray-600); margin-top: 0.25rem; }
+        .exp-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200); margin-top: auto; }
+        .exp-price { }
+        .exp-price-value { font-size: 2rem; font-weight: 800; color: var(--color-gold-dark); }
+        .exp-price-label { font-size: 0.875rem; color: var(--color-gray-500); }
+        .exp-meta { display: flex; gap: 1.5rem; }
+        .exp-meta-item { text-align: center; }
+        .exp-meta-value { font-weight: 700; color: var(--color-gray-900); }
+        .exp-meta-label { font-size: 0.75rem; color: var(--color-gray-500); }
 
-        .highlights-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
-        @media (min-width: 768px) { .highlights-grid { grid-template-columns: repeat(4, 1fr); } }
-        .highlight-item { text-align: center; padding: var(--space-6); background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); border-radius: var(--radius-xl); }
-        .highlight-icon { font-size: 2.5rem; margin-bottom: var(--space-3); }
-        .highlight-title { font-weight: 600; color: var(--color-white); margin-bottom: var(--space-1); }
-        .highlight-text { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
+        /* Seasonal Calendar */
+        .calendar-grid { display: grid; gap: 1.5rem; }
+        @media (min-width: 768px) { .calendar-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .calendar-grid { grid-template-columns: repeat(4, 1fr); } }
+        .season-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: var(--radius-xl); padding: 2rem; transition: all 0.3s ease; }
+        .season-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .season-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .season-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-white); margin-bottom: 0.5rem; }
+        .season-months { font-size: 0.875rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; }
+        .season-wildlife { list-style: none; }
+        .season-wildlife li { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.9375rem; color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 0.5rem; }
+        .season-wildlife li:last-child { border-bottom: none; }
+        .season-wildlife li::before { content: '✓'; color: var(--color-gold); font-weight: bold; }
+        .season-rating { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .season-rating-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+        .season-rating-stars { color: var(--color-gold); font-size: 1.25rem; letter-spacing: 0.1em; }
 
-        .cta-section { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); text-align: center; padding: var(--space-16) 0; }
-        .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); color: var(--color-luxury-dark); margin-bottom: var(--space-4); }
-        .cta-text { font-size: 1.125rem; color: var(--color-luxury-dark); opacity: 0.9; max-width: 600px; margin: 0 auto var(--space-8); }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); padding: var(--space-4) var(--space-8); font-size: 1rem; font-weight: 600; border-radius: var(--radius-lg); transition: all var(--transition-base); min-height: 52px; }
+        /* What's Included */
+        .included-grid { display: grid; gap: 1.5rem; }
+        @media (min-width: 768px) { .included-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .included-grid { grid-template-columns: repeat(4, 1fr); } }
+        .included-card { background: var(--color-white); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); transition: all 0.3s ease; }
+        .included-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .included-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1.5rem; }
+        .included-title { font-weight: 700; color: var(--color-gray-900); margin-bottom: 1rem; }
+        .included-list { list-style: none; }
+        .included-list li { padding: 0.5rem 0; font-size: 0.875rem; color: var(--color-gray-600); display: flex; align-items: flex-start; gap: 0.5rem; }
+        .included-list li::before { content: '✓'; color: var(--color-gold-dark); font-weight: bold; flex-shrink: 0; }
+
+        /* Testimonials */
+        .testimonials-grid { display: grid; gap: 1.5rem; }
+        @media (min-width: 768px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+        .testimonial-card { background: var(--color-white); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); }
+        .testimonial-stars { color: var(--color-gold); font-size: 1.25rem; margin-bottom: 1rem; }
+        .testimonial-text { font-size: 1rem; color: var(--color-gray-700); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+        .testimonial-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold)); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-luxury-dark); }
+        .testimonial-info { }
+        .testimonial-name { font-weight: 700; color: var(--color-gray-900); }
+        .testimonial-trip { font-size: 0.875rem; color: var(--color-gray-500); }
+
+        /* FAQ */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--color-white); border-radius: var(--radius-lg); margin-bottom: 1rem; box-shadow: var(--shadow-lg); border: 1px solid var(--color-gray-200); overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--color-gray-900); text-align: left; cursor: pointer; }
+        .faq-question:hover { color: var(--color-gold-dark); }
+        .faq-icon { font-size: 1.5rem; color: var(--color-gold); transition: transform 0.3s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 500px; padding-bottom: 1.5rem; }
+        .faq-answer p { color: var(--color-gray-600); line-height: 1.8; }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); text-align: center; padding: 5rem 0; }
+        .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); color: var(--color-luxury-dark); margin-bottom: 1rem; }
+        .cta-text { font-size: 1.125rem; color: var(--color-luxury-dark); opacity: 0.9; max-width: 600px; margin: 0 auto 2rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 1rem; font-weight: 600; border-radius: var(--radius-lg); transition: all 0.2s ease; }
         .btn-dark { background: var(--color-luxury-dark); color: var(--color-gold); }
         .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 
-        .footer { background: var(--color-gray-900); color: var(--color-gray-400); padding: var(--space-12) 0; }
-        .footer-content { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-4); }
-        .footer-logo { display: flex; align-items: center; gap: var(--space-2); font-size: 1.25rem; font-weight: 700; color: var(--color-white); }
-        .footer-links { display: flex; gap: var(--space-6); flex-wrap: wrap; justify-content: center; }
+        /* Footer */
+        .footer { background: var(--color-gray-900); color: var(--color-gray-400); padding: 3rem 0; }
+        .footer-content { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+        .footer-logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.25rem; font-weight: 700; color: var(--color-white); }
+        .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
         .footer-links a:hover { color: var(--color-gold); }
 
-        .mobile-menu { position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--color-luxury-dark); padding: var(--space-4); transform: translateX(100%); transition: transform 0.3s ease; z-index: 299; }
+        /* Mobile Menu & Nav */
+        .mobile-menu { position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--color-luxury-dark); padding: 1rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 299; }
         .mobile-menu.active { transform: translateX(0); }
-        .mobile-nav-link { display: block; padding: var(--space-4); font-size: 1.125rem; color: var(--color-white); border-bottom: 1px solid rgba(212,175,55,0.2); }
-
-        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--color-luxury-dark); border-top: 1px solid rgba(212,175,55,0.2); padding: var(--space-2) 0; padding-bottom: env(safe-area-inset-bottom); z-index: 300; display: flex; justify-content: space-around; }
+        .mobile-nav-link { display: block; padding: 1rem; font-size: 1.125rem; color: var(--color-white); border-bottom: 1px solid rgba(212,175,55,0.2); }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--color-luxury-dark); border-top: 1px solid rgba(212,175,55,0.2); padding: 0.5rem 0; padding-bottom: env(safe-area-inset-bottom); z-index: 300; display: flex; justify-content: space-around; }
         @media (min-width: 1024px) { .bottom-nav { display: none; } }
-        .bottom-nav-item { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); padding: var(--space-2); font-size: 0.625rem; color: rgba(255,255,255,0.6); }
+        .bottom-nav-item { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 0.5rem; font-size: 0.625rem; color: rgba(255,255,255,0.6); }
         .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--color-gold); }
         .bottom-nav-icon { font-size: 1.25rem; }
+
+        /* Animations */
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
@@ -173,30 +279,35 @@
     </div>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-image"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-badge">Once-in-a-Lifetime</span>
-                    <h1 class="hero-title">Exclusive <span>Wildlife Encounters</span></h1>
-                    <p class="hero-subtitle">
-                        Experience Canada's most magnificent wildlife in intimate, private settings.
-                        From polar bears on Hudson Bay to spirit bears in the Great Bear Rainforest,
-                        these are encounters that transform travelers forever.
-                    </p>
-                    <div class="hero-meta">
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">Starting From</span>
-                            <span class="hero-meta-value">$8,000/week</span>
-                        </div>
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">Duration</span>
-                            <span class="hero-meta-value">4-8 days</span>
-                        </div>
-                        <div class="hero-meta-item">
-                            <span class="hero-meta-label">Group Size</span>
-                            <span class="hero-meta-value">2-8 guests</span>
-                        </div>
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=1920&q=80" alt="Grizzly bear in Canadian wilderness">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">🐻 Once-in-a-Lifetime Encounters</span>
+                <h1 class="hero-title">Exclusive <span>Wildlife Experiences</span></h1>
+                <p class="hero-subtitle">
+                    Intimate encounters with polar bears, grizzlies, spirit bears, and whales in Canada's most pristine wilderness.
+                    Expert naturalists, private lodges, and guaranteed exclusivity.
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">200+</div>
+                        <div class="hero-stat-label">Species Encountered</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">98%</div>
+                        <div class="hero-stat-label">Sighting Success</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">25+</div>
+                        <div class="hero-stat-label">Years Experience</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">8</div>
+                        <div class="hero-stat-label">Max Group Size</div>
                     </div>
                 </div>
             </div>
@@ -204,140 +315,533 @@
 
         <nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li><a href="/">Home</a></li><li>/</li><li><a href="/luxury/">Luxury</a></li><li>/</li><li>Wildlife Viewing</li></ol></div></nav>
 
-        <section class="section section-dark">
+        <!-- Photo Gallery -->
+        <section class="gallery">
             <div class="container">
-                <header class="section-header">
-                    <span class="section-badge">The Experience</span>
-                    <h2 class="section-title">What Makes These Encounters Special</h2>
-                    <p class="section-subtitle">
-                        These aren't ordinary wildlife tours. They're private expeditions to remote locations
-                        with expert naturalists, luxury accommodations, and guaranteed exclusivity.
-                    </p>
-                </header>
-
-                <div class="highlights-grid">
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🔬</div>
-                        <h3 class="highlight-title">Expert Naturalists</h3>
-                        <p class="highlight-text">PhD-level guides with decades of field research experience</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=400&q=80" alt="Polar bear on ice">
+                        <div class="gallery-caption">Polar Bear, Churchill</div>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">👥</div>
-                        <h3 class="highlight-title">Small Groups</h3>
-                        <p class="highlight-text">Maximum 8 guests for intimate, unhurried encounters</p>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=400&q=80" alt="Spirit bear">
+                        <div class="gallery-caption">Spirit Bear, Great Bear Rainforest</div>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🏠</div>
-                        <h3 class="highlight-title">Private Lodges</h3>
-                        <p class="highlight-text">Exclusive accommodations in prime wildlife territory</p>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&q=80" alt="Grizzly bear fishing">
+                        <div class="gallery-caption">Grizzly Bear, Knight Inlet</div>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">📸</div>
-                        <h3 class="highlight-title">Photography</h3>
-                        <p class="highlight-text">Professional wildlife photographers available</p>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=400&q=80" alt="Beluga whale">
+                        <div class="gallery-caption">Beluga Whales, Churchill</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=400&q=80" alt="Bald eagle">
+                        <div class="gallery-caption">Bald Eagle, BC Coast</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?w=400&q=80" alt="Orca whale">
+                        <div class="gallery-caption">Orca, Vancouver Island</div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- What Makes Us Different -->
+        <section class="section section-dark">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">The Difference</span>
+                    <h2 class="section-title">Why Our Wildlife Experiences Are Extraordinary</h2>
+                    <p class="section-subtitle">
+                        These aren't ordinary wildlife tours. They're private expeditions to remote locations
+                        with the world's leading naturalists, luxury accommodations, and unmatched access.
+                    </p>
+                </header>
+
+                <div class="features-grid animate-on-scroll">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h3 class="feature-title">PhD Naturalists</h3>
+                        <p class="feature-text">Our guides hold advanced degrees and have decades of field research with the species you'll encounter</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3 class="feature-title">Intimate Groups</h3>
+                        <p class="feature-text">Maximum 8 guests ensures personalized attention and minimal wildlife disturbance</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3 class="feature-title">Private Lodges</h3>
+                        <p class="feature-text">Exclusive accommodations in prime wildlife territories with unmatched viewing access</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3 class="feature-title">Pro Photography</h3>
+                        <p class="feature-text">Award-winning wildlife photographers available to capture your encounters</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3 class="feature-title">Conservation Focus</h3>
+                        <p class="feature-text">Every trip directly supports wildlife research and habitat preservation programs</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✈️</div>
+                        <h3 class="feature-title">Private Access</h3>
+                        <p class="feature-text">Float plane and helicopter access to locations unreachable by commercial tours</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍽️</div>
+                        <h3 class="feature-title">Gourmet Dining</h3>
+                        <p class="feature-text">Executive chefs prepare locally-sourced cuisine in wilderness settings</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">Guaranteed Sightings</h3>
+                        <p class="feature-text">98% success rate with partial refund guarantee if primary species not seen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Experiences -->
         <section class="section">
             <div class="container">
                 <header class="section-header">
                     <span class="section-badge">Signature Encounters</span>
                     <h2 class="section-title">Exclusive Wildlife Experiences</h2>
-                    <p class="section-subtitle">Each experience offers a rare window into the lives of Canada's most magnificent creatures.</p>
+                    <p class="section-subtitle">Each expedition offers a rare window into the lives of Canada's most magnificent creatures, led by the world's foremost experts.</p>
                 </header>
 
-                <div class="wildlife-grid">
-                    <div class="wildlife-card">
-                        <div class="wildlife-image" style="background-image: url('https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=800&q=80')">
-                            <span class="wildlife-badge">Iconic</span>
-                        </div>
-                        <div class="wildlife-content">
-                            <p class="wildlife-location">Churchill, Manitoba</p>
-                            <h3 class="wildlife-title">Polar Bear Expedition</h3>
-                            <p class="wildlife-desc">
-                                Experience the world's most accessible polar bear viewing from custom-built
-                                Tundra Buggies. Stay at exclusive lodges right in bear territory for maximum
-                                viewing opportunities.
-                            </p>
-                            <div class="wildlife-highlights">
-                                <span class="wildlife-highlight">Polar Bears</span>
-                                <span class="wildlife-highlight">Northern Lights</span>
-                                <span class="wildlife-highlight">Tundra Buggy</span>
+                <div class="experience-grid">
+                    <!-- Polar Bear Expedition -->
+                    <div class="experience-card animate-on-scroll">
+                        <div class="experience-image">
+                            <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=800&q=80" alt="Polar bear on tundra">
+                            <div class="experience-badges">
+                                <span class="exp-badge">Most Popular</span>
+                                <span class="exp-badge exp-badge-dark">Oct-Nov</span>
                             </div>
-                            <div class="wildlife-footer">
-                                <div class="wildlife-price">$12,500 <span>6-day expedition</span></div>
-                                <span class="wildlife-season">Oct-Nov</span>
+                        </div>
+                        <div class="experience-content">
+                            <p class="exp-location">📍 Churchill, Manitoba</p>
+                            <h3 class="exp-title">Ultimate Polar Bear Expedition</h3>
+                            <p class="exp-desc">
+                                Experience the world's greatest concentration of polar bears from the comfort of custom-built
+                                Tundra Buggies and our exclusive wilderness lodge. Watch these magnificent apex predators
+                                hunt, play, and prepare for winter as they gather along Hudson Bay waiting for sea ice.
+                            </p>
+                            <div class="exp-highlights">
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🐻‍❄️</span>
+                                    <span class="exp-highlight-text">Up to 30+ polar bears daily</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🌌</span>
+                                    <span class="exp-highlight-text">Northern Lights viewing</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🚐</span>
+                                    <span class="exp-highlight-text">Private Tundra Buggy</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🏨</span>
+                                    <span class="exp-highlight-text">Tundra Lodge overnight</span>
+                                </div>
+                            </div>
+                            <div class="exp-itinerary">
+                                <h4 class="exp-itinerary-title">📅 6-Day Itinerary</h4>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">1</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Arrival in Churchill</div>
+                                        <div class="exp-day-desc">Charter flight from Winnipeg, orientation, and evening Northern Lights watch</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">2-4</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Tundra Buggy Adventures</div>
+                                        <div class="exp-day-desc">Full days on the tundra with expert naturalists, polar bear viewing, arctic fox encounters</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">5</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Tundra Lodge Overnight</div>
+                                        <div class="exp-day-desc">Sleep among the bears in our mobile lodge, watch bears approach at night</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">6</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Morning Safari & Departure</div>
+                                        <div class="exp-day-desc">Final viewing session, farewell lunch, charter flight to Winnipeg</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <div class="exp-price">
+                                    <div class="exp-price-value">$14,500</div>
+                                    <div class="exp-price-label">per person, all-inclusive</div>
+                                </div>
+                                <div class="exp-meta">
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">6 Days</div>
+                                        <div class="exp-meta-label">Duration</div>
+                                    </div>
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">8 Max</div>
+                                        <div class="exp-meta-label">Group Size</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="wildlife-card">
-                        <div class="wildlife-image" style="background-image: url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=800&q=80')">
-                            <span class="wildlife-badge">Rare</span>
-                        </div>
-                        <div class="wildlife-content">
-                            <p class="wildlife-location">Great Bear Rainforest, BC</p>
-                            <h3 class="wildlife-title">Spirit Bear Quest</h3>
-                            <p class="wildlife-desc">
-                                Search for the legendary Kermode "spirit bear" - the white black bear found
-                                only in BC's Great Bear Rainforest. Stay at intimate lodges with indigenous hosts.
-                            </p>
-                            <div class="wildlife-highlights">
-                                <span class="wildlife-highlight">Spirit Bears</span>
-                                <span class="wildlife-highlight">Grizzlies</span>
-                                <span class="wildlife-highlight">Salmon Runs</span>
+                    <!-- Spirit Bear Quest -->
+                    <div class="experience-card animate-on-scroll">
+                        <div class="experience-image">
+                            <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80" alt="Spirit bear in rainforest">
+                            <div class="experience-badges">
+                                <span class="exp-badge">Ultra Rare</span>
+                                <span class="exp-badge exp-badge-dark">Aug-Oct</span>
                             </div>
-                            <div class="wildlife-footer">
-                                <div class="wildlife-price">$9,800 <span>5-day experience</span></div>
-                                <span class="wildlife-season">Aug-Oct</span>
+                        </div>
+                        <div class="experience-content">
+                            <p class="exp-location">📍 Great Bear Rainforest, BC</p>
+                            <h3 class="exp-title">Spirit Bear Quest</h3>
+                            <p class="exp-desc">
+                                Search for the legendary Kermode "spirit bear" — the rare white-coated black bear found only
+                                in BC's Great Bear Rainforest. Stay at intimate Indigenous-owned lodges while exploring one of
+                                the world's largest remaining temperate rainforests by boat, on foot, and with First Nations guides.
+                            </p>
+                            <div class="exp-highlights">
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🤍</span>
+                                    <span class="exp-highlight-text">70-80% spirit bear sighting rate</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🎣</span>
+                                    <span class="exp-highlight-text">Salmon run season access</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🛶</span>
+                                    <span class="exp-highlight-text">Indigenous guide expertise</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🌲</span>
+                                    <span class="exp-highlight-text">Ancient rainforest trails</span>
+                                </div>
+                            </div>
+                            <div class="exp-itinerary">
+                                <h4 class="exp-itinerary-title">📅 7-Day Itinerary</h4>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">1</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Float Plane to Rainforest</div>
+                                        <div class="exp-day-desc">Scenic flight from Vancouver, lodge welcome, evening wildlife briefing</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">2-3</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Princess Royal Island</div>
+                                        <div class="exp-day-desc">Spirit bear territory, salmon stream viewing platforms, grizzly encounters</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">4-5</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Klemtu Village Stay</div>
+                                        <div class="exp-day-desc">Kitasoo/Xai'xais First Nation cultural immersion, traditional ceremonies</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">6</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Remote Estuary Exploration</div>
+                                        <div class="exp-day-desc">Kayaking among eagles, whale watching, forest bathing experience</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">7</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Farewell & Departure</div>
+                                        <div class="exp-day-desc">Morning wildlife viewing, float plane return to Vancouver</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <div class="exp-price">
+                                    <div class="exp-price-value">$11,900</div>
+                                    <div class="exp-price-label">per person, all-inclusive</div>
+                                </div>
+                                <div class="exp-meta">
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">7 Days</div>
+                                        <div class="exp-meta-label">Duration</div>
+                                    </div>
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">6 Max</div>
+                                        <div class="exp-meta-label">Group Size</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="wildlife-card">
-                        <div class="wildlife-image" style="background-image: url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80')">
-                            <span class="wildlife-badge">Adventure</span>
-                        </div>
-                        <div class="wildlife-content">
-                            <p class="wildlife-location">Knight Inlet, BC</p>
-                            <h3 class="wildlife-title">Grizzly Bear Safari</h3>
-                            <p class="wildlife-desc">
-                                Observe grizzly bears fishing for salmon at one of BC's premier bear viewing
-                                destinations. Private viewing platforms and expert guides ensure incredible encounters.
-                            </p>
-                            <div class="wildlife-highlights">
-                                <span class="wildlife-highlight">Grizzly Bears</span>
-                                <span class="wildlife-highlight">Bald Eagles</span>
-                                <span class="wildlife-highlight">Float Plane</span>
+                    <!-- Grizzly Bear Safari -->
+                    <div class="experience-card animate-on-scroll">
+                        <div class="experience-image">
+                            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80" alt="Grizzly bear fishing">
+                            <div class="experience-badges">
+                                <span class="exp-badge">Adventure</span>
+                                <span class="exp-badge exp-badge-dark">Aug-Oct</span>
                             </div>
-                            <div class="wildlife-footer">
-                                <div class="wildlife-price">$8,200 <span>4-day safari</span></div>
-                                <span class="wildlife-season">Aug-Oct</span>
+                        </div>
+                        <div class="experience-content">
+                            <p class="exp-location">📍 Knight Inlet, BC</p>
+                            <h3 class="exp-title">Grizzly Bear Safari</h3>
+                            <p class="exp-desc">
+                                Witness the annual grizzly bear salmon feast at one of BC's premier bear viewing destinations.
+                                From elevated viewing platforms just meters away, watch bears fish, spar, and feed while bald eagles
+                                circle overhead. Our floating lodge offers front-row seats to nature's most spectacular wildlife show.
+                            </p>
+                            <div class="exp-highlights">
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🐻</span>
+                                    <span class="exp-highlight-text">15-20 grizzlies per day</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🦅</span>
+                                    <span class="exp-highlight-text">200+ bald eagles</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🏠</span>
+                                    <span class="exp-highlight-text">Floating eco-lodge</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🚁</span>
+                                    <span class="exp-highlight-text">Helicopter access option</span>
+                                </div>
+                            </div>
+                            <div class="exp-itinerary">
+                                <h4 class="exp-itinerary-title">📅 5-Day Itinerary</h4>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">1</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Float Plane to Knight Inlet</div>
+                                        <div class="exp-day-desc">Scenic 45-minute flight from Campbell River, lodge arrival, evening viewing</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">2-3</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Glendale Cove Viewing</div>
+                                        <div class="exp-day-desc">Multiple viewing sessions from platforms, boat excursions, photography workshops</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">4</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Estuary & Whale Watching</div>
+                                        <div class="exp-day-desc">Boat safari for orcas and humpbacks, estuary grizzly viewing at dawn</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">5</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Sunrise Safari & Departure</div>
+                                        <div class="exp-day-desc">Early morning viewing, brunch, float plane return</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <div class="exp-price">
+                                    <div class="exp-price-value">$8,750</div>
+                                    <div class="exp-price-label">per person, all-inclusive</div>
+                                </div>
+                                <div class="exp-meta">
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">5 Days</div>
+                                        <div class="exp-meta-label">Duration</div>
+                                    </div>
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">8 Max</div>
+                                        <div class="exp-meta-label">Group Size</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="wildlife-card">
-                        <div class="wildlife-image" style="background-image: url('https://images.unsplash.com/photo-1564463836146-4e30522c2984?w=800&q=80')">
-                            <span class="wildlife-badge">Unique</span>
-                        </div>
-                        <div class="wildlife-content">
-                            <p class="wildlife-location">Churchill, Manitoba</p>
-                            <h3 class="wildlife-title">Beluga Whale Encounter</h3>
-                            <p class="wildlife-desc">
-                                Swim and kayak alongside thousands of curious beluga whales in the warm waters
-                                of Churchill River. A truly unique and interactive wildlife experience.
-                            </p>
-                            <div class="wildlife-highlights">
-                                <span class="wildlife-highlight">Beluga Whales</span>
-                                <span class="wildlife-highlight">Kayaking</span>
-                                <span class="wildlife-highlight">Snorkeling</span>
+                    <!-- Beluga Whale Encounter -->
+                    <div class="experience-card animate-on-scroll">
+                        <div class="experience-image">
+                            <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=800&q=80" alt="Beluga whales">
+                            <div class="experience-badges">
+                                <span class="exp-badge">Interactive</span>
+                                <span class="exp-badge exp-badge-dark">Jul-Aug</span>
                             </div>
-                            <div class="wildlife-footer">
-                                <div class="wildlife-price">$7,500 <span>5-day experience</span></div>
-                                <span class="wildlife-season">July-Aug</span>
+                        </div>
+                        <div class="experience-content">
+                            <p class="exp-location">📍 Churchill, Manitoba</p>
+                            <h3 class="exp-title">Beluga Whale Encounter</h3>
+                            <p class="exp-desc">
+                                Paddle, snorkel, and swim alongside thousands of curious beluga whales in the warm waters of the
+                                Churchill River. These friendly "canaries of the sea" actively seek out human interaction, creating
+                                magical encounters you'll never forget. Combine with summer wildlife viewing for the ultimate experience.
+                            </p>
+                            <div class="exp-highlights">
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🐋</span>
+                                    <span class="exp-highlight-text">3,000+ belugas in estuary</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🤿</span>
+                                    <span class="exp-highlight-text">Snorkeling with whales</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🛶</span>
+                                    <span class="exp-highlight-text">Kayaking experiences</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🎤</span>
+                                    <span class="exp-highlight-text">Underwater hydrophones</span>
+                                </div>
+                            </div>
+                            <div class="exp-itinerary">
+                                <h4 class="exp-itinerary-title">📅 5-Day Itinerary</h4>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">1</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Arrival & Orientation</div>
+                                        <div class="exp-day-desc">Charter flight from Winnipeg, wetsuit fitting, zodiac tour introduction</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">2-3</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Beluga Immersion Days</div>
+                                        <div class="exp-day-desc">Morning kayaking, afternoon snorkeling, hydrophone whale song sessions</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">4</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Tundra Wildlife Safari</div>
+                                        <div class="exp-day-desc">Summer caribou, arctic fox, 200+ bird species, historic sites</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">5</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Final Encounter & Departure</div>
+                                        <div class="exp-day-desc">Sunrise paddle, farewell ceremonies, charter flight home</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <div class="exp-price">
+                                    <div class="exp-price-value">$7,950</div>
+                                    <div class="exp-price-label">per person, all-inclusive</div>
+                                </div>
+                                <div class="exp-meta">
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">5 Days</div>
+                                        <div class="exp-meta-label">Duration</div>
+                                    </div>
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">8 Max</div>
+                                        <div class="exp-meta-label">Group Size</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orca & Whale Safari -->
+                    <div class="experience-card animate-on-scroll">
+                        <div class="experience-image">
+                            <img src="https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?w=800&q=80" alt="Orca whale breaching">
+                            <div class="experience-badges">
+                                <span class="exp-badge">Marine Life</span>
+                                <span class="exp-badge exp-badge-dark">May-Oct</span>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <p class="exp-location">📍 Vancouver Island, BC</p>
+                            <h3 class="exp-title">Ultimate Orca & Whale Safari</h3>
+                            <p class="exp-desc">
+                                Explore the waters of the Salish Sea and Johnstone Strait aboard luxury expedition vessels, tracking
+                                resident and transient orca pods alongside humpback whales, sea lions, and more. Our multi-day
+                                safari includes overnight stays at remote wilderness lodges with exclusive marine access.
+                            </p>
+                            <div class="exp-highlights">
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🐋</span>
+                                    <span class="exp-highlight-text">300+ resident orcas</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🐳</span>
+                                    <span class="exp-highlight-text">Humpback whale season</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🚤</span>
+                                    <span class="exp-highlight-text">Private expedition yacht</span>
+                                </div>
+                                <div class="exp-highlight">
+                                    <span class="exp-highlight-icon">🏝️</span>
+                                    <span class="exp-highlight-text">Remote island stays</span>
+                                </div>
+                            </div>
+                            <div class="exp-itinerary">
+                                <h4 class="exp-itinerary-title">📅 4-Day Itinerary</h4>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">1</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Departure from Telegraph Cove</div>
+                                        <div class="exp-day-desc">Board expedition vessel, Johnstone Strait orca search, sunset anchorage</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">2</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Robson Bight Ecological Reserve</div>
+                                        <div class="exp-day-desc">Famous orca rubbing beaches, hydrophone listening, kayaking</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">3</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Broughton Archipelago</div>
+                                        <div class="exp-day-desc">Humpback whale encounters, sea lion colonies, First Nations sites</div>
+                                    </div>
+                                </div>
+                                <div class="exp-day">
+                                    <span class="exp-day-num">4</span>
+                                    <div class="exp-day-content">
+                                        <div class="exp-day-title">Return Journey</div>
+                                        <div class="exp-day-desc">Morning wildlife viewing, scenic return, farewell lunch</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <div class="exp-price">
+                                    <div class="exp-price-value">$6,500</div>
+                                    <div class="exp-price-label">per person, all-inclusive</div>
+                                </div>
+                                <div class="exp-meta">
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">4 Days</div>
+                                        <div class="exp-meta-label">Duration</div>
+                                    </div>
+                                    <div class="exp-meta-item">
+                                        <div class="exp-meta-value">10 Max</div>
+                                        <div class="exp-meta-label">Group Size</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -345,11 +849,298 @@
             </div>
         </section>
 
+        <!-- Seasonal Wildlife Calendar -->
+        <section class="section section-dark">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">Planning Guide</span>
+                    <h2 class="section-title">Seasonal Wildlife Calendar</h2>
+                    <p class="section-subtitle">Canada's wildlife spectacles occur year-round. Here's when to see what.</p>
+                </header>
+
+                <div class="calendar-grid animate-on-scroll">
+                    <div class="season-card">
+                        <div class="season-icon">🌸</div>
+                        <h3 class="season-name">Spring</h3>
+                        <p class="season-months">April - May</p>
+                        <ul class="season-wildlife">
+                            <li>Grizzly bears emerging</li>
+                            <li>Bird migration peaks</li>
+                            <li>Whale migration north</li>
+                            <li>Newborn wildlife</li>
+                            <li>Polar bear denning</li>
+                        </ul>
+                        <div class="season-rating">
+                            <div class="season-rating-label">Overall Rating</div>
+                            <div class="season-rating-stars">★★★★☆</div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <div class="season-icon">☀️</div>
+                        <h3 class="season-name">Summer</h3>
+                        <p class="season-months">June - August</p>
+                        <ul class="season-wildlife">
+                            <li>Beluga whale congregations</li>
+                            <li>Grizzlies with cubs</li>
+                            <li>Orca super pods</li>
+                            <li>Midnight sun viewing</li>
+                            <li>Puffin colonies</li>
+                        </ul>
+                        <div class="season-rating">
+                            <div class="season-rating-label">Overall Rating</div>
+                            <div class="season-rating-stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <div class="season-icon">🍂</div>
+                        <h3 class="season-name">Fall</h3>
+                        <p class="season-months">September - November</p>
+                        <ul class="season-wildlife">
+                            <li>Polar bear migration</li>
+                            <li>Salmon runs peak</li>
+                            <li>Spirit bear season</li>
+                            <li>Northern Lights begin</li>
+                            <li>Grizzly hyperphagia</li>
+                        </ul>
+                        <div class="season-rating">
+                            <div class="season-rating-label">Overall Rating</div>
+                            <div class="season-rating-stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <div class="season-card">
+                        <div class="season-icon">❄️</div>
+                        <h3 class="season-name">Winter</h3>
+                        <p class="season-months">December - March</p>
+                        <ul class="season-wildlife">
+                            <li>Aurora borealis peak</li>
+                            <li>Wolf pack sightings</li>
+                            <li>Polar bears on ice</li>
+                            <li>Snowy owl migrations</li>
+                            <li>Caribou herds</li>
+                        </ul>
+                        <div class="season-rating">
+                            <div class="season-rating-label">Overall Rating</div>
+                            <div class="season-rating-stars">★★★☆☆</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included -->
+        <section class="section section-gray">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">All-Inclusive</span>
+                    <h2 class="section-title">What's Included in Every Experience</h2>
+                    <p class="section-subtitle">Every detail is handled so you can focus entirely on the wildlife.</p>
+                </header>
+
+                <div class="included-grid animate-on-scroll">
+                    <div class="included-card">
+                        <div class="included-icon">✈️</div>
+                        <h3 class="included-title">Transportation</h3>
+                        <ul class="included-list">
+                            <li>Charter flights to remote locations</li>
+                            <li>Float plane or helicopter transfers</li>
+                            <li>All ground transportation</li>
+                            <li>Boat excursions and zodiacs</li>
+                            <li>Airport meet & greet service</li>
+                        </ul>
+                    </div>
+                    <div class="included-card">
+                        <div class="included-icon">🏨</div>
+                        <h3 class="included-title">Accommodations</h3>
+                        <ul class="included-list">
+                            <li>Luxury wilderness lodges</li>
+                            <li>Private or semi-private rooms</li>
+                            <li>Premium bedding and amenities</li>
+                            <li>Hot tubs and saunas available</li>
+                            <li>Wildlife viewing from rooms</li>
+                        </ul>
+                    </div>
+                    <div class="included-card">
+                        <div class="included-icon">🍽️</div>
+                        <h3 class="included-title">Gourmet Dining</h3>
+                        <ul class="included-list">
+                            <li>All meals prepared by chefs</li>
+                            <li>Local and sustainable ingredients</li>
+                            <li>Premium wines and spirits</li>
+                            <li>Dietary accommodations</li>
+                            <li>Wilderness picnic lunches</li>
+                        </ul>
+                    </div>
+                    <div class="included-card">
+                        <div class="included-icon">🎯</div>
+                        <h3 class="included-title">Expert Guiding</h3>
+                        <ul class="included-list">
+                            <li>PhD-level naturalist guides</li>
+                            <li>Indigenous cultural interpreters</li>
+                            <li>Wildlife photography coaching</li>
+                            <li>Evening lectures and presentations</li>
+                            <li>24/7 guide availability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">Guest Experiences</span>
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <p class="section-subtitle">Life-changing encounters that exceed every expectation.</p>
+                </header>
+
+                <div class="testimonials-grid animate-on-scroll">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Watching a mother polar bear play with her cubs just 20 meters from our Tundra Buggy
+                            was the most profound wildlife experience of my life. Our guide's knowledge transformed
+                            every moment into a deeper understanding of these magnificent animals."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SK</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Sarah K.</div>
+                                <div class="testimonial-trip">Polar Bear Expedition, Nov 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "We spent three magical days searching for spirit bears, and on day two, we had
+                            a 45-minute encounter with a beautiful white bear fishing for salmon. The Indigenous
+                            guides shared stories that gave the experience profound cultural meaning."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MJ</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Michael J.</div>
+                                <div class="testimonial-trip">Spirit Bear Quest, Sep 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Swimming with curious belugas was unlike anything I've ever experienced.
+                            They came right up to us, clicking and singing. When you hear their voices
+                            underwater, you understand why they're called the canaries of the sea."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ER</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Emily R.</div>
+                                <div class="testimonial-trip">Beluga Encounter, Aug 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section section-gray">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">FAQ</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </header>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is the best time to see polar bears in Churchill?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>October to November is prime polar bear season in Churchill. This is when bears gather along the shores of Hudson Bay, waiting for the sea ice to form so they can return to hunting seals. During this window, you can see 30+ bears in a single day. July-August offers summer beluga whale experiences with occasional polar bear sightings.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How rare are spirit bear sightings?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Spirit bears (white Kermode bears) are extremely rare — only about 400 exist in the wild. However, our experienced First Nations guides have intimate knowledge of their territories and achieve 70-80% sighting success rates during peak salmon season (August-October). Multi-day trips significantly increase your chances.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What fitness level is required for these trips?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most experiences are accessible to average fitness levels. Polar bear trips involve minimal walking. Grizzly viewing is primarily from boats and platforms. Spirit bear trips may include moderate hiking on forest trails. Beluga snorkeling requires basic swimming ability. We can customize activities based on your fitness level.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How close do you get to the wildlife?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Distances vary by species and situation. Polar bears often approach Tundra Buggies within meters. Grizzly viewing platforms position you 10-30 meters from fishing bears. Spirit bears are viewed from 15-50 meters. Belugas actively seek out swimmers, often coming within arm's reach. All viewing follows strict wildlife safety protocols.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What camera equipment should I bring?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We recommend a DSLR or mirrorless camera with a 100-400mm telephoto lens for most wildlife. Polar bear trips benefit from longer 500-600mm lenses. Waterproof cameras or housings are essential for beluga snorkeling. Our guides provide photography coaching, and professional photographers are available for hire. Basic smartphone photography can also yield excellent results.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What happens if weather prevents travel?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Weather delays are built into our itineraries. We maintain flexibility in schedules and have contingency plans for all trips. If significant delays occur, we provide alternative activities, extended stays where possible, or partial refunds. Our 25+ years of experience means we rarely face insurmountable weather challenges.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you guarantee wildlife sightings?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We maintain a 98% success rate for primary species sightings. While we cannot guarantee nature, if you don't see the primary species on your trip (polar bears in Churchill, grizzlies at Knight Inlet, etc.), we offer a 25% credit toward a future trip. Spirit bear sightings have a 70-80% success rate due to their rarity.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How far in advance should I book?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Popular experiences book 6-12 months in advance. Polar bear trips for October-November should be booked by January-March. Spirit bear expeditions fill by spring for fall season. Some last-minute availability exists, but specific dates and premium accommodations require early booking. Contact us to check current availability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
-                <h2 class="cta-title">Book Your Wildlife Adventure</h2>
-                <p class="cta-text">These experiences book months in advance. Contact our wildlife specialists to secure your dates.</p>
-                <a href="/contact/" class="btn btn-dark">Inquire About Wildlife Tours <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg></a>
+                <h2 class="cta-title">Begin Your Wildlife Adventure</h2>
+                <p class="cta-text">These experiences book months in advance. Contact our wildlife specialists today to secure your dates for an encounter you'll remember forever.</p>
+                <a href="/contact/" class="btn btn-dark">
+                    Inquire About Wildlife Tours
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+                </a>
             </div>
         </section>
     </main>
@@ -362,6 +1153,7 @@
                     <a href="/luxury/">All Luxury Experiences</a>
                     <a href="/luxury/helicopter-tours/">Helicopter Tours</a>
                     <a href="/luxury/wilderness-lodges/">Wilderness Lodges</a>
+                    <a href="/luxury/rocky-mountaineer/">Rocky Mountaineer</a>
                     <a href="/contact/">Contact</a>
                 </div>
                 <p>&copy; 2025 TopCanadaTravel. All rights reserved.</p>
@@ -377,6 +1169,32 @@
         <a href="/plan-your-trip/" class="bottom-nav-item"><span class="bottom-nav-icon">✈️</span><span>Plan</span></a>
     </nav>
 
-    <script>document.querySelector('.mobile-menu-btn').addEventListener('click', function() { document.getElementById('mobile-menu').classList.toggle('active'); });</script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('active');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
