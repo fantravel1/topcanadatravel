@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="forestGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#166534"/>
+      <stop offset="100%" style="stop-color:#14532d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="400" fill="#7dd3fc"/>
+  <rect y="400" width="1200" height="230" fill="url(#forestGradient)"/>
+
+  <!-- Mountains -->
+  <polygon points="0,400 200,200 400,350 600,180 800,300 1000,150 1200,280 1200,400" fill="#64748b"/>
+  <polygon points="200,200 240,250 160,250" fill="#fff"/>
+  <polygon points="600,180 650,240 550,240" fill="#fff"/>
+  <polygon points="1000,150 1050,210 950,210" fill="#fff"/>
+
+  <!-- Trees -->
+  <g fill="#166534">
+    <polygon points="50,400 80,300 110,400"/>
+    <polygon points="100,400 140,280 180,400"/>
+    <polygon points="1020,400 1060,290 1100,400"/>
+    <polygon points="1080,400 1120,310 1160,400"/>
+  </g>
+
+  <!-- Bear Silhouette -->
+  <g transform="translate(200, 320)" fill="#1e293b">
+    <ellipse cx="80" cy="50" rx="60" ry="40"/>
+    <ellipse cx="130" cy="40" rx="30" ry="25"/>
+    <circle cx="115" cy="30" r="12"/>
+    <circle cx="145" cy="30" r="12"/>
+    <circle cx="125" cy="45" r="5" fill="#4a5568"/>
+    <ellipse cx="135" cy="40" rx="3" ry="2" fill="#4a5568"/>
+    <rect x="30" y="75" width="15" height="25" rx="5"/>
+    <rect x="55" y="75" width="15" height="25" rx="5"/>
+    <rect x="95" y="75" width="15" height="25" rx="5"/>
+    <rect x="120" y="75" width="15" height="25" rx="5"/>
+  </g>
+
+  <!-- Moose Silhouette -->
+  <g transform="translate(700, 300)" fill="#1e293b">
+    <ellipse cx="60" cy="50" rx="45" ry="30"/>
+    <ellipse cx="100" cy="35" rx="25" ry="18"/>
+    <rect x="25" y="70" width="10" height="40"/>
+    <rect x="50" y="70" width="10" height="40"/>
+    <rect x="70" y="70" width="10" height="40"/>
+    <rect x="95" y="70" width="10" height="40"/>
+    <polygon points="105,25 140,5 110,35"/>
+    <polygon points="105,25 145,15 115,40"/>
+  </g>
+
+  <!-- Eagle -->
+  <g transform="translate(500, 100)" fill="#1e293b">
+    <ellipse cx="50" cy="30" rx="25" ry="15"/>
+    <polygon points="25,30 -20,10 -10,35"/>
+    <polygon points="75,30 120,10 110,35"/>
+    <circle cx="60" cy="25" r="5" fill="#fbbf24"/>
+  </g>
+
+  <!-- Fish jumping -->
+  <g transform="translate(550, 450)">
+    <ellipse cx="30" cy="20" rx="25" ry="12" fill="#f97316"/>
+    <polygon points="0,20 -15,10 -15,30" fill="#f97316"/>
+    <circle cx="45" cy="18" r="3" fill="#1e293b"/>
+    <path d="M20,380 Q30,350 40,380" stroke="#7dd3fc" stroke-width="3" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="100" y="480" width="1000" height="120" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(140, 500)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="200" y="540" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#fff">Canadian Wildlife Encounters</text>
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="22" fill="#e2e8f0">Bears, Moose, Whales &amp; More in Their Natural Habitat</text>
+  <text x="950" y="580" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">topcanadatravel.com</text>
+</svg>

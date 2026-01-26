@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="winterSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#7dd3fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="630" fill="url(#winterSky)"/>
+
+  <!-- Snowflakes -->
+  <g fill="#fff" opacity="0.8">
+    <circle cx="100" cy="80" r="4"/>
+    <circle cx="200" cy="150" r="3"/>
+    <circle cx="350" cy="60" r="5"/>
+    <circle cx="500" cy="120" r="3"/>
+    <circle cx="650" cy="50" r="4"/>
+    <circle cx="800" cy="100" r="3"/>
+    <circle cx="950" cy="70" r="5"/>
+    <circle cx="1100" cy="130" r="4"/>
+    <circle cx="150" cy="200" r="3"/>
+    <circle cx="450" cy="180" r="4"/>
+    <circle cx="750" cy="160" r="3"/>
+    <circle cx="1050" cy="190" r="4"/>
+  </g>
+
+  <!-- Mountains with Snow -->
+  <polygon points="0,500 200,200 400,400 600,150 800,350 1000,100 1200,300 1200,500" fill="#e2e8f0"/>
+  <polygon points="0,520 200,220 400,420 600,170 800,370 1000,120 1200,320 1200,520" fill="#94a3b8"/>
+
+  <!-- Snow caps highlights -->
+  <polygon points="200,200 260,280 140,280" fill="#fff"/>
+  <polygon points="600,150 680,250 520,250" fill="#fff"/>
+  <polygon points="1000,100 1080,200 920,200" fill="#fff"/>
+
+  <!-- Ski Runs (trails) -->
+  <path d="M600,170 Q650,300 700,450" stroke="#1e3a5f" stroke-width="20" fill="none" opacity="0.3"/>
+  <path d="M1000,120 Q1050,250 1100,400" stroke="#1e3a5f" stroke-width="15" fill="none" opacity="0.3"/>
+
+  <!-- Trees -->
+  <g fill="#166534">
+    <polygon points="50,520 80,420 110,520"/>
+    <polygon points="100,520 140,400 180,520"/>
+    <polygon points="150,520 185,440 220,520"/>
+    <polygon points="1000,520 1040,430 1080,520"/>
+    <polygon points="1050,520 1090,410 1130,520"/>
+    <polygon points="1100,520 1140,450 1180,520"/>
+  </g>
+
+  <!-- Skier -->
+  <g transform="translate(550, 350)">
+    <circle cx="30" cy="0" r="12" fill="#1e293b"/>
+    <line x1="30" y1="12" x2="30" y2="45" stroke="#1e293b" stroke-width="4"/>
+    <line x1="30" y1="20" x2="10" y2="35" stroke="#1e293b" stroke-width="3"/>
+    <line x1="30" y1="20" x2="50" y2="35" stroke="#1e293b" stroke-width="3"/>
+    <line x1="30" y1="45" x2="15" y2="70" stroke="#1e293b" stroke-width="3"/>
+    <line x1="30" y1="45" x2="45" y2="70" stroke="#1e293b" stroke-width="3"/>
+    <line x1="0" y1="75" x2="70" y2="65" stroke="#DC2626" stroke-width="4" stroke-linecap="round"/>
+    <line x1="10" y1="35" x2="-20" y2="20" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="50" y1="35" x2="80" y2="20" stroke="#94a3b8" stroke-width="2"/>
+  </g>
+
+  <!-- Ski Lift -->
+  <g stroke="#1e293b" stroke-width="3">
+    <line x1="200" y1="250" x2="450" y2="150"/>
+    <rect x="190" y="240" width="20" height="40" fill="#475569"/>
+    <rect x="440" y="140" width="20" height="40" fill="#475569"/>
+    <g transform="translate(300, 210)">
+      <line x1="0" y1="0" x2="0" y2="30"/>
+      <rect x="-15" y="30" width="30" height="20" fill="#DC2626" rx="3"/>
+    </g>
+    <g transform="translate(380, 175)">
+      <line x1="0" y1="0" x2="0" y2="30"/>
+      <rect x="-15" y="30" width="30" height="20" fill="#DC2626" rx="3"/>
+    </g>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="100" y="480" width="1000" height="120" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(140, 500)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="200" y="540" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#fff">Skiing in Canada</text>
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="22" fill="#e2e8f0">World-Class Ski Resorts in the Canadian Rockies</text>
+  <text x="950" y="580" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">topcanadatravel.com</text>
+</svg>

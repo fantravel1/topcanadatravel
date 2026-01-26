@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="foodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c2d12"/>
+      <stop offset="100%" style="stop-color:#431407"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#foodGradient)"/>
+
+  <!-- Decorative Food Pattern -->
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="50" fill="#fff"/>
+    <circle cx="300" cy="200" r="30" fill="#fff"/>
+    <circle cx="1000" cy="150" r="60" fill="#fff"/>
+    <circle cx="1100" cy="300" r="40" fill="#fff"/>
+  </g>
+
+  <!-- Plate with Food -->
+  <g transform="translate(450, 100)">
+    <!-- Plate -->
+    <ellipse cx="150" cy="200" rx="180" ry="160" fill="#f1f5f9"/>
+    <ellipse cx="150" cy="200" rx="150" ry="130" fill="#e2e8f0"/>
+
+    <!-- Maple Glazed Salmon (iconic Canadian dish) -->
+    <ellipse cx="150" cy="180" rx="80" ry="50" fill="#f97316"/>
+    <path d="M80,180 Q150,140 220,180" stroke="#ea580c" stroke-width="8" fill="none"/>
+
+    <!-- Garnish -->
+    <ellipse cx="100" cy="240" rx="25" ry="15" fill="#22c55e"/>
+    <ellipse cx="200" cy="240" rx="25" ry="15" fill="#22c55e"/>
+
+    <!-- Maple Syrup Drizzle -->
+    <path d="M100,160 Q150,200 200,160" stroke="#92400e" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Fork and Knife -->
+  <g transform="translate(200, 150)">
+    <!-- Fork -->
+    <rect x="0" y="100" width="8" height="150" fill="#94a3b8" rx="2"/>
+    <rect x="-5" y="50" width="4" height="60" fill="#94a3b8" rx="1"/>
+    <rect x="2" y="50" width="4" height="60" fill="#94a3b8" rx="1"/>
+    <rect x="9" y="50" width="4" height="60" fill="#94a3b8" rx="1"/>
+  </g>
+
+  <g transform="translate(900, 150)">
+    <!-- Knife -->
+    <rect x="0" y="100" width="10" height="150" fill="#94a3b8" rx="2"/>
+    <polygon points="5,50 15,100 -5,100" fill="#94a3b8"/>
+  </g>
+
+  <!-- Maple Leaf Garnish -->
+  <g transform="translate(570, 280)">
+    <path d="M25,0 L28,8 L38,8 L32,14 L35,25 L25,18 L15,25 L18,14 L12,8 L22,8 Z" fill="#DC2626"/>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="100" y="480" width="1000" height="120" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(140, 500)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="200" y="540" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#fff">Canadian Dining Experiences</text>
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="22" fill="#e2e8f0">From Farm-to-Table to World-Class Cuisine</text>
+  <text x="950" y="580" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">topcanadatravel.com</text>
+</svg>

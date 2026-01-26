@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="50%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="aurora1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e" stop-opacity="0.8"/>
+      <stop offset="50%" style="stop-color:#10b981" stop-opacity="0.6"/>
+      <stop offset="100%" style="stop-color:#06b6d4" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="aurora2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6" stop-opacity="0.6"/>
+      <stop offset="50%" style="stop-color:#22c55e" stop-opacity="0.7"/>
+      <stop offset="100%" style="stop-color:#14b8a6" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Night Sky -->
+  <rect width="1200" height="630" fill="url(#nightSky)"/>
+
+  <!-- Stars -->
+  <g fill="#fff">
+    <circle cx="100" cy="50" r="2" opacity="0.9"/>
+    <circle cx="200" cy="100" r="1.5" opacity="0.7"/>
+    <circle cx="350" cy="40" r="2" opacity="0.8"/>
+    <circle cx="450" cy="80" r="1" opacity="0.6"/>
+    <circle cx="550" cy="30" r="2.5" opacity="0.9"/>
+    <circle cx="650" cy="70" r="1.5" opacity="0.7"/>
+    <circle cx="750" cy="45" r="2" opacity="0.8"/>
+    <circle cx="850" cy="90" r="1" opacity="0.6"/>
+    <circle cx="950" cy="35" r="2" opacity="0.9"/>
+    <circle cx="1050" cy="75" r="1.5" opacity="0.7"/>
+    <circle cx="1100" cy="50" r="2" opacity="0.8"/>
+    <circle cx="150" cy="150" r="1" opacity="0.5"/>
+    <circle cx="300" cy="120" r="1.5" opacity="0.6"/>
+    <circle cx="500" cy="140" r="1" opacity="0.5"/>
+    <circle cx="700" cy="110" r="1.5" opacity="0.6"/>
+    <circle cx="900" cy="130" r="1" opacity="0.5"/>
+    <circle cx="1000" cy="160" r="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Aurora Borealis Waves -->
+  <g>
+    <path d="M0,100 Q200,50 400,120 Q600,180 800,100 Q1000,20 1200,80 L1200,250 Q1000,180 800,220 Q600,280 400,200 Q200,130 0,180 Z" fill="url(#aurora1)" opacity="0.7"/>
+    <path d="M0,150 Q150,80 350,150 Q550,220 750,140 Q950,60 1200,120 L1200,280 Q950,200 750,260 Q550,320 350,240 Q150,160 0,220 Z" fill="url(#aurora2)" opacity="0.5"/>
+    <path d="M0,200 Q300,100 600,180 Q900,260 1200,160 L1200,320 Q900,380 600,280 Q300,180 0,280 Z" fill="#22c55e" opacity="0.3"/>
+  </g>
+
+  <!-- Snow Mountains -->
+  <polygon points="0,500 200,350 400,450 600,320 800,400 1000,300 1200,380 1200,500" fill="#1e293b"/>
+  <polygon points="0,630 0,500 200,350 250,400 150,500 0,630" fill="#334155"/>
+  <polygon points="200,350 250,400 150,400" fill="#e2e8f0"/>
+  <polygon points="600,320 660,380 540,380" fill="#e2e8f0"/>
+  <polygon points="1000,300 1060,370 940,370" fill="#e2e8f0"/>
+
+  <!-- Snow Ground -->
+  <rect x="0" y="500" width="1200" height="130" fill="#1e293b"/>
+
+  <!-- Pine Trees Silhouettes -->
+  <g fill="#0f172a">
+    <polygon points="100,630 130,520 160,630"/>
+    <polygon points="200,630 240,500 280,630"/>
+    <polygon points="900,630 940,510 980,630"/>
+    <polygon points="1050,630 1090,530 1130,630"/>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="200" y="400" width="800" height="150" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(240, 430)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="300" y="480" font-family="Georgia, serif" font-size="46" font-weight="bold" fill="#fff">Northern Lights in Canada</text>
+  <text x="300" y="520" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Experience the Aurora Borealis</text>
+  <text x="600" y="550" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">topcanadatravel.com</text>
+</svg>
