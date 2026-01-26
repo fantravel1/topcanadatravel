@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="50%" style="stop-color:#2d5a87"/>
+      <stop offset="100%" style="stop-color:#87ceeb"/>
+    </linearGradient>
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a5568"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="snowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="lakeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#38b2ac"/>
+      <stop offset="100%" style="stop-color:#2c7a7b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="1200" height="630" fill="url(#skyGradient)"/>
+
+  <!-- Stars -->
+  <g fill="#fff" opacity="0.6">
+    <circle cx="100" cy="80" r="2"/>
+    <circle cx="250" cy="120" r="1.5"/>
+    <circle cx="400" cy="60" r="2"/>
+    <circle cx="550" cy="100" r="1"/>
+    <circle cx="700" cy="50" r="2"/>
+    <circle cx="850" cy="90" r="1.5"/>
+    <circle cx="1000" cy="70" r="2"/>
+    <circle cx="1100" cy="110" r="1"/>
+    <circle cx="180" cy="150" r="1"/>
+    <circle cx="320" cy="40" r="1.5"/>
+    <circle cx="620" cy="130" r="1"/>
+    <circle cx="920" cy="45" r="1.5"/>
+  </g>
+
+  <!-- Aurora Borealis Effect -->
+  <g opacity="0.3">
+    <ellipse cx="600" cy="100" rx="500" ry="80" fill="#22c55e" filter="blur(30px)"/>
+    <ellipse cx="400" cy="120" rx="300" ry="50" fill="#06b6d4" filter="blur(25px)"/>
+    <ellipse cx="800" cy="90" rx="350" ry="60" fill="#8b5cf6" filter="blur(28px)"/>
+  </g>
+
+  <!-- Far Mountains -->
+  <polygon points="0,400 150,280 300,350 450,250 600,320 750,230 900,300 1050,260 1200,340 1200,400" fill="#4a5568" opacity="0.7"/>
+
+  <!-- Main Rocky Mountains -->
+  <polygon points="0,450 100,320 200,380 350,250 500,350 650,220 800,300 950,240 1100,320 1200,280 1200,450" fill="url(#mountainGradient)"/>
+
+  <!-- Snow Caps -->
+  <polygon points="350,250 380,290 320,290" fill="url(#snowGradient)"/>
+  <polygon points="650,220 690,270 610,270" fill="url(#snowGradient)"/>
+  <polygon points="950,240 985,285 915,285" fill="url(#snowGradient)"/>
+
+  <!-- Lake -->
+  <ellipse cx="600" cy="520" rx="550" ry="100" fill="url(#lakeGradient)"/>
+
+  <!-- Lake Reflection -->
+  <g opacity="0.3">
+    <polygon points="350,520 380,490 320,490" fill="#fff" transform="scale(1,-0.3) translate(0,-1600)"/>
+    <polygon points="650,520 690,490 610,490" fill="#fff" transform="scale(1,-0.3) translate(0,-1600)"/>
+  </g>
+
+  <!-- Foreground Forest -->
+  <g fill="#1a202c">
+    <polygon points="0,630 30,480 60,630"/>
+    <polygon points="50,630 85,460 120,630"/>
+    <polygon points="100,630 140,440 180,630"/>
+    <polygon points="160,630 195,470 230,630"/>
+    <polygon points="1000,630 1040,450 1080,630"/>
+    <polygon points="1060,630 1095,480 1130,630"/>
+    <polygon points="1110,630 1150,460 1190,630"/>
+    <polygon points="1150,630 1180,490 1200,630"/>
+  </g>
+
+  <!-- Title Background -->
+  <rect x="150" y="380" width="900" height="180" rx="20" fill="#000" opacity="0.5"/>
+
+  <!-- Canadian Maple Leaf -->
+  <g transform="translate(200, 420)">
+    <path d="M50,0 L55,15 L70,15 L60,25 L65,45 L50,35 L35,45 L40,25 L30,15 L45,15 Z" fill="#DC2626"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="280" y="470" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="#fff">TopCanadaTravel</text>
+
+  <!-- Tagline -->
+  <text x="280" y="520" font-family="Arial, sans-serif" font-size="26" fill="#e2e8f0">Your Ultimate Canadian Adventure Awaits</text>
+
+  <!-- Website URL -->
+  <text x="600" y="570" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">topcanadatravel.com</text>
+</svg>

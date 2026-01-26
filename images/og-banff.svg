@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="lakeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="630" fill="url(#skyGradient)"/>
+
+  <!-- Clouds -->
+  <g fill="#fff" opacity="0.8">
+    <ellipse cx="200" cy="100" rx="80" ry="40"/>
+    <ellipse cx="260" cy="90" rx="60" ry="35"/>
+    <ellipse cx="900" cy="120" rx="100" ry="50"/>
+    <ellipse cx="980" cy="110" rx="70" ry="40"/>
+  </g>
+
+  <!-- Mountains - Three Sisters Style -->
+  <polygon points="0,450 200,200 400,450" fill="#64748b"/>
+  <polygon points="200,200 250,280 150,280" fill="#fff"/>
+
+  <polygon points="300,450 500,180 700,450" fill="#475569"/>
+  <polygon points="500,180 560,280 440,280" fill="#fff"/>
+
+  <polygon points="600,450 850,150 1100,450" fill="#64748b"/>
+  <polygon points="850,150 920,260 780,260" fill="#fff"/>
+
+  <polygon points="900,450 1100,220 1200,350 1200,450" fill="#475569"/>
+  <polygon points="1100,220 1140,290 1060,290" fill="#fff"/>
+
+  <!-- Lake Louise -->
+  <ellipse cx="600" cy="520" rx="580" ry="120" fill="url(#lakeGradient)"/>
+
+  <!-- Mountain Reflections -->
+  <g opacity="0.3" transform="translate(0,630) scale(1,-0.4)">
+    <polygon points="300,450 500,180 700,450" fill="#475569"/>
+    <polygon points="600,450 850,150 1100,450" fill="#64748b"/>
+  </g>
+
+  <!-- Foreground Trees -->
+  <g fill="#166534">
+    <polygon points="0,630 40,500 80,630"/>
+    <polygon points="60,630 110,480 160,630"/>
+    <polygon points="1040,630 1090,490 1140,630"/>
+    <polygon points="1100,630 1150,510 1200,630"/>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="100" y="380" width="500" height="160" rx="15" fill="#000" opacity="0.6"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(130, 410)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="180" y="460" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#fff">Banff National Park</text>
+  <text x="180" y="505" font-family="Arial, sans-serif" font-size="22" fill="#e2e8f0">Canada's First National Park</text>
+  <text x="180" y="535" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">topcanadatravel.com</text>
+</svg>

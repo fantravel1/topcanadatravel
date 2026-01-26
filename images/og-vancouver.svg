@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="oceanSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#7dd3fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="630" fill="url(#oceanSky)"/>
+
+  <!-- North Shore Mountains -->
+  <polygon points="0,350 150,150 300,280 450,100 600,230 750,80 900,200 1050,120 1200,250 1200,350" fill="#64748b"/>
+  <polygon points="150,150 190,200 110,200" fill="#fff"/>
+  <polygon points="450,100 510,170 390,170" fill="#fff"/>
+  <polygon points="750,80 820,160 680,160" fill="#fff"/>
+  <polygon points="1050,120 1100,180 1000,180" fill="#fff"/>
+
+  <!-- Pacific Ocean -->
+  <rect y="400" width="1200" height="230" fill="#0891b2"/>
+
+  <!-- Stanley Park (green peninsula) -->
+  <ellipse cx="300" cy="420" rx="150" ry="60" fill="#166534"/>
+
+  <!-- Downtown Skyline -->
+  <g fill="#1e293b">
+    <rect x="450" y="280" width="50" height="120"/>
+    <rect x="510" y="250" width="60" height="150"/>
+    <rect x="580" y="220" width="45" height="180"/>
+    <rect x="635" y="260" width="70" height="140"/>
+    <rect x="715" y="240" width="55" height="160"/>
+    <rect x="780" y="280" width="60" height="120"/>
+    <rect x="850" y="300" width="50" height="100"/>
+  </g>
+
+  <!-- Glass building reflections -->
+  <g fill="#7dd3fc" opacity="0.3">
+    <rect x="520" y="260" width="20" height="60"/>
+    <rect x="590" y="230" width="15" height="80"/>
+    <rect x="650" y="270" width="25" height="50"/>
+    <rect x="725" y="250" width="20" height="70"/>
+  </g>
+
+  <!-- Lions Gate Bridge -->
+  <g stroke="#DC2626" stroke-width="4" fill="none">
+    <path d="M100,380 Q300,320 500,380"/>
+    <line x1="100" y1="380" x2="100" y2="420"/>
+    <line x1="500" y1="380" x2="500" y2="420"/>
+    <line x1="200" y1="350" x2="200" y2="380"/>
+    <line x1="300" y1="330" x2="300" y2="380"/>
+    <line x1="400" y1="350" x2="400" y2="380"/>
+  </g>
+
+  <!-- Seaplane -->
+  <g transform="translate(900, 300)" fill="#fff">
+    <ellipse cx="30" cy="20" rx="25" ry="10"/>
+    <polygon points="55,20 80,10 80,30"/>
+    <polygon points="20,12 40,0 50,12"/>
+    <rect x="15" y="30" width="30" height="5" fill="#0ea5e9"/>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="100" y="480" width="650" height="120" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(140, 500)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="200" y="540" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#fff">Vancouver, Canada</text>
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="20" fill="#e2e8f0">Where Mountains Meet the Pacific Ocean</text>
+</svg>

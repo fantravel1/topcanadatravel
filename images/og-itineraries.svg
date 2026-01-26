@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#1e3a8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#mapGradient)"/>
+
+  <!-- Map Lines Pattern -->
+  <g stroke="#fff" stroke-width="1" fill="none" opacity="0.1">
+    <path d="M0,100 Q300,50 600,100 Q900,150 1200,100"/>
+    <path d="M0,200 Q300,150 600,200 Q900,250 1200,200"/>
+    <path d="M0,300 Q300,250 600,300 Q900,350 1200,300"/>
+    <path d="M0,400 Q300,350 600,400 Q900,450 1200,400"/>
+  </g>
+
+  <!-- Route Line -->
+  <path d="M150,350 Q300,200 450,280 Q600,360 750,240 Q900,120 1050,200"
+        stroke="#DC2626" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="15,10"/>
+
+  <!-- Location Markers -->
+  <g>
+    <!-- Start Point -->
+    <circle cx="150" cy="350" r="25" fill="#22c55e"/>
+    <text x="150" y="355" font-family="Arial, sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
+    <text x="150" y="400" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Vancouver</text>
+
+    <!-- Stop 2 -->
+    <circle cx="450" cy="280" r="20" fill="#DC2626"/>
+    <text x="450" y="285" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">2</text>
+    <text x="450" y="320" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Banff</text>
+
+    <!-- Stop 3 -->
+    <circle cx="750" cy="240" r="20" fill="#DC2626"/>
+    <text x="750" y="245" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
+    <text x="750" y="280" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Jasper</text>
+
+    <!-- End Point -->
+    <circle cx="1050" cy="200" r="25" fill="#0ea5e9"/>
+    <text x="1050" y="205" font-family="Arial, sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">4</text>
+    <text x="1050" y="245" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Calgary</text>
+  </g>
+
+  <!-- Compass Rose -->
+  <g transform="translate(1080, 450)">
+    <circle cx="50" cy="50" r="45" fill="#1e3a5f" stroke="#fff" stroke-width="2"/>
+    <polygon points="50,15 45,50 55,50" fill="#DC2626"/>
+    <polygon points="50,85 45,50 55,50" fill="#fff"/>
+    <polygon points="15,50 50,45 50,55" fill="#fff"/>
+    <polygon points="85,50 50,45 50,55" fill="#fff"/>
+    <text x="50" y="10" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">N</text>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="100" y="480" width="900" height="120" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(140, 500)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="200" y="540" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#fff">Canadian Travel Itineraries</text>
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="22" fill="#e2e8f0">Curated Routes Through Canada's Best Destinations</text>
+  <text x="850" y="580" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">topcanadatravel.com</text>
+</svg>

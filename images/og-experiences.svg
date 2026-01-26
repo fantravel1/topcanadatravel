@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="expGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e"/>
+      <stop offset="100%" style="stop-color:#134e4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#expGradient)"/>
+
+  <!-- Experience Icons Grid -->
+  <g transform="translate(100, 100)">
+    <!-- Northern Lights -->
+    <g transform="translate(0, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <path d="M20,100 Q50,40 80,80 Q110,120 140,60 Q160,30 170,50" stroke="#22c55e" stroke-width="4" fill="none"/>
+      <path d="M10,110 Q40,60 70,90 Q100,120 130,70 Q155,40 175,70" stroke="#06b6d4" stroke-width="3" fill="none" opacity="0.7"/>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Northern Lights</text>
+    </g>
+
+    <!-- Wildlife -->
+    <g transform="translate(220, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <g transform="translate(50, 30)">
+        <ellipse cx="40" cy="35" rx="30" ry="20" fill="#a1a1aa"/>
+        <ellipse cx="65" cy="30" rx="15" ry="12" fill="#a1a1aa"/>
+        <rect x="15" y="50" width="6" height="25" fill="#71717a"/>
+        <rect x="30" y="50" width="6" height="25" fill="#71717a"/>
+        <rect x="55" y="50" width="6" height="25" fill="#71717a"/>
+        <rect x="70" y="50" width="6" height="25" fill="#71717a"/>
+      </g>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Wildlife</text>
+    </g>
+
+    <!-- Skiing -->
+    <g transform="translate(440, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <polygon points="90,20 40,80 140,80" fill="#64748b"/>
+      <polygon points="90,20 75,50 105,50" fill="#fff"/>
+      <line x1="90" y1="80" x2="90" y2="100" stroke="#94a3b8" stroke-width="3"/>
+      <circle cx="90" cy="90" r="8" fill="#DC2626"/>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Skiing</text>
+    </g>
+
+    <!-- Food & Wine -->
+    <g transform="translate(660, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <ellipse cx="90" cy="70" rx="40" ry="35" fill="#f1f5f9"/>
+      <ellipse cx="90" cy="65" rx="30" ry="25" fill="#f97316"/>
+      <path d="M60,60 Q90,45 120,60" stroke="#92400e" stroke-width="2" fill="none"/>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Food &amp; Wine</text>
+    </g>
+
+    <!-- Indigenous Culture -->
+    <g transform="translate(880, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <polygon points="90,20 60,100 120,100" fill="#DC2626"/>
+      <polygon points="90,30 70,90 110,90" fill="#fbbf24"/>
+      <circle cx="90" cy="60" r="15" fill="#1e293b"/>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Indigenous Culture</text>
+    </g>
+  </g>
+
+  <!-- Second Row -->
+  <g transform="translate(210, 270)">
+    <!-- Hiking -->
+    <g transform="translate(0, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <polygon points="90,30 30,100 150,100" fill="#166534"/>
+      <path d="M60,80 L80,60 L100,80 L120,55" stroke="#fbbf24" stroke-width="3" fill="none"/>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Hiking</text>
+    </g>
+
+    <!-- Whale Watching -->
+    <g transform="translate(220, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <ellipse cx="90" cy="60" rx="50" ry="30" fill="#0ea5e9"/>
+      <ellipse cx="70" cy="55" rx="35" ry="20" fill="#1e3a5f"/>
+      <path d="M100,50 Q120,30 115,55" fill="#1e3a5f"/>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Whale Watching</text>
+    </g>
+
+    <!-- Road Trips -->
+    <g transform="translate(440, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <rect x="30" y="70" width="120" height="8" fill="#64748b" rx="2"/>
+      <line x1="50" y1="74" x2="60" y2="74" stroke="#fbbf24" stroke-width="2"/>
+      <line x1="80" y1="74" x2="90" y2="74" stroke="#fbbf24" stroke-width="2"/>
+      <line x1="110" y1="74" x2="120" y2="74" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="70" y="45" width="40" height="25" fill="#DC2626" rx="5"/>
+      <circle cx="80" cy="75" r="8" fill="#1e293b"/>
+      <circle cx="100" cy="75" r="8" fill="#1e293b"/>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Road Trips</text>
+    </g>
+
+    <!-- Festivals -->
+    <g transform="translate(660, 0)">
+      <rect width="180" height="140" fill="#1e293b" rx="10"/>
+      <polygon points="90,30 70,80 110,80" fill="#DC2626"/>
+      <polygon points="60,35 80,75 40,75" fill="#fbbf24"/>
+      <polygon points="120,35 100,75 140,75" fill="#22c55e"/>
+      <circle cx="90" cy="55" r="8" fill="#fff"/>
+      <circle cx="65" cy="55" r="6" fill="#fff"/>
+      <circle cx="115" cy="55" r="6" fill="#fff"/>
+      <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Festivals</text>
+    </g>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="100" y="480" width="1000" height="120" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(140, 500)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="200" y="540" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#fff">Canadian Experiences</text>
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="22" fill="#e2e8f0">Adventure, Culture, Nature &amp; More</text>
+  <text x="950" y="580" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">topcanadatravel.com</text>
+</svg>

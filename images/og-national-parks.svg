@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0284c7"/>
+      <stop offset="100%" style="stop-color:#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="forestGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#166534"/>
+      <stop offset="100%" style="stop-color:#14532d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="630" fill="url(#skyGradient)"/>
+
+  <!-- Clouds -->
+  <g fill="#fff" opacity="0.9">
+    <ellipse cx="150" cy="80" rx="70" ry="35"/>
+    <ellipse cx="200" cy="70" rx="50" ry="30"/>
+    <ellipse cx="900" cy="100" rx="90" ry="45"/>
+    <ellipse cx="970" cy="90" rx="60" ry="35"/>
+    <ellipse cx="550" cy="60" rx="60" ry="30"/>
+  </g>
+
+  <!-- Mountain Range Background -->
+  <polygon points="0,350 150,200 300,280 450,150 600,230 750,120 900,200 1050,170 1200,250 1200,350" fill="#64748b" opacity="0.6"/>
+
+  <!-- Mountain Range Foreground -->
+  <polygon points="0,400 200,250 350,320 500,200 700,280 850,180 1000,260 1200,220 1200,400" fill="#475569"/>
+
+  <!-- Snow Caps -->
+  <polygon points="200,250 240,290 160,290" fill="#fff"/>
+  <polygon points="500,200 550,250 450,250" fill="#fff"/>
+  <polygon points="850,180 900,230 800,230" fill="#fff"/>
+
+  <!-- Lake -->
+  <ellipse cx="600" cy="480" rx="500" ry="80" fill="#0ea5e9" opacity="0.7"/>
+
+  <!-- Forest Trees -->
+  <g fill="url(#forestGradient)">
+    <!-- Left Forest -->
+    <polygon points="0,630 50,450 100,630"/>
+    <polygon points="60,630 120,420 180,630"/>
+    <polygon points="130,630 200,400 270,630"/>
+    <polygon points="200,630 260,440 320,630"/>
+
+    <!-- Right Forest -->
+    <polygon points="880,630 950,430 1020,630"/>
+    <polygon points="950,630 1020,410 1090,630"/>
+    <polygon points="1020,630 1080,450 1140,630"/>
+    <polygon points="1100,630 1150,470 1200,630"/>
+  </g>
+
+  <!-- Wildlife - Moose Silhouette -->
+  <g transform="translate(500, 380)" fill="#1e293b">
+    <ellipse cx="50" cy="40" rx="35" ry="25"/>
+    <ellipse cx="85" cy="30" rx="20" ry="15"/>
+    <rect x="25" y="55" width="8" height="35"/>
+    <rect x="45" y="55" width="8" height="35"/>
+    <rect x="55" y="55" width="8" height="35"/>
+    <rect x="75" y="55" width="8" height="35"/>
+    <!-- Antlers -->
+    <polygon points="90,20 110,5 95,25" fill="#1e293b"/>
+    <polygon points="90,20 115,15 95,30" fill="#1e293b"/>
+  </g>
+
+  <!-- Parks Canada Logo Style Badge -->
+  <g transform="translate(100, 100)">
+    <circle cx="50" cy="50" r="45" fill="#fff"/>
+    <circle cx="50" cy="50" r="40" fill="#DC2626"/>
+    <text x="50" y="45" font-family="Georgia, serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">PARKS</text>
+    <text x="50" y="65" font-family="Georgia, serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">CANADA</text>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="200" y="500" width="800" height="110" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(240, 515)">
+    <path d="M30,0 L34,9 L43,9 L37,16 L40,28 L30,21 L20,28 L23,16 L17,9 L26,9 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="290" y="555" font-family="Georgia, serif" font-size="40" font-weight="bold" fill="#fff">Canadian National Parks</text>
+  <text x="290" y="590" font-family="Arial, sans-serif" font-size="20" fill="#e2e8f0">48 Parks Protecting Canada's Natural Heritage</text>
+  <text x="850" y="590" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">topcanadatravel.com</text>
+</svg>

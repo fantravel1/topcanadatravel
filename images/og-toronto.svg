@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="50%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sunset Sky -->
+  <rect width="1200" height="630" fill="url(#skyGradient)"/>
+
+  <!-- Lake Ontario -->
+  <rect y="450" width="1200" height="180" fill="#1e3a5f"/>
+
+  <!-- City Skyline -->
+  <g fill="#1e293b">
+    <!-- Left buildings -->
+    <rect x="50" y="300" width="60" height="150"/>
+    <rect x="120" y="280" width="50" height="170"/>
+    <rect x="180" y="320" width="70" height="130"/>
+    <rect x="260" y="260" width="55" height="190"/>
+
+    <!-- CN Tower -->
+    <rect x="400" y="80" width="20" height="370"/>
+    <rect x="395" y="200" width="30" height="15"/>
+    <ellipse cx="410" cy="240" rx="40" ry="30"/>
+    <rect x="380" y="220" width="60" height="50"/>
+    <polygon points="410,80 400,120 420,120" fill="#DC2626"/>
+
+    <!-- Rogers Centre (dome) -->
+    <ellipse cx="500" cy="400" rx="70" ry="50" fill="#475569"/>
+
+    <!-- More buildings -->
+    <rect x="580" y="280" width="60" height="170"/>
+    <rect x="650" y="250" width="70" height="200"/>
+    <rect x="730" y="300" width="50" height="150"/>
+    <rect x="790" y="270" width="80" height="180"/>
+    <rect x="880" y="290" width="60" height="160"/>
+    <rect x="950" y="320" width="55" height="130"/>
+    <rect x="1020" y="280" width="70" height="170"/>
+    <rect x="1100" y="310" width="60" height="140"/>
+  </g>
+
+  <!-- Building Windows -->
+  <g fill="#fbbf24" opacity="0.8">
+    <rect x="130" y="300" width="10" height="8"/>
+    <rect x="145" y="300" width="10" height="8"/>
+    <rect x="130" y="315" width="10" height="8"/>
+    <rect x="145" y="315" width="10" height="8"/>
+    <rect x="665" y="270" width="15" height="10"/>
+    <rect x="690" y="270" width="15" height="10"/>
+    <rect x="665" y="290" width="15" height="10"/>
+    <rect x="690" y="290" width="15" height="10"/>
+    <rect x="805" y="290" width="12" height="8"/>
+    <rect x="825" y="290" width="12" height="8"/>
+    <rect x="845" y="290" width="12" height="8"/>
+  </g>
+
+  <!-- CN Tower Light -->
+  <circle cx="410" cy="200" r="3" fill="#DC2626"/>
+
+  <!-- Water Reflection -->
+  <g opacity="0.3">
+    <rect x="390" y="460" width="40" height="100" fill="#64748b"/>
+  </g>
+
+  <!-- Title Card -->
+  <rect x="100" y="480" width="600" height="120" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf -->
+  <g transform="translate(140, 500)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="200" y="540" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#fff">Toronto, Canada</text>
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="20" fill="#e2e8f0">Canada's Vibrant Multicultural Metropolis</text>
+</svg>

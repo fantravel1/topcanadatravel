@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="mtlSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="630" fill="url(#mtlSky)"/>
+
+  <!-- Mount Royal -->
+  <ellipse cx="200" cy="380" rx="250" ry="100" fill="#166534"/>
+
+  <!-- Cross on Mount Royal -->
+  <g transform="translate(180, 280)" fill="#fff">
+    <rect x="0" y="0" width="10" height="60"/>
+    <rect x="-15" y="15" width="40" height="10"/>
+  </g>
+
+  <!-- City Skyline -->
+  <g fill="#1e293b">
+    <!-- 1000 de La Gauchetière -->
+    <rect x="400" y="220" width="70" height="180"/>
+    <polygon points="435,220 400,250 470,250" fill="#334155"/>
+
+    <!-- Place Ville Marie -->
+    <rect x="500" y="200" width="80" height="200"/>
+
+    <!-- Tour de la Bourse -->
+    <rect x="600" y="180" width="60" height="220"/>
+
+    <!-- Olympic Stadium Tower (distinctive) -->
+    <g transform="translate(750, 150)">
+      <path d="M0,250 L30,0 L60,250" fill="#475569"/>
+      <ellipse cx="30" cy="250" rx="100" ry="40" fill="#334155"/>
+    </g>
+
+    <!-- More buildings -->
+    <rect x="900" y="260" width="55" height="140"/>
+    <rect x="970" y="240" width="65" height="160"/>
+    <rect x="1050" y="280" width="50" height="120"/>
+    <rect x="1120" y="300" width="60" height="100"/>
+  </g>
+
+  <!-- Building details -->
+  <g fill="#fbbf24" opacity="0.7">
+    <rect x="420" y="250" width="12" height="8"/>
+    <rect x="440" y="250" width="12" height="8"/>
+    <rect x="520" y="220" width="15" height="10"/>
+    <rect x="545" y="220" width="15" height="10"/>
+    <rect x="615" y="200" width="10" height="8"/>
+    <rect x="635" y="200" width="10" height="8"/>
+  </g>
+
+  <!-- St. Lawrence River -->
+  <rect y="400" width="1200" height="230" fill="#0891b2"/>
+
+  <!-- Old Montreal (Notre-Dame style building) -->
+  <g transform="translate(280, 300)" fill="#475569">
+    <rect x="0" y="50" width="80" height="50"/>
+    <polygon points="40,0 0,50 80,50"/>
+    <polygon points="20,10 40,0 60,10 60,50 20,50" fill="#64748b"/>
+    <rect x="35" y="70" width="10" height="30" fill="#92400e"/>
+  </g>
+
+  <!-- Biosphere (geodesic dome) -->
+  <circle cx="1050" cy="380" r="50" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M1000,380 Q1025,340 1050,380 Q1075,420 1100,380" stroke="#94a3b8" stroke-width="2" fill="none"/>
+  <path d="M1010,350 Q1050,380 1090,350" stroke="#94a3b8" stroke-width="2" fill="none"/>
+  <path d="M1010,410 Q1050,380 1090,410" stroke="#94a3b8" stroke-width="2" fill="none"/>
+
+  <!-- Title Card -->
+  <rect x="100" y="480" width="650" height="120" rx="15" fill="#000" opacity="0.7"/>
+
+  <!-- Maple Leaf + Fleur-de-lis -->
+  <g transform="translate(140, 500)">
+    <path d="M35,0 L39,10 L50,10 L43,18 L47,32 L35,24 L23,32 L27,18 L20,10 L31,10 Z" fill="#DC2626"/>
+  </g>
+
+  <text x="200" y="540" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#fff">Montréal, Canada</text>
+  <text x="200" y="580" font-family="Arial, sans-serif" font-size="20" fill="#e2e8f0">North America's French-Speaking Gem</text>
+</svg>
