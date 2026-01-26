@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>About Us - Our Mission & Team | TopCanadaTravel</title>
+    <meta name="description" content="Learn about TopCanadaTravel, Canada's trusted travel guide. Discover our mission to help travelers explore Canada, meet our team, and learn what makes us your best resource for Canadian travel.">
+    <meta name="keywords" content="about TopCanadaTravel, Canada travel experts, Canadian travel guide team, travel to Canada">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://topcanadatravel.com/about/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://topcanadatravel.com/about/">
+    <meta property="og:title" content="About Us | TopCanadaTravel">
+    <meta property="og:description" content="Meet the team behind Canada's most comprehensive travel guide.">
+    <meta property="og:site_name" content="TopCanadaTravel">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | TopCanadaTravel">
+    <meta name="twitter:description" content="Meet the team behind Canada's most comprehensive travel guide.">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TopCanadaTravel",
+        "url": "https://topcanadatravel.com",
+        "logo": "https://topcanadatravel.com/images/logo.png",
+        "description": "Canada's comprehensive travel guide helping visitors discover the best destinations, experiences, and travel tips.",
+        "sameAs": [
+            "https://twitter.com/topcanadatravel",
+            "https://facebook.com/topcanadatravel",
+            "https://instagram.com/topcanadatravel"
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://topcanadatravel.com/"},
+            {"@type": "ListItem", "position": 2, "name": "About", "item": "https://topcanadatravel.com/about/"}
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --color-primary: #DC2626;
+            --color-primary-dark: #B91C1C;
+            --color-primary-light: #FEE2E2;
+            --color-secondary: #1E3A5F;
+            --color-secondary-dark: #0F2942;
+            --color-white: #FFFFFF;
+            --color-gray-50: #F9FAFB;
+            --color-gray-100: #F3F4F6;
+            --color-gray-200: #E5E7EB;
+            --color-gray-300: #D1D5DB;
+            --color-gray-400: #9CA3AF;
+            --color-gray-500: #6B7280;
+            --color-gray-600: #4B5563;
+            --color-gray-700: #374151;
+            --color-gray-800: #1F2937;
+            --color-gray-900: #111827;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--color-gray-800);
+            background: var(--color-white);
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        .sr-only {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0,0,0,0); border: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        @media (min-width: 768px) { .container { padding: 0 1.5rem; } }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+        .logo span { color: var(--color-primary); }
+        .nav-menu { display: none; gap: 0.25rem; }
+        @media (min-width: 1024px) { .nav-menu { display: flex; } }
+        .nav-link {
+            padding: 0.5rem 1rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--color-gray-700);
+            border-radius: var(--radius-lg);
+            transition: all 0.15s;
+        }
+        .nav-link:hover { color: var(--color-primary); background: var(--color-gray-100); }
+        .nav-link.active { color: var(--color-primary); }
+
+        /* Hero */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            background: var(--color-gray-50);
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--color-gray-600);
+        }
+        .breadcrumb-list a:hover { color: var(--color-primary); }
+        .breadcrumb-list span { color: var(--color-gray-400); }
+
+        /* Section */
+        .section { padding: 4rem 0; }
+        @media (min-width: 768px) { .section { padding: 6rem 0; } }
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 3rem;
+        }
+        .section-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--color-primary-light);
+            color: var(--color-primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 9999px;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--color-gray-900);
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--color-gray-600);
+        }
+
+        /* Content */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        @media (min-width: 768px) {
+            .content-grid { grid-template-columns: 1fr 1fr; align-items: center; }
+        }
+        .content-text h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-gray-900);
+            margin-bottom: 1rem;
+        }
+        .content-text p {
+            color: var(--color-gray-600);
+            margin-bottom: 1rem;
+        }
+        .content-text p:last-child { margin-bottom: 0; }
+        .content-image {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--color-gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+        .stat-card {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: white;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 0.9375rem;
+            color: var(--color-gray-600);
+        }
+
+        /* Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        @media (min-width: 640px) { .values-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .values-grid { grid-template-columns: repeat(3, 1fr); } }
+        .value-card {
+            padding: 2rem;
+            background: white;
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-xl);
+            transition: all 0.2s;
+        }
+        .value-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-lg);
+        }
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-primary-light);
+            border-radius: var(--radius-lg);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .value-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-gray-900);
+            margin-bottom: 0.5rem;
+        }
+        .value-card p {
+            font-size: 0.9375rem;
+            color: var(--color-gray-600);
+        }
+
+        /* Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        @media (min-width: 768px) { .team-grid { grid-template-columns: repeat(4, 1fr); } }
+        .team-card {
+            text-align: center;
+        }
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            background: var(--color-gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .team-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-gray-900);
+            margin-bottom: 0.25rem;
+        }
+        .team-card p {
+            font-size: 0.875rem;
+            color: var(--color-gray-500);
+        }
+
+        /* Links */
+        .about-links {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        @media (min-width: 640px) { .about-links { grid-template-columns: repeat(3, 1fr); } }
+        .about-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-lg);
+            transition: all 0.2s;
+        }
+        .about-link:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-md);
+        }
+        .about-link-icon {
+            font-size: 2rem;
+        }
+        .about-link-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-gray-900);
+            margin-bottom: 0.25rem;
+        }
+        .about-link-content p {
+            font-size: 0.875rem;
+            color: var(--color-gray-500);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-gray-900);
+            color: var(--color-gray-400);
+            padding: 4rem 0 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(4, 1fr); } }
+        .footer h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+        .footer ul { display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer a:hover { color: white; }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-gray-800);
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Bottom Nav */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid var(--color-gray-200);
+            padding: 0.5rem 0;
+            padding-bottom: env(safe-area-inset-bottom);
+            display: flex;
+            justify-content: space-around;
+            z-index: 100;
+        }
+        @media (min-width: 1024px) { .bottom-nav { display: none; } }
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.5rem;
+            min-width: 64px;
+            font-size: 0.625rem;
+            color: var(--color-gray-500);
+        }
+        .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--color-primary); }
+        .bottom-nav-icon { font-size: 1.25rem; }
+
+        .pb-mobile { padding-bottom: 80px; }
+        @media (min-width: 1024px) { .pb-mobile { padding-bottom: 0; } }
+    </style>
+</head>
+<body class="pb-mobile">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">🍁 Top<span>Canada</span>Travel</a>
+                <ul class="nav-menu">
+                    <li><a href="/destinations/" class="nav-link">Destinations</a></li>
+                    <li><a href="/national-parks/" class="nav-link">National Parks</a></li>
+                    <li><a href="/experiences/" class="nav-link">Experiences</a></li>
+                    <li><a href="/itineraries/" class="nav-link">Itineraries</a></li>
+                    <li><a href="/plan-your-trip/" class="nav-link">Plan Your Trip</a></li>
+                </ul>
+                <div></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <span class="hero-badge">🍁 Est. 2015</span>
+                <h1>About TopCanadaTravel</h1>
+                <p>Your trusted guide to discovering the best of Canada, from coast to coast to coast.</p>
+            </div>
+        </section>
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="/">Home</a></li>
+                    <li><span>/</span></li>
+                    <li aria-current="page">About</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Mission Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2>Our Mission</h2>
+                        <p>At TopCanadaTravel, we believe that Canada is one of the world's most incredible travel destinations, offering unparalleled natural beauty, rich cultural diversity, and endless adventures waiting to be discovered.</p>
+                        <p>Our mission is to inspire and empower travelers to explore Canada with confidence. Whether you're planning your first trip to the Great White North or you're a seasoned visitor looking for hidden gems, we provide comprehensive, up-to-date travel information to help you create unforgettable memories.</p>
+                        <p>Founded by a team of passionate Canadian travelers and locals, we combine first-hand experience with expert research to bring you the most reliable travel guides, itineraries, and insider tips available online.</p>
+                    </div>
+                    <div class="content-image">🏔️</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section" style="background: var(--color-gray-50)">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">By The Numbers</span>
+                    <h2 class="section-title">Helping Travelers Explore Canada</h2>
+                </header>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Destinations Covered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">500K+</div>
+                        <div class="stat-label">Monthly Visitors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Trips Planned</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">Our Values</span>
+                    <h2 class="section-title">What We Stand For</h2>
+                    <p class="section-subtitle">The principles that guide everything we do</p>
+                </header>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h3>Accuracy</h3>
+                        <p>We verify all information through direct experience and reliable sources to ensure you can trust our recommendations.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌿</div>
+                        <h3>Sustainability</h3>
+                        <p>We promote responsible travel practices that protect Canada's natural wonders for future generations to enjoy.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Authenticity</h3>
+                        <p>We share genuine experiences and honest reviews, never influenced by paid promotions or affiliate pressures.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌍</div>
+                        <h3>Inclusivity</h3>
+                        <p>We create content for all travelers, regardless of budget, ability, or travel style, ensuring everyone can explore Canada.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">📚</div>
+                        <h3>Education</h3>
+                        <p>We go beyond surface-level guides to share the history, culture, and stories that make each destination special.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💡</div>
+                        <h3>Innovation</h3>
+                        <p>We continuously improve our guides with the latest travel technology, trends, and traveler feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section" style="background: var(--color-gray-50)">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">Our Team</span>
+                    <h2 class="section-title">Meet the Experts</h2>
+                    <p class="section-subtitle">A passionate team of Canadian travel enthusiasts and local experts</p>
+                </header>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-photo">👩</div>
+                        <h3>Sarah Mitchell</h3>
+                        <p>Founder & Editor-in-Chief</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">👨</div>
+                        <h3>David Chen</h3>
+                        <p>Head of Content</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">👩</div>
+                        <h3>Marie Dubois</h3>
+                        <p>Quebec & Maritimes Editor</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">👨</div>
+                        <h3>James Wilson</h3>
+                        <p>Adventure Travel Expert</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-badge">Get In Touch</span>
+                    <h2 class="section-title">Connect With Us</h2>
+                </header>
+                <div class="about-links">
+                    <a href="/about/contact/" class="about-link">
+                        <div class="about-link-icon">📧</div>
+                        <div class="about-link-content">
+                            <h3>Contact Us</h3>
+                            <p>Questions? We'd love to hear from you</p>
+                        </div>
+                    </a>
+                    <a href="/about/advertise/" class="about-link">
+                        <div class="about-link-icon">📢</div>
+                        <div class="about-link-content">
+                            <h3>Advertise With Us</h3>
+                            <p>Partner with Canada's top travel guide</p>
+                        </div>
+                    </a>
+                    <a href="/about/press/" class="about-link">
+                        <div class="about-link-icon">📰</div>
+                        <div class="about-link-content">
+                            <h3>Press & Media</h3>
+                            <p>Resources for journalists and media</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="/destinations/cities/toronto/">Toronto</a></li>
+                        <li><a href="/destinations/cities/vancouver/">Vancouver</a></li>
+                        <li><a href="/destinations/cities/montreal/">Montreal</a></li>
+                        <li><a href="/national-parks/banff/">Banff</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Plan Your Trip</h4>
+                    <ul>
+                        <li><a href="/plan-your-trip/visa-eta/">Visa & eTA</a></li>
+                        <li><a href="/plan-your-trip/when-to-visit/">When to Visit</a></li>
+                        <li><a href="/itineraries/">Itineraries</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Experiences</h4>
+                    <ul>
+                        <li><a href="/experiences/northern-lights/">Northern Lights</a></li>
+                        <li><a href="/experiences/wildlife/">Wildlife</a></li>
+                        <li><a href="/experiences/skiing-snowboarding/">Skiing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/about/contact/">Contact</a></li>
+                        <li><a href="/legal/privacy-policy/">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TopCanadaTravel.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav" aria-label="Mobile navigation">
+        <a href="/" class="bottom-nav-item"><span class="bottom-nav-icon">🏠</span><span>Home</span></a>
+        <a href="/destinations/" class="bottom-nav-item"><span class="bottom-nav-icon">📍</span><span>Explore</span></a>
+        <a href="/itineraries/" class="bottom-nav-item"><span class="bottom-nav-icon">🗺️</span><span>Trips</span></a>
+        <a href="/hotels/" class="bottom-nav-item"><span class="bottom-nav-icon">🏨</span><span>Hotels</span></a>
+        <a href="/plan-your-trip/" class="bottom-nav-item"><span class="bottom-nav-icon">✈️</span><span>Plan</span></a>
+    </nav>
+</body>
+</html>
