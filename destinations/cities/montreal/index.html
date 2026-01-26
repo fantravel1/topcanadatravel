@@ -209,6 +209,8 @@ nav{display:none}
 .attraction-content p{font-size:0.95rem;color:var(--gray);margin-bottom:12px}
 .attraction-meta{display:flex;gap:16px;font-size:0.85rem;color:var(--gray)}
 .attraction-meta span{display:flex;align-items:center;gap:4px}
+.attraction-card-link{display:block;text-decoration:none;color:inherit;transition:transform 0.2s}
+.attraction-card-link:hover{transform:translateY(-4px)}
 
 /* Neighborhood Cards */
 .neighborhood-grid{display:grid;gap:16px}
@@ -346,72 +348,84 @@ body{padding-bottom:70px}
     <section class="section">
       <h2>Top Attractions</h2>
       <div class="attractions-grid">
-        <div class="attraction-card">
-          <div class="attraction-img">🏛️</div>
-          <div class="attraction-content">
-            <h3>Old Montreal (Vieux-Montréal)</h3>
-            <p>Explore 400 years of history in this stunning district with cobblestone streets, the Old Port waterfront, and beautiful 17th-19th century architecture.</p>
-            <div class="attraction-meta">
-              <span>📍 Historic District</span>
-              <span>⏱️ Half to full day</span>
+        <a href="/attractions/montreal/old-montreal/" class="attraction-card-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🏛️</div>
+            <div class="attraction-content">
+              <h3>Old Montreal (Vieux-Montréal)</h3>
+              <p>Explore 400 years of history in this stunning district with cobblestone streets, the Old Port waterfront, and beautiful 17th-19th century architecture.</p>
+              <div class="attraction-meta">
+                <span>📍 Historic District</span>
+                <span>⏱️ Half to full day</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">⛪</div>
-          <div class="attraction-content">
-            <h3>Notre-Dame Basilica</h3>
-            <p>Marvel at one of North America's most beautiful churches. The Gothic Revival masterpiece features stunning blue interior and the AURA immersive light show.</p>
-            <div class="attraction-meta">
-              <span>📍 Old Montreal</span>
-              <span>💵 $15 CAD</span>
+        </a>
+        <a href="/attractions/montreal/notre-dame-basilica/" class="attraction-card-link">
+          <div class="attraction-card">
+            <div class="attraction-img">⛪</div>
+            <div class="attraction-content">
+              <h3>Notre-Dame Basilica</h3>
+              <p>Marvel at one of North America's most beautiful churches. The Gothic Revival masterpiece features stunning blue interior and the AURA immersive light show.</p>
+              <div class="attraction-meta">
+                <span>📍 Old Montreal</span>
+                <span>💵 $15 CAD</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🏔️</div>
-          <div class="attraction-content">
-            <h3>Mount Royal Park</h3>
-            <p>Climb the city's namesake mountain designed by Central Park's creator. The Kondiaronk Belvedere offers the best panoramic views of downtown Montreal.</p>
-            <div class="attraction-meta">
-              <span>📍 Plateau</span>
-              <span>🎫 Free</span>
+        </a>
+        <a href="/attractions/montreal/mount-royal-park/" class="attraction-card-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🏔️</div>
+            <div class="attraction-content">
+              <h3>Mount Royal Park</h3>
+              <p>Climb the city's namesake mountain designed by Central Park's creator. The Kondiaronk Belvedere offers the best panoramic views of downtown Montreal.</p>
+              <div class="attraction-meta">
+                <span>📍 Plateau</span>
+                <span>🎫 Free</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🎨</div>
-          <div class="attraction-content">
-            <h3>Montreal Museum of Fine Arts</h3>
-            <p>Canada's largest art museum spans five pavilions with 45,000+ works from antiquity to contemporary art, plus world-class traveling exhibitions.</p>
-            <div class="attraction-meta">
-              <span>📍 Golden Square Mile</span>
-              <span>💵 $24 CAD</span>
+        </a>
+        <a href="/attractions/montreal/montreal-museum-fine-arts/" class="attraction-card-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🎨</div>
+            <div class="attraction-content">
+              <h3>Montreal Museum of Fine Arts</h3>
+              <p>Canada's largest art museum spans five pavilions with 45,000+ works from antiquity to contemporary art, plus world-class traveling exhibitions.</p>
+              <div class="attraction-meta">
+                <span>📍 Golden Square Mile</span>
+                <span>💵 $24 CAD</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🥕</div>
-          <div class="attraction-content">
-            <h3>Jean-Talon Market</h3>
-            <p>North America's largest open-air market overflows with local produce, Quebec cheeses, maple products, and specialty foods. A foodie paradise year-round.</p>
-            <div class="attraction-meta">
-              <span>📍 Little Italy</span>
-              <span>🎫 Free to browse</span>
+        </a>
+        <a href="/attractions/montreal/jean-talon-market/" class="attraction-card-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🥕</div>
+            <div class="attraction-content">
+              <h3>Jean-Talon Market</h3>
+              <p>North America's largest open-air market overflows with local produce, Quebec cheeses, maple products, and specialty foods. A foodie paradise year-round.</p>
+              <div class="attraction-meta">
+                <span>📍 Little Italy</span>
+                <span>🎫 Free to browse</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🌿</div>
-          <div class="attraction-content">
-            <h3>Montreal Botanical Garden</h3>
-            <p>One of the world's largest botanical gardens features 22,000 plant species, stunning themed gardens, and the magical Gardens of Light in autumn.</p>
-            <div class="attraction-meta">
-              <span>📍 Maisonneuve</span>
-              <span>💵 $22 CAD</span>
+        </a>
+        <a href="/attractions/montreal/montreal-botanical-garden/" class="attraction-card-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🌿</div>
+            <div class="attraction-content">
+              <h3>Montreal Botanical Garden</h3>
+              <p>One of the world's largest botanical gardens features 22,000 plant species, stunning themed gardens, and the magical Gardens of Light in autumn.</p>
+              <div class="attraction-meta">
+                <span>📍 Maisonneuve</span>
+                <span>💵 $22 CAD</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 

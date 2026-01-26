@@ -190,6 +190,11 @@ nav{display:none}
 .attraction-content p{font-size:0.95rem;color:var(--gray);margin-bottom:12px}
 .attraction-meta{display:flex;gap:16px;font-size:0.85rem;color:var(--gray)}
 .attraction-meta span{display:flex;align-items:center;gap:4px}
+.attraction-link{text-decoration:none;color:inherit;display:block}
+.attraction-link:hover .attraction-card{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,0.15)}
+.attraction-link:focus .attraction-card{outline:3px solid var(--accent);outline-offset:2px}
+.attraction-link .attraction-card{transition:transform 0.3s,box-shadow 0.3s}
+.attraction-link:hover .attraction-content h3{color:var(--accent)}
 .seasonal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .season-card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-align:center}
 .season-icon{font-size:2.5rem;margin-bottom:12px}
@@ -303,72 +308,84 @@ body{padding-bottom:70px}
     <section class="section">
       <h2>Top Attractions</h2>
       <div class="attractions-grid">
-        <div class="attraction-card">
-          <div class="attraction-img">🏰</div>
-          <div class="attraction-content">
-            <h3>Old Quebec (Vieux-Québec)</h3>
-            <p>Wander North America's only walled city with cobblestone streets, 17th-century buildings, and the iconic fortifications. UNESCO World Heritage since 1985.</p>
-            <div class="attraction-meta">
-              <span>📍 Historic District</span>
-              <span>🎫 Free to explore</span>
+        <a href="/attractions/quebec-city/old-quebec/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🏰</div>
+            <div class="attraction-content">
+              <h3>Old Quebec (Vieux-Québec)</h3>
+              <p>Wander North America's only walled city with cobblestone streets, 17th-century buildings, and the iconic fortifications. UNESCO World Heritage since 1985.</p>
+              <div class="attraction-meta">
+                <span>📍 Historic District</span>
+                <span>🎫 Free to explore</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🏨</div>
-          <div class="attraction-content">
-            <h3>Château Frontenac</h3>
-            <p>The world's most photographed hotel dominates the Quebec skyline. Take a guided tour or enjoy afternoon tea in this castle-like landmark built in 1893.</p>
-            <div class="attraction-meta">
-              <span>📍 Upper Town</span>
-              <span>💵 Tours from $22</span>
+        </a>
+        <a href="/attractions/quebec-city/chateau-frontenac/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🏨</div>
+            <div class="attraction-content">
+              <h3>Château Frontenac</h3>
+              <p>The world's most photographed hotel dominates the Quebec skyline. Take a guided tour or enjoy afternoon tea in this castle-like landmark built in 1893.</p>
+              <div class="attraction-meta">
+                <span>📍 Upper Town</span>
+                <span>💵 Tours from $22</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🏛️</div>
-          <div class="attraction-content">
-            <h3>Place Royale</h3>
-            <p>The birthplace of French civilization in North America. Samuel de Champlain founded his settlement here in 1608. Don't miss the Notre-Dame-des-Victoires church.</p>
-            <div class="attraction-meta">
-              <span>📍 Lower Town</span>
-              <span>🎫 Free</span>
+        </a>
+        <a href="/attractions/quebec-city/place-royale/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🏛️</div>
+            <div class="attraction-content">
+              <h3>Place Royale</h3>
+              <p>The birthplace of French civilization in North America. Samuel de Champlain founded his settlement here in 1608. Don't miss the Notre-Dame-des-Victoires church.</p>
+              <div class="attraction-meta">
+                <span>📍 Lower Town</span>
+                <span>🎫 Free</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">💧</div>
-          <div class="attraction-content">
-            <h3>Montmorency Falls</h3>
-            <p>At 83 meters, these falls are 30 meters taller than Niagara! Take the cable car, walk the suspension bridge, or climb the 487-step staircase.</p>
-            <div class="attraction-meta">
-              <span>📍 12 km from downtown</span>
-              <span>💵 $6.25 parking</span>
+        </a>
+        <a href="/attractions/quebec-city/montmorency-falls/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">💧</div>
+            <div class="attraction-content">
+              <h3>Montmorency Falls</h3>
+              <p>At 83 meters, these falls are 30 meters taller than Niagara! Take the cable car, walk the suspension bridge, or climb the 487-step staircase.</p>
+              <div class="attraction-meta">
+                <span>📍 12 km from downtown</span>
+                <span>💵 $6.25 parking</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🛍️</div>
-          <div class="attraction-content">
-            <h3>Quartier Petit-Champlain</h3>
-            <p>North America's oldest commercial district features charming boutiques, artisan shops, and cozy cafés along narrow cobblestone streets.</p>
-            <div class="attraction-meta">
-              <span>📍 Lower Town</span>
-              <span>🚡 Funicular access</span>
+        </a>
+        <a href="/attractions/quebec-city/petit-champlain/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🛍️</div>
+            <div class="attraction-content">
+              <h3>Quartier Petit-Champlain</h3>
+              <p>North America's oldest commercial district features charming boutiques, artisan shops, and cozy cafés along narrow cobblestone streets.</p>
+              <div class="attraction-meta">
+                <span>📍 Lower Town</span>
+                <span>🚡 Funicular access</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">⛪</div>
-          <div class="attraction-content">
-            <h3>Basilica of Sainte-Anne-de-Beaupré</h3>
-            <p>One of North America's most important Catholic pilgrimage sites, attracting over 500,000 visitors annually. Stunning neo-Romanesque architecture.</p>
-            <div class="attraction-meta">
-              <span>📍 30 km from downtown</span>
-              <span>🎫 Free</span>
+        </a>
+        <a href="/attractions/quebec-city/sainte-anne-de-beaupre/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">⛪</div>
+            <div class="attraction-content">
+              <h3>Basilica of Sainte-Anne-de-Beaupré</h3>
+              <p>One of North America's most important Catholic pilgrimage sites, attracting over 500,000 visitors annually. Stunning neo-Romanesque architecture.</p>
+              <div class="attraction-meta">
+                <span>📍 30 km from downtown</span>
+                <span>🎫 Free</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
