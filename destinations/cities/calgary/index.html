@@ -163,6 +163,10 @@ nav{display:none}
 .highlight-content h3{font-size:1.15rem;color:var(--blue);margin-bottom:8px}
 .highlight-content p{font-size:0.95rem;color:var(--gray);margin-bottom:12px}
 .highlight-meta{display:flex;gap:16px;font-size:0.85rem;color:var(--gray)}
+.highlight-card-link{display:block;text-decoration:none;color:inherit;transition:transform 0.2s}
+.highlight-card-link:hover{transform:translateY(-4px)}
+.highlight-card-link:hover .highlight-card{box-shadow:0 8px 30px rgba(0,0,0,0.15)}
+.highlight-card-link .highlight-content h3,.highlight-card-link .highlight-content p,.highlight-card-link .highlight-meta{color:inherit}
 .stampede-box{background:linear-gradient(135deg,#7c2d12,#c2410c);color:#fff;border-radius:var(--radius);padding:24px;margin:30px 0}
 .stampede-box h3{margin-bottom:16px;font-size:1.3rem}
 .stampede-box p{opacity:0.95;margin-bottom:16px}
@@ -295,72 +299,84 @@ body{padding-bottom:70px}
     <section class="section">
       <h2>Top Attractions</h2>
       <div class="highlights-grid">
-        <div class="highlight-card">
-          <div class="highlight-img">🗼<span class="highlight-badge">Iconic</span></div>
-          <div class="highlight-content">
-            <h3>Calgary Tower</h3>
-            <p>Ride 191m up for 360° views of the city, prairies, and Rockies. The glass floor observation deck isn't for the faint of heart!</p>
-            <div class="highlight-meta">
-              <span>📍 Downtown</span>
-              <span>💵 $21 adult</span>
+        <a href="/attractions/calgary/calgary-tower/" class="highlight-card-link">
+          <div class="highlight-card">
+            <div class="highlight-img">🗼<span class="highlight-badge">Iconic</span></div>
+            <div class="highlight-content">
+              <h3>Calgary Tower</h3>
+              <p>Ride 191m up for 360° views of the city, prairies, and Rockies. The glass floor observation deck isn't for the faint of heart!</p>
+              <div class="highlight-meta">
+                <span>📍 Downtown</span>
+                <span>💵 $21 adult</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-img">🏛️</div>
-          <div class="highlight-content">
-            <h3>Studio Bell / National Music Centre</h3>
-            <p>Interactive music museum celebrating Canadian music. Play instruments, see rare artifacts, and explore the architectural gem.</p>
-            <div class="highlight-meta">
-              <span>📍 East Village</span>
-              <span>💵 $22 adult</span>
+        </a>
+        <a href="/attractions/calgary/studio-bell/" class="highlight-card-link">
+          <div class="highlight-card">
+            <div class="highlight-img">🏛️</div>
+            <div class="highlight-content">
+              <h3>Studio Bell / National Music Centre</h3>
+              <p>Interactive music museum celebrating Canadian music. Play instruments, see rare artifacts, and explore the architectural gem.</p>
+              <div class="highlight-meta">
+                <span>📍 East Village</span>
+                <span>💵 $22 adult</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-img">🌳</div>
-          <div class="highlight-content">
-            <h3>Prince's Island Park</h3>
-            <p>Urban oasis in the Bow River. Walk, bike, or picnic in this beautiful downtown park, home to summer festivals.</p>
-            <div class="highlight-meta">
-              <span>📍 Downtown</span>
-              <span>🎫 Free</span>
+        </a>
+        <a href="/attractions/calgary/princes-island-park/" class="highlight-card-link">
+          <div class="highlight-card">
+            <div class="highlight-img">🌳</div>
+            <div class="highlight-content">
+              <h3>Prince's Island Park</h3>
+              <p>Urban oasis in the Bow River. Walk, bike, or picnic in this beautiful downtown park, home to summer festivals.</p>
+              <div class="highlight-meta">
+                <span>📍 Downtown</span>
+                <span>🎫 Free</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-img">🦖</div>
-          <div class="highlight-content">
-            <h3>Royal Tyrrell Museum</h3>
-            <p>World-class dinosaur museum in nearby Drumheller (1.5 hrs). See T-Rex and the famous Alberta badlands fossils.</p>
-            <div class="highlight-meta">
-              <span>📍 Drumheller</span>
-              <span>💵 $21 adult</span>
+        </a>
+        <a href="/attractions/drumheller/royal-tyrrell-museum/" class="highlight-card-link">
+          <div class="highlight-card">
+            <div class="highlight-img">🦖</div>
+            <div class="highlight-content">
+              <h3>Royal Tyrrell Museum</h3>
+              <p>World-class dinosaur museum in nearby Drumheller (1.5 hrs). See T-Rex and the famous Alberta badlands fossils.</p>
+              <div class="highlight-meta">
+                <span>📍 Drumheller</span>
+                <span>💵 $21 adult</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-img">🐧</div>
-          <div class="highlight-content">
-            <h3>Calgary Zoo</h3>
-            <p>One of Canada's top zoos with 1,000+ animals. Don't miss the Penguin Plunge and Canadian Wilds exhibits.</p>
-            <div class="highlight-meta">
-              <span>📍 St. George's Island</span>
-              <span>💵 $35 adult</span>
+        </a>
+        <a href="/attractions/calgary/calgary-zoo/" class="highlight-card-link">
+          <div class="highlight-card">
+            <div class="highlight-img">🐧</div>
+            <div class="highlight-content">
+              <h3>Calgary Zoo</h3>
+              <p>One of Canada's top zoos with 1,000+ animals. Don't miss the Penguin Plunge and Canadian Wilds exhibits.</p>
+              <div class="highlight-meta">
+                <span>📍 St. George's Island</span>
+                <span>💵 $35 adult</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-img">🎿</div>
-          <div class="highlight-content">
-            <h3>Canada Olympic Park</h3>
-            <p>Legacy of the 1988 Winter Olympics. Ski, zipline, luge, or tour the facilities. Great for families year-round.</p>
-            <div class="highlight-meta">
-              <span>📍 West Calgary</span>
-              <span>Activities vary</span>
+        </a>
+        <a href="/attractions/calgary/canada-olympic-park/" class="highlight-card-link">
+          <div class="highlight-card">
+            <div class="highlight-img">🎿</div>
+            <div class="highlight-content">
+              <h3>Canada Olympic Park</h3>
+              <p>Legacy of the 1988 Winter Olympics. Ski, zipline, luge, or tour the facilities. Great for families year-round.</p>
+              <div class="highlight-meta">
+                <span>📍 West Calgary</span>
+                <span>Activities vary</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
