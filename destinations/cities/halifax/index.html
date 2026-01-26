@@ -137,7 +137,10 @@ body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ox
 .intro-box p{margin-bottom:1rem}
 .intro-box p:last-child{margin-bottom:0}
 .attractions-grid{display:grid;gap:1.5rem}
-.attraction-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.1)}
+.attraction-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.1);transition:transform .2s ease,box-shadow .2s ease}
+.attraction-link{text-decoration:none;color:inherit;display:block}
+.attraction-link:hover .attraction-card{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.attraction-link:focus .attraction-card{outline:3px solid var(--seafoam);outline-offset:2px}
 .attraction-img{height:200px;background:linear-gradient(45deg,var(--ocean),var(--seafoam));display:flex;align-items:center;justify-content:center;color:#fff;font-size:3rem}
 .attraction-content{padding:1.25rem}
 .attraction-content h3{color:var(--navy);margin-bottom:.5rem;font-size:1.1rem}
@@ -244,6 +247,7 @@ body{padding-bottom:70px}
 
 <h2 class="section-title">Must-See Attractions</h2>
 <div class="attractions-grid">
+<a href="/attractions/halifax/peggys-cove/" class="attraction-link">
 <article class="attraction-card">
 <div class="attraction-img">🗼</div>
 <div class="attraction-content">
@@ -255,7 +259,9 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 
+<a href="/attractions/halifax/halifax-citadel/" class="attraction-link">
 <article class="attraction-card">
 <div class="attraction-img">🏰</div>
 <div class="attraction-content">
@@ -267,7 +273,9 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 
+<a href="/attractions/halifax/waterfront-boardwalk/" class="attraction-link">
 <article class="attraction-card">
 <div class="attraction-img">🚶</div>
 <div class="attraction-content">
@@ -279,7 +287,9 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 
+<a href="/attractions/halifax/maritime-museum/" class="attraction-link">
 <article class="attraction-card">
 <div class="attraction-img">🚢</div>
 <div class="attraction-content">
@@ -291,7 +301,9 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 
+<a href="/attractions/halifax/pier-21/" class="attraction-link">
 <article class="attraction-card">
 <div class="attraction-img">🛂</div>
 <div class="attraction-content">
@@ -303,7 +315,9 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 
+<a href="/attractions/halifax/public-gardens/" class="attraction-link">
 <article class="attraction-card">
 <div class="attraction-img">🌿</div>
 <div class="attraction-content">
@@ -315,6 +329,7 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 </div>
 </div>
 </section>

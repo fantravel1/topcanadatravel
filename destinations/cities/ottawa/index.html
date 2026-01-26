@@ -104,7 +104,9 @@ nav{display:none}
 .section h2{font-size:1.5rem;color:var(--blue);margin-bottom:20px;padding-bottom:10px;border-bottom:3px solid var(--red)}
 .section p{margin-bottom:16px;color:#4a5568}
 .attractions-grid{display:grid;gap:20px}
-.attraction-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.attraction-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:transform 0.2s,box-shadow 0.2s}
+.attraction-link{display:block;text-decoration:none;color:inherit}
+.attraction-link:hover .attraction-card{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,0.15)}
 .attraction-img{height:160px;background:linear-gradient(45deg,#c8102e,#1d3557);display:flex;align-items:center;justify-content:center;color:#fff;font-size:3rem;position:relative}
 .attraction-badge{position:absolute;top:12px;right:12px;background:#fff;color:var(--red);padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600}
 .attraction-content{padding:20px}
@@ -213,72 +215,84 @@ body{padding-bottom:70px}
     <section class="section">
       <h2>Top Attractions</h2>
       <div class="attractions-grid">
-        <div class="attraction-card">
-          <div class="attraction-img">🏛️<span class="attraction-badge">Free Tours</span></div>
-          <div class="attraction-content">
-            <h3>Parliament Hill</h3>
-            <p>Seat of Canadian democracy with stunning Gothic Revival architecture. Free guided tours, Changing of the Guard (summer), and Sound & Light show.</p>
-            <div class="attraction-meta">
-              <span>📍 Downtown</span>
-              <span>🎫 Free</span>
+        <a href="/attractions/ottawa/parliament-hill/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🏛️<span class="attraction-badge">Free Tours</span></div>
+            <div class="attraction-content">
+              <h3>Parliament Hill</h3>
+              <p>Seat of Canadian democracy with stunning Gothic Revival architecture. Free guided tours, Changing of the Guard (summer), and Sound & Light show.</p>
+              <div class="attraction-meta">
+                <span>📍 Downtown</span>
+                <span>🎫 Free</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🚣<span class="attraction-badge">UNESCO</span></div>
-          <div class="attraction-content">
-            <h3>Rideau Canal</h3>
-            <p>UNESCO World Heritage Site. Skate the 7.8 km length in winter (world's largest rink!) or boat/cycle/walk along it in summer.</p>
-            <div class="attraction-meta">
-              <span>📍 Through Downtown</span>
-              <span>🎫 Free access</span>
+        </a>
+        <a href="/attractions/ottawa/rideau-canal/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🚣<span class="attraction-badge">UNESCO</span></div>
+            <div class="attraction-content">
+              <h3>Rideau Canal</h3>
+              <p>UNESCO World Heritage Site. Skate the 7.8 km length in winter (world's largest rink!) or boat/cycle/walk along it in summer.</p>
+              <div class="attraction-meta">
+                <span>📍 Through Downtown</span>
+                <span>🎫 Free access</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🎨</div>
-          <div class="attraction-content">
-            <h3>National Gallery of Canada</h3>
-            <p>Canada's premier art museum featuring Canadian, Indigenous, and international art. Iconic glass and granite building with "Maman" spider sculpture.</p>
-            <div class="attraction-meta">
-              <span>📍 Sussex Drive</span>
-              <span>💵 $20</span>
+        </a>
+        <a href="/attractions/ottawa/national-gallery-canada/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🎨</div>
+            <div class="attraction-content">
+              <h3>National Gallery of Canada</h3>
+              <p>Canada's premier art museum featuring Canadian, Indigenous, and international art. Iconic glass and granite building with "Maman" spider sculpture.</p>
+              <div class="attraction-meta">
+                <span>📍 Sussex Drive</span>
+                <span>💵 $20</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🏺</div>
-          <div class="attraction-content">
-            <h3>Canadian Museum of History</h3>
-            <p>Canada's most-visited museum across the river in Gatineau. Spectacular Indigenous collections and Canadian history galleries.</p>
-            <div class="attraction-meta">
-              <span>📍 Gatineau, QC</span>
-              <span>💵 $23</span>
+        </a>
+        <a href="/attractions/ottawa/canadian-museum-history/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🏺</div>
+            <div class="attraction-content">
+              <h3>Canadian Museum of History</h3>
+              <p>Canada's most-visited museum across the river in Gatineau. Spectacular Indigenous collections and Canadian history galleries.</p>
+              <div class="attraction-meta">
+                <span>📍 Gatineau, QC</span>
+                <span>💵 $23</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🍴</div>
-          <div class="attraction-content">
-            <h3>ByWard Market</h3>
-            <p>Ottawa's oldest and liveliest neighborhood. Farmers market, restaurants, bars, boutiques, and the famous BeaverTails pastry stand.</p>
-            <div class="attraction-meta">
-              <span>📍 Downtown East</span>
-              <span>🎫 Free to explore</span>
+        </a>
+        <a href="/attractions/ottawa/byward-market/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🍴</div>
+            <div class="attraction-content">
+              <h3>ByWard Market</h3>
+              <p>Ottawa's oldest and liveliest neighborhood. Farmers market, restaurants, bars, boutiques, and the famous BeaverTails pastry stand.</p>
+              <div class="attraction-meta">
+                <span>📍 Downtown East</span>
+                <span>🎫 Free to explore</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img">🍁</div>
-          <div class="attraction-content">
-            <h3>Gatineau Park</h3>
-            <p>361 km² of wilderness just 15 minutes from downtown. Hiking, swimming beaches, fall colors, and cross-country skiing.</p>
-            <div class="attraction-meta">
-              <span>📍 Gatineau, QC</span>
-              <span>🎫 Free (parking fee)</span>
+        </a>
+        <a href="/attractions/ottawa/gatineau-park/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img">🍁</div>
+            <div class="attraction-content">
+              <h3>Gatineau Park</h3>
+              <p>361 km² of wilderness just 15 minutes from downtown. Hiking, swimming beaches, fall colors, and cross-country skiing.</p>
+              <div class="attraction-meta">
+                <span>📍 Gatineau, QC</span>
+                <span>🎫 Free (parking fee)</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
