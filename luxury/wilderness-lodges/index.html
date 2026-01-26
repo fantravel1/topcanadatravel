@@ -103,8 +103,9 @@
         .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--color-gold); color: var(--color-gold); }
 
         .breadcrumb { padding: var(--space-4) 0; background: var(--color-luxury-dark); border-bottom: 1px solid rgba(212,175,55,0.1); }
-        .breadcrumb-list { display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: rgba(255,255,255,0.6); flex-wrap: wrap; }
+        .breadcrumb-list { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; color: rgba(255,255,255,0.6); flex-wrap: wrap; }
         .breadcrumb-list a:hover { color: var(--color-gold); }
+        .breadcrumb-list li { display: flex; align-items: center; }
 
         .section { padding: var(--space-16) 0; }
         @media (min-width: 768px) { .section { padding: var(--space-24) 0; } }
