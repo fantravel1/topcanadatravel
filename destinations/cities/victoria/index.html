@@ -115,6 +115,10 @@ nav{display:none}
 .attraction-content h3{font-size:1.1rem;color:var(--navy);margin-bottom:8px}
 .attraction-content p{font-size:0.9rem;color:var(--gray);margin-bottom:12px}
 .attraction-meta{display:flex;gap:12px;font-size:0.85rem;color:var(--gray)}
+.attraction-link{text-decoration:none;color:inherit;display:block}
+.attraction-link .attraction-card{transition:transform 0.2s ease,box-shadow 0.2s ease}
+.attraction-link:hover .attraction-card{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,0.15)}
+.attraction-link:focus .attraction-card{outline:2px solid var(--rose);outline-offset:2px}
 .tea-box{background:linear-gradient(135deg,#fdf2f8,#fce7f3);border-left:4px solid var(--rose);padding:20px;border-radius:0 var(--radius) var(--radius) 0;margin:24px 0}
 .tea-box h4{color:var(--rose);margin-bottom:8px}
 .tea-box p{color:#9d174d;font-size:0.95rem;margin:0}
@@ -212,50 +216,58 @@ body{padding-bottom:70px}
     <section class="section">
       <h2>Top Attractions</h2>
       <div class="attractions-grid">
-        <div class="attraction-card">
-          <div class="attraction-img gardens"><span class="attraction-badge">Must-See</span>🌷</div>
-          <div class="attraction-content">
-            <h3>Butchart Gardens</h3>
-            <p>One of the world's great gardens. 55 acres of stunning themed gardens in a former limestone quarry. Magical evening illuminations in summer.</p>
-            <div class="attraction-meta">
-              <span>📍 20 min from downtown</span>
-              <span>💵 $30-42</span>
+        <a href="/attractions/victoria/butchart-gardens/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img gardens"><span class="attraction-badge">Must-See</span>🌷</div>
+            <div class="attraction-content">
+              <h3>Butchart Gardens</h3>
+              <p>One of the world's great gardens. 55 acres of stunning themed gardens in a former limestone quarry. Magical evening illuminations in summer.</p>
+              <div class="attraction-meta">
+                <span>📍 20 min from downtown</span>
+                <span>💵 $30-42</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img harbour">⚓</div>
-          <div class="attraction-content">
-            <h3>Inner Harbour</h3>
-            <p>Victoria's heart — stroll the promenade past the Parliament Buildings, watch float planes land, and enjoy street performers and buskers.</p>
-            <div class="attraction-meta">
-              <span>📍 Downtown</span>
-              <span>🎫 Free</span>
+        </a>
+        <a href="/attractions/victoria/inner-harbour/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img harbour">⚓</div>
+            <div class="attraction-content">
+              <h3>Inner Harbour</h3>
+              <p>Victoria's heart — stroll the promenade past the Parliament Buildings, watch float planes land, and enjoy street performers and buskers.</p>
+              <div class="attraction-meta">
+                <span>📍 Downtown</span>
+                <span>🎫 Free</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img whales"><span class="attraction-badge">Year-Round</span>🐋</div>
-          <div class="attraction-content">
-            <h3>Whale Watching</h3>
-            <p>See orcas (resident and transient pods), humpbacks, and gray whales. Victoria is one of the world's best whale watching destinations.</p>
-            <div class="attraction-meta">
-              <span>📍 Inner Harbour departures</span>
-              <span>💵 $120-150</span>
+        </a>
+        <a href="/attractions/victoria/whale-watching/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img whales"><span class="attraction-badge">Year-Round</span>🐋</div>
+            <div class="attraction-content">
+              <h3>Whale Watching</h3>
+              <p>See orcas (resident and transient pods), humpbacks, and gray whales. Victoria is one of the world's best whale watching destinations.</p>
+              <div class="attraction-meta">
+                <span>📍 Inner Harbour departures</span>
+                <span>💵 $120-150</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="attraction-card">
-          <div class="attraction-img tea">☕</div>
-          <div class="attraction-content">
-            <h3>Afternoon Tea at The Empress</h3>
-            <p>The quintessential Victoria experience. Elegant tea service in the iconic Fairmont Empress hotel since 1908. Reservations essential.</p>
-            <div class="attraction-meta">
-              <span>📍 Inner Harbour</span>
-              <span>💵 $85+</span>
+        </a>
+        <a href="/attractions/victoria/empress-afternoon-tea/" class="attraction-link">
+          <div class="attraction-card">
+            <div class="attraction-img tea">☕</div>
+            <div class="attraction-content">
+              <h3>Afternoon Tea at The Empress</h3>
+              <p>The quintessential Victoria experience. Elegant tea service in the iconic Fairmont Empress hotel since 1908. Reservations essential.</p>
+              <div class="attraction-meta">
+                <span>📍 Inner Harbour</span>
+                <span>💵 $85+</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
