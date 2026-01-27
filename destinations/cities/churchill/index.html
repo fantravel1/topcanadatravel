@@ -60,6 +60,7 @@ body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ox
 .season-img.aurora{background:linear-gradient(45deg,var(--aurora),#9b59b6)}
 .season-content{padding:1.25rem}
 .season-content h3{color:var(--night);margin-bottom:.5rem;font-size:1.1rem}
+.season-card-link{display:block;text-decoration:none;color:inherit;transition:transform 0.2s}.season-card-link:hover{transform:translateY(-4px)}.season-card-link:hover .season-card{box-shadow:0 8px 30px rgba(0,0,0,0.15)}
 .bear-box{background:linear-gradient(135deg,var(--bear) 0%,#d68910 100%);color:#fff;border-radius:12px;padding:1.5rem;margin:2rem 0}
 .whale-box{background:linear-gradient(135deg,var(--ice) 0%,#2980b9 100%);color:#fff;border-radius:12px;padding:1.5rem;margin:2rem 0}
 .aurora-box{background:linear-gradient(135deg,var(--aurora) 0%,#9b59b6 100%);color:#fff;border-radius:12px;padding:1.5rem;margin:2rem 0}
@@ -133,6 +134,7 @@ body{padding-bottom:70px}
 
 <h2 class="section-title">Three Amazing Seasons</h2>
 <div class="seasons-grid">
+<a href="/attractions/churchill/polar-bear-season/" class="season-card-link">
 <article class="season-card">
 <div class="season-img bear">🐻‍❄️</div>
 <div class="season-content">
@@ -142,7 +144,9 @@ body{padding-bottom:70px}
 <p><strong>This is the #1 reason people visit Churchill!</strong></p>
 </div>
 </article>
+</a>
 
+<a href="/attractions/churchill/beluga-season/" class="season-card-link">
 <article class="season-card">
 <div class="season-img whale">🐋</div>
 <div class="season-content">
@@ -152,7 +156,9 @@ body{padding-bottom:70px}
 <p><strong>Incredibly interactive—belugas are curious!</strong></p>
 </div>
 </article>
+</a>
 
+<a href="/attractions/churchill/aurora-season/" class="season-card-link">
 <article class="season-card">
 <div class="season-img aurora">🌌</div>
 <div class="season-content">
@@ -162,6 +168,7 @@ body{padding-bottom:70px}
 <p><strong>300+ nights of aurora activity per year!</strong></p>
 </div>
 </article>
+</a>
 </div>
 </div>
 </section>
