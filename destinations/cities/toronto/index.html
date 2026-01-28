@@ -262,7 +262,7 @@
         }
         .neighborhood-scroll::-webkit-scrollbar { display: none; }
         .neighborhood-card {
-            flex: 0 0 280px; scroll-snap-align: start;
+            flex: 0 0 min(280px, 85vw); scroll-snap-align: start;
             border-radius: var(--radius-xl); overflow: hidden;
             border: 1px solid var(--color-gray-200); background: white;
         }

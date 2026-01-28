@@ -141,6 +141,7 @@ body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sa
 .attraction-content{padding:1.25rem}
 .attraction-content h3{color:var(--northern);margin-bottom:.5rem;font-size:1.1rem}
 .attraction-meta{display:flex;gap:1rem;margin-top:.75rem;font-size:.85rem;color:#666}
+.attraction-card-link{display:block;text-decoration:none;color:inherit;transition:transform 0.2s}.attraction-card-link:hover{transform:translateY(-4px)}.attraction-card-link:hover .attraction-card{box-shadow:0 8px 30px rgba(0,0,0,0.15)}
 .mall-highlight{background:#fff;border:3px solid var(--mall);border-radius:12px;padding:1.5rem;margin:2rem 0}
 .mall-highlight h3{color:var(--mall);margin-bottom:1rem;font-size:1.25rem}
 .mall-features{display:grid;gap:.75rem}
@@ -243,6 +244,7 @@ body{padding-bottom:70px}
 
 <h2 class="section-title">Top Attractions</h2>
 <div class="attractions-grid">
+<a href="/attractions/edmonton/west-edmonton-mall/" class="attraction-card-link">
 <article class="attraction-card">
 <div class="attraction-img mall">🛒</div>
 <div class="attraction-content">
@@ -254,7 +256,9 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 
+<a href="/attractions/edmonton/river-valley-parks/" class="attraction-card-link">
 <article class="attraction-card">
 <div class="attraction-img river">🌲</div>
 <div class="attraction-content">
@@ -266,7 +270,9 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 
+<a href="/attractions/edmonton/royal-alberta-museum/" class="attraction-card-link">
 <article class="attraction-card">
 <div class="attraction-img museum">🏛️</div>
 <div class="attraction-content">
@@ -278,7 +284,9 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 
+<a href="/attractions/edmonton/fort-edmonton-park/" class="attraction-card-link">
 <article class="attraction-card">
 <div class="attraction-img fort">🏰</div>
 <div class="attraction-content">
@@ -290,6 +298,7 @@ body{padding-bottom:70px}
 </div>
 </div>
 </article>
+</a>
 </div>
 </div>
 </section>
