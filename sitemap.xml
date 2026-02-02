@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage - All 12 languages -->
+  <url>
+    <loc>https://topcanadatravel.com/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://topcanadatravel.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://topcanadatravel.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://topcanadatravel.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://topcanadatravel.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://topcanadatravel.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://topcanadatravel.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://topcanadatravel.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://topcanadatravel.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://topcanadatravel.com/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://topcanadatravel.com/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://topcanadatravel.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://topcanadatravel.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://topcanadatravel.com/"/>
+  </url>
+
+  <!-- Multilingual Homepages -->
+  <url><loc>https://topcanadatravel.com/fr/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/es/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/de/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/it/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/pt/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/ja/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/ko/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/zh-hans/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/zh-hant/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/hi/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/ar/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- VISA SECTION (NEW) -->
+  <url><loc>https://topcanadatravel.com/visa/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/india/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/usa/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/uk/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/china/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/australia/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/germany/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/france/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/japan/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/south-korea/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/brazil/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/mexico/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/philippines/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/uae/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/nigeria/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/south-africa/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/visa/processing-times/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- DESTINATIONS - ENGLISH -->
+  <url><loc>https://topcanadatravel.com/destinations/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/toronto/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/vancouver/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/montreal/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/calgary/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/ottawa/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/quebec-city/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/victoria/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/halifax/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/winnipeg/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/edmonton/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/niagara-falls/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/whistler/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/banff-town/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/yellowknife/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/churchill/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/whitehorse/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/tofino/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/kelowna/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/saskatoon/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/charlottetown/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/destinations/cities/st-johns/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- NATIONAL PARKS - ENGLISH -->
+  <url><loc>https://topcanadatravel.com/national-parks/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/banff/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/jasper/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/pacific-rim/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/gros-morne/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/cape-breton-highlands/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/bruce-peninsula/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/yoho/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/waterton-lakes/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/fundy/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/national-parks/thousand-islands/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- EXPERIENCES - ENGLISH -->
+  <url><loc>https://topcanadatravel.com/experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/northern-lights/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/wildlife/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/skiing/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/hiking/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/food-wine/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/road-trips/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/whale-watching/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/indigenous-culture/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/experiences/festivals/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ITINERARIES - ENGLISH -->
+  <url><loc>https://topcanadatravel.com/itineraries/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/itineraries/featured/ultimate-rockies/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/itineraries/featured/eastern-canada/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/itineraries/featured/western-canada-road-trip/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/itineraries/featured/northern-lights-chase/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/itineraries/featured/northern-lights-adventure/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/itineraries/featured/maritime-adventure/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/itineraries/featured/fall-foliage/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/itineraries/featured/winter-wonderland/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- PLAN YOUR TRIP - ENGLISH -->
+  <url><loc>https://topcanadatravel.com/plan-your-trip/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/plan-your-trip/visa-eta/</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/plan-your-trip/best-time-to-visit/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/plan-your-trip/getting-around/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/plan-your-trip/money-costs/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ATTRACTIONS - TORONTO -->
+  <url><loc>https://topcanadatravel.com/attractions/toronto/cn-tower/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/toronto/royal-ontario-museum/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/toronto/distillery-district/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/toronto/toronto-islands/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ATTRACTIONS - VANCOUVER -->
+  <url><loc>https://topcanadatravel.com/attractions/vancouver/stanley-park/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/vancouver/capilano-suspension-bridge/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/vancouver/granville-island/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/vancouver/grouse-mountain/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ATTRACTIONS - MONTREAL -->
+  <url><loc>https://topcanadatravel.com/attractions/montreal/old-montreal/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/montreal/notre-dame-basilica/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/montreal/mount-royal-park/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/montreal/montreal-botanical-garden/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/montreal/jean-talon-market/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/montreal/montreal-museum-fine-arts/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- ATTRACTIONS - NIAGARA FALLS -->
+  <url><loc>https://topcanadatravel.com/attractions/niagara-falls/hornblower-cruises/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/niagara-falls/journey-behind-falls/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/niagara-falls/skylon-tower/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/niagara-falls/clifton-hill/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/niagara-falls/falls-illumination/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/niagara-falls/whirlpool-aero-car/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- ATTRACTIONS - BANFF -->
+  <url><loc>https://topcanadatravel.com/attractions/banff/banff-gondola/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/banff/bow-falls/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/banff/cave-basin/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/banff/fairmont-banff-springs/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/banff/upper-hot-springs/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/banff/banff-park-museum/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
+  <!-- ATTRACTIONS - WHISTLER -->
+  <url><loc>https://topcanadatravel.com/attractions/whistler/whistler-blackcomb/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/whistler/peak-2-peak-gondola/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/whistler/whistler-village/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/whistler/alpine-hiking/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/whistler/bear-viewing/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/whistler/mountain-biking/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- ATTRACTIONS - YELLOWKNIFE -->
+  <url><loc>https://topcanadatravel.com/attractions/yellowknife/aurora-viewing/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/yellowknife/dog-sledding/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/yellowknife/ice-road-driving/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/yellowknife/old-town-houseboats/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/yellowknife/prince-of-wales-heritage-centre/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/yellowknife/snowking-winter-festival/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
+  <!-- ATTRACTIONS - OTTAWA -->
+  <url><loc>https://topcanadatravel.com/attractions/ottawa/parliament-hill/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/ottawa/rideau-canal/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/ottawa/national-gallery-canada/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/ottawa/byward-market/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/ottawa/canadian-museum-history/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/ottawa/gatineau-park/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- ATTRACTIONS - QUEBEC CITY -->
+  <url><loc>https://topcanadatravel.com/attractions/quebec-city/old-quebec/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/quebec-city/chateau-frontenac/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/quebec-city/montmorency-falls/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/quebec-city/petit-champlain/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/quebec-city/place-royale/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/attractions/quebec-city/sainte-anne-de-beaupre/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
+  <!-- LUXURY -->
+  <url><loc>https://topcanadatravel.com/luxury/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/luxury/helicopter-tours/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/luxury/rocky-mountaineer/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/luxury/ski-experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/luxury/wilderness-lodges/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/luxury/wildlife-viewing/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/luxury/yacht-expeditions/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- UNESCO SITES -->
+  <url><loc>https://topcanadatravel.com/unesco-sites/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/unesco-sites/old-quebec/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/unesco-sites/rideau-canal/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/unesco-sites/lunenburg/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- OTHER -->
+  <url><loc>https://topcanadatravel.com/hotels/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/restaurants/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://topcanadatravel.com/stories/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
+  <!-- ABOUT & LEGAL -->
+  <url><loc>https://topcanadatravel.com/about/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://topcanadatravel.com/about/contact/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://topcanadatravel.com/about/advertise/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://topcanadatravel.com/about/press/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://topcanadatravel.com/legal/privacy-policy/</loc><lastmod>2025-01-10</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://topcanadatravel.com/legal/terms-of-service/</loc><lastmod>2025-01-10</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://topcanadatravel.com/legal/cookie-policy/</loc><lastmod>2025-01-10</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://topcanadatravel.com/legal/affiliate-disclosure/</loc><lastmod>2025-01-10</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- MULTILINGUAL CONTENT - SPANISH -->
+  <url><loc>https://topcanadatravel.com/es/destinations/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/es/destinations/cities/toronto/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/es/destinations/cities/vancouver/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/es/destinations/cities/montreal/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/es/national-parks/banff/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/es/national-parks/jasper/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/es/experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/es/itineraries/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/es/plan-your-trip/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- MULTILINGUAL CONTENT - PORTUGUESE -->
+  <url><loc>https://topcanadatravel.com/pt/destinations/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/pt/destinations/cities/toronto/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/pt/destinations/cities/vancouver/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/pt/national-parks/banff/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/pt/experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/pt/itineraries/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- MULTILINGUAL CONTENT - GERMAN -->
+  <url><loc>https://topcanadatravel.com/de/destinations/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/de/destinations/cities/toronto/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/de/destinations/cities/vancouver/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/de/national-parks/banff/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/de/experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/de/itineraries/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- MULTILINGUAL CONTENT - JAPANESE -->
+  <url><loc>https://topcanadatravel.com/ja/destinations/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/ja/destinations/cities/toronto/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/ja/destinations/cities/vancouver/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/ja/national-parks/banff/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/ja/experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/ja/itineraries/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- MULTILINGUAL CONTENT - ITALIAN -->
+  <url><loc>https://topcanadatravel.com/it/destinations/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/it/destinations/cities/toronto/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/it/destinations/cities/vancouver/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/it/national-parks/banff/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/it/experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/it/itineraries/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- MULTILINGUAL CONTENT - SIMPLIFIED CHINESE -->
+  <url><loc>https://topcanadatravel.com/zh-hans/destinations/</loc><lastmod>2025-01-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/zh-hans/destinations/cities/toronto/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/zh-hans/destinations/cities/vancouver/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/zh-hans/national-parks/banff/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/zh-hans/experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/zh-hans/itineraries/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>
