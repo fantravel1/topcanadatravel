@@ -271,4 +271,61 @@
   <url><loc>https://topcanadatravel.com/zh-hans/experiences/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://topcanadatravel.com/zh-hans/itineraries/</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
+  <!-- NEW SECTIONS - REGIONS -->
+  <url><loc>https://topcanadatravel.com/regions/</loc><lastmod>2026-02-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/british-columbia/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/alberta/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/ontario/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/quebec/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/nova-scotia/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/new-brunswick/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/manitoba/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/saskatchewan/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/newfoundland/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/prince-edward-island/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/yukon/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/northwest-territories/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://topcanadatravel.com/regions/nunavut/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- NEW SECTIONS - TRAVEL GUIDES -->
+  <url><loc>https://topcanadatravel.com/travel-guides/</loc><lastmod>2026-02-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/travel-guides/family/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/travel-guides/budget/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/travel-guides/solo/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/travel-guides/adventure/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/travel-guides/seniors/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/travel-guides/pet-friendly/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- NEW SECTIONS - DAY TRIPS -->
+  <url><loc>https://topcanadatravel.com/day-trips/</loc><lastmod>2026-02-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/day-trips/from-toronto/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/day-trips/from-vancouver/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/day-trips/from-montreal/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/day-trips/from-calgary/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/day-trips/from-ottawa/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- NEW SECTIONS - SEASONS -->
+  <url><loc>https://topcanadatravel.com/seasons/</loc><lastmod>2026-02-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://topcanadatravel.com/seasons/spring/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/seasons/summer/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/seasons/fall/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/seasons/winter/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- NEW SECTIONS - PHOTOGRAPHY -->
+  <url><loc>https://topcanadatravel.com/photography/</loc><lastmod>2026-02-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/photography/rockies/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/photography/northern-lights/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/photography/wildlife/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/photography/coastal/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/photography/urban/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- NEW SECTIONS - HIDDEN GEMS -->
+  <url><loc>https://topcanadatravel.com/hidden-gems/</loc><lastmod>2026-02-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://topcanadatravel.com/hidden-gems/british-columbia/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/hidden-gems/alberta/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/hidden-gems/ontario/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/hidden-gems/quebec/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/hidden-gems/atlantic/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://topcanadatravel.com/hidden-gems/north/</loc><lastmod>2026-02-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>
