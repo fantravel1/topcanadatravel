@@ -38,7 +38,7 @@ header{background:var(--navy);color:#fff;padding:16px 20px;position:sticky;top:0
 .logo span{color:var(--red)}
 nav a{color:#fff;padding:8px 16px}
 nav{display:none}
-.hero{background:linear-gradient(135deg,#059669 0%,#10b981 50%,#34d399 100%);color:#fff;padding:60px 20px;text-align:center}
+.hero{background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1517090504586-fde19ea6066f?w=1600&q=80');background-size:cover;background-position:center;color:#fff;padding:80px 20px;text-align:center}
 .hero h1{font-size:2.25rem;margin-bottom:12px}
 .hero p{font-size:1.1rem;opacity:0.95;max-width:700px;margin:0 auto}
 .quick-facts{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:24px}
@@ -50,11 +50,15 @@ nav{display:none}
 .dest-grid{display:grid;gap:24px}
 .dest-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);transition:transform 0.3s}
 .dest-card:hover{transform:translateY(-4px)}
-.dest-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff}
-.dest-card.city .dest-img{background:linear-gradient(135deg,#dc2626,#f87171)}
-.dest-card.nature .dest-img{background:linear-gradient(135deg,#059669,#34d399)}
-.dest-card.wonder .dest-img{background:linear-gradient(135deg,#0891b2,#22d3ee)}
-.dest-card.cottage .dest-img{background:linear-gradient(135deg,#7c3aed,#a78bfa)}
+.dest-img{height:160px;background-size:cover;background-position:center}
+.dest-card.toronto .dest-img{background-image:url('https://images.unsplash.com/photo-1517090504586-fde19ea6066f?w=500&q=80')}
+.dest-card.niagara .dest-img{background-image:url('https://images.unsplash.com/photo-1489447068241-b3490214e879?w=500&q=80')}
+.dest-card.ottawa .dest-img{background-image:url('https://images.unsplash.com/photo-1535776142635-8fa180c46af7?w=500&q=80')}
+.dest-card.muskoka .dest-img{background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80')}
+.dest-card.algonquin .dest-img{background-image:url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=500&q=80')}
+.dest-card.bluemtn .dest-img{background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=500&q=80')}
+.dest-card.thousand .dest-img{background-image:url('https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?w=500&q=80')}
+.dest-card.hidden .dest-img{background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&q=80')}
 .dest-content{padding:20px}
 .dest-content h3{font-size:1.2rem;color:var(--navy);margin-bottom:6px}
 .dest-content p{color:var(--gray);margin-bottom:12px;font-size:0.9rem}
@@ -126,64 +130,64 @@ body{padding-bottom:70px}
   <div class="container">
     <h2>Top Ontario Destinations</h2>
     <div class="dest-grid">
-      <a href="/destinations/cities/toronto/" class="dest-card city">
-        <div class="dest-img">🏙️</div>
+      <a href="/destinations/cities/toronto/" class="dest-card toronto">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Toronto</h3>
           <p>Canada's largest city with world-class culture and cuisine</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/destinations/niagara-falls/" class="dest-card wonder">
-        <div class="dest-img">💦</div>
+      <a href="/destinations/niagara-falls/" class="dest-card niagara">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Niagara Falls</h3>
           <p>One of the world's most famous natural wonders</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/destinations/cities/ottawa/" class="dest-card city">
-        <div class="dest-img">🏛️</div>
+      <a href="/destinations/cities/ottawa/" class="dest-card ottawa">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Ottawa</h3>
           <p>Canada's capital with Parliament, museums, and tulips</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/national-parks/algonquin/" class="dest-card nature">
-        <div class="dest-img">🦫</div>
+      <a href="/national-parks/algonquin/" class="dest-card algonquin">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Algonquin Park</h3>
           <p>Ontario's signature wilderness for camping and canoeing</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/regions/ontario/muskoka/" class="dest-card cottage">
-        <div class="dest-img">🛶</div>
+      <a href="/regions/ontario/muskoka/" class="dest-card muskoka">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Muskoka</h3>
           <p>Classic cottage country with pristine lakes</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/regions/ontario/thousand-islands/" class="dest-card nature">
-        <div class="dest-img">🏝️</div>
+      <a href="/regions/ontario/thousand-islands/" class="dest-card thousand">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Thousand Islands</h3>
           <p>Scenic St. Lawrence River archipelago</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/national-parks/bruce-peninsula/" class="dest-card nature">
-        <div class="dest-img">🌊</div>
+      <a href="/national-parks/bruce-peninsula/" class="dest-card muskoka">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Bruce Peninsula</h3>
           <p>Turquoise waters and dramatic cliffs</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/hidden-gems/ontario/" class="dest-card cottage">
-        <div class="dest-img">💎</div>
+      <a href="/hidden-gems/ontario/" class="dest-card hidden">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Hidden Gems</h3>
           <p>Secret spots beyond the usual attractions</p>
