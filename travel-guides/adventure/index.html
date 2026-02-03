@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adventure Travel Canada 2025 - Outdoor Activities & Thrills | TopCanadaTravel</title>
+<meta name="description" content="Adventure travel guide for Canada. Hiking, skiing, kayaking, wildlife tours, and extreme sports. Find your next adrenaline rush in Canada's wild outdoors.">
+<meta name="keywords" content="adventure travel Canada, outdoor activities Canada, hiking Canada, skiing Canada, kayaking Canada, extreme sports Canada">
+<link rel="canonical" href="https://topcanadatravel.com/travel-guides/adventure/">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Adventure Travel Canada - Outdoor Activities & Thrills">
+<meta property="og:description" content="Canada's ultimate adventure guide. Hiking, skiing, paddling, and wildlife encounters.">
+<meta property="og:url" content="https://topcanadatravel.com/travel-guides/adventure/">
+<meta property="og:image" content="https://topcanadatravel.com/images/og-canada-travel.jpg">
+<style>
+:root{--red:#dc2626;--blue:#2563eb;--navy:#1e3a5f;--gray:#64748b;--light:#f8fafc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;color:#1f2937;line-height:1.7}
+a{color:var(--blue);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;padding:16px 20px;position:sticky;top:0;z-index:100}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.25rem;font-weight:700;color:#fff}
+.logo span{color:var(--red)}
+nav a{color:#fff;padding:8px 16px}
+nav{display:none}
+.hero{background:linear-gradient(135deg,#dc2626 0%,#ef4444 50%,#f87171 100%);color:#fff;padding:60px 20px;text-align:center}
+.hero h1{font-size:2.25rem;margin-bottom:12px}
+.hero p{font-size:1.1rem;opacity:0.95;max-width:700px;margin:0 auto}
+.breadcrumb{background:#f1f5f9;padding:12px 20px;font-size:0.9rem}
+.section{padding:50px 20px}
+.section-alt{background:var(--light)}
+.section h2{font-size:1.75rem;color:var(--navy);margin-bottom:30px;text-align:center}
+.activity-grid{display:grid;gap:24px}
+.activity-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);transition:transform 0.3s}
+.activity-card:hover{transform:translateY(-4px)}
+.activity-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff}
+.activity-card.hike .activity-img{background:linear-gradient(135deg,#059669,#34d399)}
+.activity-card.ski .activity-img{background:linear-gradient(135deg,#0891b2,#22d3ee)}
+.activity-card.paddle .activity-img{background:linear-gradient(135deg,#2563eb,#60a5fa)}
+.activity-card.wildlife .activity-img{background:linear-gradient(135deg,#7c3aed,#a78bfa)}
+.activity-card.climb .activity-img{background:linear-gradient(135deg,#dc2626,#f87171)}
+.activity-card.extreme .activity-img{background:linear-gradient(135deg,#f59e0b,#fcd34d)}
+.activity-content{padding:20px}
+.activity-content h3{font-size:1.2rem;color:var(--navy);margin-bottom:6px}
+.activity-content p{color:var(--gray);margin-bottom:12px;font-size:0.9rem}
+.activity-btn{color:var(--blue);font-weight:600;font-size:0.9rem}
+.dest-grid{display:grid;gap:20px}
+.dest-card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,0.06)}
+.dest-card h3{color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.dest-card p{color:var(--gray);font-size:0.95rem;margin-bottom:8px}
+.dest-card ul{color:var(--gray);font-size:0.95rem;margin-left:20px}
+.dest-card li{margin-bottom:4px}
+.highlights{display:grid;gap:16px;margin-top:20px}
+.highlight{display:flex;gap:16px;align-items:center;background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.highlight-icon{font-size:2rem;flex-shrink:0}
+.highlight h4{color:var(--navy);margin-bottom:4px}
+.highlight p{color:var(--gray);margin:0;font-size:0.9rem}
+footer{background:var(--navy);color:#fff;padding:40px 20px}
+.footer-grid{display:grid;gap:24px;margin-bottom:24px}
+.footer-col h4{color:var(--red);margin-bottom:12px}
+.footer-col a{display:block;color:rgba(255,255,255,0.8);padding:4px 0;font-size:0.9rem}
+.footer-bottom{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:0.85rem;opacity:0.7}
+.mobile-nav{position:fixed;bottom:0;left:0;right:0;background:var(--navy);display:flex;justify-content:space-around;padding:8px 0;z-index:100}
+.mobile-nav a{display:flex;flex-direction:column;align-items:center;color:#fff;font-size:0.7rem;padding:8px}
+.mobile-nav .icon{font-size:1.25rem;margin-bottom:2px}
+body{padding-bottom:70px}
+@media(min-width:768px){
+  .hero h1{font-size:2.75rem}
+  nav{display:flex}
+  .activity-grid{grid-template-columns:repeat(2,1fr)}
+  .dest-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(4,1fr)}
+  .mobile-nav{display:none}
+  body{padding-bottom:0}
+}
+@media(min-width:1024px){
+  .activity-grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">Top<span>Canada</span>Travel</a>
+    <nav>
+      <a href="/destinations/">Destinations</a>
+      <a href="/travel-guides/">Travel Guides</a>
+      <a href="/experiences/">Experiences</a>
+      <a href="/plan-your-trip/">Plan</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="breadcrumb"><div class="container"><a href="/">Home</a> › <a href="/travel-guides/">Travel Guides</a> › <span>Adventure Travel</span></div></nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>⛰️ Adventure Travel Canada</h1>
+    <p>From mountain peaks to ocean depths – find your next adrenaline rush in Canada's wilderness</p>
+  </div>
+</section>
+
+<main>
+<section class="section">
+  <div class="container">
+    <h2>Adventure Activities</h2>
+    <div class="activity-grid">
+      <a href="/experiences/hiking/" class="activity-card hike">
+        <div class="activity-img">🥾</div>
+        <div class="activity-content">
+          <h3>Hiking & Trekking</h3>
+          <p>From day hikes to multi-day backcountry adventures in the Rockies and beyond</p>
+          <span class="activity-btn">Explore Hikes →</span>
+        </div>
+      </a>
+      <a href="/experiences/skiing/" class="activity-card ski">
+        <div class="activity-img">⛷️</div>
+        <div class="activity-content">
+          <h3>Skiing & Snowboarding</h3>
+          <p>World-class resorts from Whistler to Mont-Tremblant plus heli-skiing</p>
+          <span class="activity-btn">Find Ski Resorts →</span>
+        </div>
+      </a>
+      <a href="/experiences/kayaking/" class="activity-card paddle">
+        <div class="activity-img">🛶</div>
+        <div class="activity-content">
+          <h3>Kayaking & Canoeing</h3>
+          <p>Paddle pristine lakes, coastal waters, and wild rivers</p>
+          <span class="activity-btn">Plan Paddling Trips →</span>
+        </div>
+      </a>
+      <a href="/experiences/wildlife/" class="activity-card wildlife">
+        <div class="activity-img">🐻</div>
+        <div class="activity-content">
+          <h3>Wildlife Encounters</h3>
+          <p>Bears, whales, polar bears, and more in their natural habitat</p>
+          <span class="activity-btn">Find Wildlife Tours →</span>
+        </div>
+      </a>
+      <a href="/experiences/climbing/" class="activity-card climb">
+        <div class="activity-img">🧗</div>
+        <div class="activity-content">
+          <h3>Rock Climbing</h3>
+          <p>Squamish granite, ice climbing in the Rockies, and via ferrata routes</p>
+          <span class="activity-btn">Climbing Guides →</span>
+        </div>
+      </a>
+      <a href="/experiences/extreme/" class="activity-card extreme">
+        <div class="activity-img">🪂</div>
+        <div class="activity-content">
+          <h3>Extreme Sports</h3>
+          <p>Bungee jumping, skydiving, white water rafting, and zip-lining</p>
+          <span class="activity-btn">Get Extreme →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Top Adventure Destinations</h2>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <h3>🏔️ Canadian Rockies</h3>
+        <p>The ultimate adventure playground with endless options:</p>
+        <ul>
+          <li>Hike to Moraine Lake, Plain of Six Glaciers</li>
+          <li>Scramble up Ha Ling Peak or Mt. Rundle</li>
+          <li>Ice walk Johnston Canyon in winter</li>
+          <li>White water raft the Kicking Horse River</li>
+          <li>Via ferrata at Mt. Norquay</li>
+        </ul>
+      </div>
+      <div class="dest-card">
+        <h3>🌊 British Columbia Coast</h3>
+        <p>Pacific adventures from Vancouver Island to Haida Gwaii:</p>
+        <ul>
+          <li>Kayak with orcas in Johnstone Strait</li>
+          <li>Surf the wild waves of Tofino</li>
+          <li>Hike the West Coast Trail (75km)</li>
+          <li>Bear viewing in the Great Bear Rainforest</li>
+          <li>Sail the Gulf Islands</li>
+        </ul>
+      </div>
+      <div class="dest-card">
+        <h3>🧗 Squamish, BC</h3>
+        <p>Canada's outdoor recreation capital:</p>
+        <ul>
+          <li>World-class rock climbing on the Chief</li>
+          <li>Kiteboarding at Squamish Spit</li>
+          <li>Mountain biking at Diamond Head</li>
+          <li>White water kayaking</li>
+          <li>Sea-to-Sky Gondola hiking</li>
+        </ul>
+      </div>
+      <div class="dest-card">
+        <h3>🏔️ Northern Adventures</h3>
+        <p>Remote wilderness experiences in Yukon and NWT:</p>
+        <ul>
+          <li>Canoe the Nahanni River</li>
+          <li>Hike Tombstone Territorial Park</li>
+          <li>Northern lights viewing</li>
+          <li>Dog sledding in Whitehorse</li>
+          <li>Ice road driving</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Epic Canadian Adventures</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <span class="highlight-icon">🥾</span>
+        <div>
+          <h4>West Coast Trail</h4>
+          <p>75km wilderness hike along Vancouver Island's rugged Pacific coast - 5-7 days</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <span class="highlight-icon">🚁</span>
+        <div>
+          <h4>Heli-Skiing BC</h4>
+          <p>Access untouched powder via helicopter in the Bugaboos, Revelstoke, and beyond</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <span class="highlight-icon">🐋</span>
+        <div>
+          <h4>Orca Kayaking</h4>
+          <p>Multi-day kayak trips in Johnstone Strait with resident orca pods</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <span class="highlight-icon">🐻‍❄️</span>
+        <div>
+          <h4>Polar Bear Safari</h4>
+          <p>See polar bears in Churchill, Manitoba from tundra buggies</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <span class="highlight-icon">🛶</span>
+        <div>
+          <h4>Nahanni River Canoe</h4>
+          <p>Paddle one of the world's great wilderness rivers past Virginia Falls</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <span class="highlight-icon">🏔️</span>
+        <div>
+          <h4>Climb Mt. Robson</h4>
+          <p>Summit the Canadian Rockies' highest peak - a serious mountaineering objective</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Travel Guides</h4>
+        <a href="/travel-guides/family/">Family Travel</a>
+        <a href="/travel-guides/budget/">Budget Travel</a>
+        <a href="/travel-guides/adventure/">Adventure</a>
+        <a href="/travel-guides/solo/">Solo Travel</a>
+      </div>
+      <div class="footer-col">
+        <h4>Adventure Spots</h4>
+        <a href="/national-parks/banff/">Banff</a>
+        <a href="/destinations/cities/whistler/">Whistler</a>
+        <a href="/regions/british-columbia/">British Columbia</a>
+      </div>
+      <div class="footer-col">
+        <h4>Experiences</h4>
+        <a href="/experiences/hiking/">Hiking</a>
+        <a href="/experiences/skiing/">Skiing</a>
+        <a href="/experiences/wildlife/">Wildlife</a>
+      </div>
+      <div class="footer-col">
+        <h4>Plan</h4>
+        <a href="/plan-your-trip/">Overview</a>
+        <a href="/itineraries/">Itineraries</a>
+        <a href="/seasons/">Seasons</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 TopCanadaTravel. All rights reserved.</div>
+  </div>
+</footer>
+
+<nav class="mobile-nav">
+  <a href="/"><span class="icon">🏠</span>Home</a>
+  <a href="/destinations/"><span class="icon">📍</span>Places</a>
+  <a href="/travel-guides/"><span class="icon">📖</span>Guides</a>
+  <a href="/experiences/"><span class="icon">✨</span>Do</a>
+  <a href="/plan-your-trip/"><span class="icon">✈️</span>Plan</a>
+</nav>
+</body>
+</html>
