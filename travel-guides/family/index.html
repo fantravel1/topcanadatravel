@@ -24,7 +24,7 @@ header{background:var(--navy);color:#fff;padding:16px 20px;position:sticky;top:0
 .logo span{color:var(--red)}
 nav a{color:#fff;padding:8px 16px}
 nav{display:none}
-.hero{background:linear-gradient(135deg,#f59e0b 0%,#fbbf24 50%,#fcd34d 100%);color:#1f2937;padding:60px 20px;text-align:center}
+.hero{background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1600&q=80');background-size:cover;background-position:center;color:#fff;padding:80px 20px;text-align:center}
 .hero h1{font-size:2.25rem;margin-bottom:12px}
 .hero p{font-size:1.1rem;opacity:0.9;max-width:700px;margin:0 auto}
 .breadcrumb{background:#f1f5f9;padding:12px 20px;font-size:0.9rem}
@@ -34,11 +34,15 @@ nav{display:none}
 .dest-grid{display:grid;gap:24px}
 .dest-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);transition:transform 0.3s}
 .dest-card:hover{transform:translateY(-4px)}
-.dest-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff}
-.dest-card.city .dest-img{background:linear-gradient(135deg,#f59e0b,#fcd34d)}
-.dest-card.nature .dest-img{background:linear-gradient(135deg,#059669,#34d399)}
-.dest-card.adventure .dest-img{background:linear-gradient(135deg,#7c3aed,#a78bfa)}
-.dest-card.coast .dest-img{background:linear-gradient(135deg,#0891b2,#22d3ee)}
+.dest-img{height:160px;background-size:cover;background-position:center}
+.dest-card.toronto .dest-img{background-image:url('https://images.unsplash.com/photo-1517090504586-fde19ea6066f?w=500&q=80')}
+.dest-card.niagara .dest-img{background-image:url('https://images.unsplash.com/photo-1489447068241-b3490214e879?w=500&q=80')}
+.dest-card.vancouver .dest-img{background-image:url('https://images.unsplash.com/photo-1559511260-66a654ae982a?w=500&q=80')}
+.dest-card.banff .dest-img{background-image:url('https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=500&q=80')}
+.dest-card.ottawa .dest-img{background-image:url('https://images.unsplash.com/photo-1535776142635-8fa180c46af7?w=500&q=80')}
+.dest-card.montreal .dest-img{background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80')}
+.dest-card.pei .dest-img{background-image:url('https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?w=500&q=80')}
+.dest-card.whistler .dest-img{background-image:url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=500&q=80')}
 .dest-content{padding:20px}
 .dest-content h3{font-size:1.2rem;color:var(--navy);margin-bottom:6px}
 .dest-content p{color:var(--gray);margin-bottom:12px;font-size:0.9rem}
@@ -104,64 +108,64 @@ body{padding-bottom:70px}
   <div class="container">
     <h2>Best Family Destinations</h2>
     <div class="dest-grid">
-      <a href="/destinations/cities/toronto/" class="dest-card city">
-        <div class="dest-img">🎡</div>
+      <a href="/destinations/cities/toronto/" class="dest-card toronto">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Toronto</h3>
           <p>CN Tower, Toronto Zoo, Ontario Science Centre, Ripley's Aquarium</p>
           <span class="dest-btn">Plan Your Visit →</span>
         </div>
       </a>
-      <a href="/destinations/niagara-falls/" class="dest-card adventure">
-        <div class="dest-img">💦</div>
+      <a href="/destinations/niagara-falls/" class="dest-card niagara">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Niagara Falls</h3>
           <p>The falls plus Clifton Hill attractions, Butterfly Conservatory</p>
           <span class="dest-btn">Plan Your Visit →</span>
         </div>
       </a>
-      <a href="/destinations/cities/vancouver/" class="dest-card coast">
-        <div class="dest-img">🦭</div>
+      <a href="/destinations/cities/vancouver/" class="dest-card vancouver">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Vancouver</h3>
           <p>Stanley Park, Vancouver Aquarium, Science World, Granville Island</p>
           <span class="dest-btn">Plan Your Visit →</span>
         </div>
       </a>
-      <a href="/destinations/cities/calgary/" class="dest-card city">
-        <div class="dest-img">🦖</div>
+      <a href="/destinations/cities/calgary/" class="dest-card banff">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Calgary</h3>
           <p>Calgary Zoo, Heritage Park, Telus Spark, Royal Tyrrell Museum nearby</p>
           <span class="dest-btn">Plan Your Visit →</span>
         </div>
       </a>
-      <a href="/national-parks/banff/" class="dest-card nature">
-        <div class="dest-img">🏔️</div>
+      <a href="/national-parks/banff/" class="dest-card banff">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Banff</h3>
           <p>Easy hikes, gondola rides, hot springs, and wildlife viewing</p>
           <span class="dest-btn">Plan Your Visit →</span>
         </div>
       </a>
-      <a href="/destinations/cities/ottawa/" class="dest-card city">
-        <div class="dest-img">🏛️</div>
+      <a href="/destinations/cities/ottawa/" class="dest-card ottawa">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Ottawa</h3>
           <p>Canadian Museum of History, Nature Museum, Rideau Canal</p>
           <span class="dest-btn">Plan Your Visit →</span>
         </div>
       </a>
-      <a href="/regions/ontario/muskoka/" class="dest-card nature">
-        <div class="dest-img">🛶</div>
+      <a href="/regions/ontario/muskoka/" class="dest-card pei">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Muskoka</h3>
           <p>Cottage rentals, beach days, Santa's Village, paddleboarding</p>
           <span class="dest-btn">Plan Your Visit →</span>
         </div>
       </a>
-      <a href="/regions/british-columbia/okanagan/" class="dest-card coast">
-        <div class="dest-img">🏖️</div>
+      <a href="/regions/british-columbia/okanagan/" class="dest-card whistler">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Okanagan</h3>
           <p>Lake beaches, waterslides, fruit picking, mini golf</p>

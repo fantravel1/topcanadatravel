@@ -40,20 +40,21 @@ nav{display:none}
 .region-grid{display:grid;gap:24px}
 .region-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);transition:transform 0.3s}
 .region-card:hover{transform:translateY(-4px)}
-.region-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:4rem;color:#fff}
-.region-card.bc .region-img{background:linear-gradient(135deg,#1d4ed8,#0891b2)}
-.region-card.ab .region-img{background:linear-gradient(135deg,#0369a1,#0d9488)}
-.region-card.on .region-img{background:linear-gradient(135deg,#be123c,#f59e0b)}
-.region-card.qc .region-img{background:linear-gradient(135deg,#1d4ed8,#7c3aed)}
-.region-card.ns .region-img{background:linear-gradient(135deg,#0369a1,#0284c7)}
-.region-card.nb .region-img{background:linear-gradient(135deg,#15803d,#0891b2)}
-.region-card.mb .region-img{background:linear-gradient(135deg,#b91c1c,#fbbf24)}
-.region-card.sk .region-img{background:linear-gradient(135deg,#15803d,#facc15)}
-.region-card.nl .region-img{background:linear-gradient(135deg,#be123c,#ec4899)}
-.region-card.pe .region-img{background:linear-gradient(135deg,#15803d,#dc2626)}
-.region-card.yt .region-img{background:linear-gradient(135deg,#1e3a5f,#4f46e5)}
-.region-card.nt .region-img{background:linear-gradient(135deg,#0f172a,#6366f1)}
-.region-card.nu .region-img{background:linear-gradient(135deg,#0c4a6e,#0ea5e9)}
+.region-img{height:200px;background-size:cover;background-position:center;position:relative}
+.region-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.4))}
+.region-card.bc .region-img{background-image:url('https://images.unsplash.com/photo-1559511260-66a654ae982a?w=600&q=80')}
+.region-card.ab .region-img{background-image:url('https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=600&q=80')}
+.region-card.on .region-img{background-image:url('https://images.unsplash.com/photo-1517090504586-fde19ea6066f?w=600&q=80')}
+.region-card.qc .region-img{background-image:url('https://images.unsplash.com/photo-1519178614-68673b201f36?w=600&q=80')}
+.region-card.ns .region-img{background-image:url('https://images.unsplash.com/photo-1575408264798-b50b252663e6?w=600&q=80')}
+.region-card.nb .region-img{background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80')}
+.region-card.mb .region-img{background-image:url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=600&q=80')}
+.region-card.sk .region-img{background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80')}
+.region-card.nl .region-img{background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80')}
+.region-card.pe .region-img{background-image:url('https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?w=600&q=80')}
+.region-card.yt .region-img{background-image:url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=80')}
+.region-card.nt .region-img{background-image:url('https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=600&q=80')}
+.region-card.nu .region-img{background-image:url('https://images.unsplash.com/photo-1517783999520-f068a5e29f60?w=600&q=80')}
 .region-content{padding:24px}
 .region-content h3{font-size:1.35rem;color:var(--navy);margin-bottom:8px}
 .region-content p{color:var(--gray);margin-bottom:16px}
@@ -112,7 +113,7 @@ body{padding-bottom:70px}
     <h2>Western Canada</h2>
     <div class="region-grid">
       <a href="/regions/british-columbia/" class="region-card bc">
-        <div class="region-img">🏔️</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>British Columbia</h3>
           <p>Mountains meet ocean in Canada's westernmost province. Explore rainforests, ski world-class resorts, and discover vibrant Vancouver.</p>
@@ -124,7 +125,7 @@ body{padding-bottom:70px}
         </div>
       </a>
       <a href="/regions/alberta/" class="region-card ab">
-        <div class="region-img">⛰️</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Alberta</h3>
           <p>Home to the iconic Canadian Rockies, Banff and Jasper national parks, and the dynamic cities of Calgary and Edmonton.</p>
@@ -144,7 +145,7 @@ body{padding-bottom:70px}
     <h2>Prairie Provinces</h2>
     <div class="region-grid">
       <a href="/regions/saskatchewan/" class="region-card sk">
-        <div class="region-img">🌾</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Saskatchewan</h3>
           <p>Land of living skies with endless prairies, over 100,000 lakes, and unique northern wilderness adventures.</p>
@@ -156,7 +157,7 @@ body{padding-bottom:70px}
         </div>
       </a>
       <a href="/regions/manitoba/" class="region-card mb">
-        <div class="region-img">🐻‍❄️</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Manitoba</h3>
           <p>Polar bear capital of the world in Churchill, vibrant Winnipeg, and the stunning boreal wilderness of the north.</p>
@@ -176,7 +177,7 @@ body{padding-bottom:70px}
     <h2>Central Canada</h2>
     <div class="region-grid">
       <a href="/regions/ontario/" class="region-card on">
-        <div class="region-img">🏙️</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Ontario</h3>
           <p>Canada's most populous province featuring Toronto, Ottawa, Niagara Falls, and the stunning cottage country of Muskoka.</p>
@@ -188,7 +189,7 @@ body{padding-bottom:70px}
         </div>
       </a>
       <a href="/regions/quebec/" class="region-card qc">
-        <div class="region-img">🏰</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Quebec</h3>
           <p>French-speaking province with European charm, historic Quebec City, cosmopolitan Montreal, and stunning Laurentian mountains.</p>
@@ -208,7 +209,7 @@ body{padding-bottom:70px}
     <h2>Atlantic Canada</h2>
     <div class="region-grid">
       <a href="/regions/nova-scotia/" class="region-card ns">
-        <div class="region-img">🌊</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Nova Scotia</h3>
           <p>Maritime charm with historic Halifax, iconic Peggy's Cove lighthouse, and the scenic Cabot Trail through Cape Breton.</p>
@@ -220,7 +221,7 @@ body{padding-bottom:70px}
         </div>
       </a>
       <a href="/regions/new-brunswick/" class="region-card nb">
-        <div class="region-img">🦞</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>New Brunswick</h3>
           <p>Bay of Fundy's highest tides, charming coastal villages, and the only officially bilingual Canadian province.</p>
@@ -232,7 +233,7 @@ body{padding-bottom:70px}
         </div>
       </a>
       <a href="/regions/prince-edward-island/" class="region-card pe">
-        <div class="region-img">🏖️</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Prince Edward Island</h3>
           <p>Canada's smallest province with red sand beaches, Anne of Green Gables heritage, and incredible seafood.</p>
@@ -244,7 +245,7 @@ body{padding-bottom:70px}
         </div>
       </a>
       <a href="/regions/newfoundland/" class="region-card nl">
-        <div class="region-img">🐋</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Newfoundland & Labrador</h3>
           <p>Easternmost point of North America with Viking history, icebergs, whales, and the dramatic Gros Morne landscapes.</p>
@@ -264,7 +265,7 @@ body{padding-bottom:70px}
     <h2>Northern Territories</h2>
     <div class="region-grid">
       <a href="/regions/yukon/" class="region-card yt">
-        <div class="region-img">🌌</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Yukon</h3>
           <p>Northern lights, midnight sun, Klondike Gold Rush history, and pristine wilderness including Kluane National Park.</p>
@@ -276,7 +277,7 @@ body{padding-bottom:70px}
         </div>
       </a>
       <a href="/regions/northwest-territories/" class="region-card nt">
-        <div class="region-img">🌠</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Northwest Territories</h3>
           <p>Aurora borealis capital Yellowknife, Nahanni National Park, Great Slave Lake, and vast Arctic wilderness.</p>
@@ -288,7 +289,7 @@ body{padding-bottom:70px}
         </div>
       </a>
       <a href="/regions/nunavut/" class="region-card nu">
-        <div class="region-img">❄️</div>
+        <div class="region-img"></div>
         <div class="region-content">
           <h3>Nunavut</h3>
           <p>Canada's newest and largest territory with Arctic tundra, Inuit culture, polar bears, and the Northwest Passage.</p>

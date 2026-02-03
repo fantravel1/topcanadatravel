@@ -38,7 +38,7 @@ header{background:var(--navy);color:#fff;padding:16px 20px;position:sticky;top:0
 .logo span{color:var(--red)}
 nav a{color:#fff;padding:8px 16px}
 nav{display:none}
-.hero{background:linear-gradient(135deg,#7c3aed 0%,#8b5cf6 50%,#a78bfa 100%);color:#fff;padding:60px 20px;text-align:center}
+.hero{background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=1600&q=80');background-size:cover;background-position:center;color:#fff;padding:80px 20px;text-align:center}
 .hero h1{font-size:2.25rem;margin-bottom:12px}
 .hero p{font-size:1.1rem;opacity:0.95;max-width:700px;margin:0 auto}
 .quick-facts{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:24px}
@@ -50,11 +50,15 @@ nav{display:none}
 .dest-grid{display:grid;gap:24px}
 .dest-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);transition:transform 0.3s}
 .dest-card:hover{transform:translateY(-4px)}
-.dest-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff}
-.dest-card.park .dest-img{background:linear-gradient(135deg,#059669,#34d399)}
-.dest-card.city .dest-img{background:linear-gradient(135deg,#dc2626,#f87171)}
-.dest-card.drive .dest-img{background:linear-gradient(135deg,#0891b2,#22d3ee)}
-.dest-card.adventure .dest-img{background:linear-gradient(135deg,#7c3aed,#a78bfa)}
+.dest-img{height:160px;background-size:cover;background-position:center}
+.dest-card.banff .dest-img{background-image:url('https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=500&q=80')}
+.dest-card.jasper .dest-img{background-image:url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=500&q=80')}
+.dest-card.calgary .dest-img{background-image:url('https://images.unsplash.com/photo-1559913869-e94e45e52e23?w=500&q=80')}
+.dest-card.edmonton .dest-img{background-image:url('https://images.unsplash.com/photo-1569982175971-d92b01cf8694?w=500&q=80')}
+.dest-card.icefields .dest-img{background-image:url('https://images.unsplash.com/photo-1516655855035-d5215bcb5604?w=500&q=80')}
+.dest-card.drumheller .dest-img{background-image:url('https://images.unsplash.com/photo-1568702846914-96b305d2uj8b?w=500&q=80')}
+.dest-card.waterton .dest-img{background-image:url('https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=500&q=80')}
+.dest-card.hidden .dest-img{background-image:url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=500&q=80')}
 .dest-content{padding:20px}
 .dest-content h3{font-size:1.2rem;color:var(--navy);margin-bottom:6px}
 .dest-content p{color:var(--gray);margin-bottom:12px;font-size:0.9rem}
@@ -126,64 +130,64 @@ body{padding-bottom:70px}
   <div class="container">
     <h2>Top Alberta Destinations</h2>
     <div class="dest-grid">
-      <a href="/national-parks/banff/" class="dest-card park">
-        <div class="dest-img">🏔️</div>
+      <a href="/national-parks/banff/" class="dest-card banff">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Banff National Park</h3>
           <p>Canada's most iconic park with turquoise lakes and majestic peaks</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/national-parks/jasper/" class="dest-card park">
-        <div class="dest-img">🌌</div>
+      <a href="/national-parks/jasper/" class="dest-card jasper">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Jasper National Park</h3>
           <p>Dark sky preserve with glaciers, wildlife, and hot springs</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/destinations/cities/calgary/" class="dest-card city">
-        <div class="dest-img">🤠</div>
+      <a href="/destinations/cities/calgary/" class="dest-card calgary">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Calgary</h3>
           <p>Gateway to the Rockies and home of the Calgary Stampede</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/destinations/cities/edmonton/" class="dest-card city">
-        <div class="dest-img">🏙️</div>
+      <a href="/destinations/cities/edmonton/" class="dest-card edmonton">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Edmonton</h3>
           <p>Festival city with North America's largest mall</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/itineraries/icefields-parkway/" class="dest-card drive">
-        <div class="dest-img">🚗</div>
+      <a href="/itineraries/icefields-parkway/" class="dest-card icefields">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Icefields Parkway</h3>
           <p>World's most scenic drive through the Rockies</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/destinations/lake-louise/" class="dest-card park">
-        <div class="dest-img">💎</div>
+      <a href="/destinations/lake-louise/" class="dest-card banff">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Lake Louise</h3>
           <p>The iconic turquoise gem of the Canadian Rockies</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/national-parks/waterton/" class="dest-card park">
-        <div class="dest-img">🦌</div>
+      <a href="/national-parks/waterton/" class="dest-card waterton">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Waterton Lakes</h3>
           <p>Where prairies meet mountains in dramatic fashion</p>
           <span class="dest-btn">Explore →</span>
         </div>
       </a>
-      <a href="/hidden-gems/alberta/" class="dest-card adventure">
-        <div class="dest-img">💎</div>
+      <a href="/hidden-gems/alberta/" class="dest-card hidden">
+        <div class="dest-img"></div>
         <div class="dest-content">
           <h3>Hidden Gems</h3>
           <p>Secret spots away from Banff crowds</p>
